@@ -1,0 +1,961 @@
+﻿Nivell;Codi;Nom
+Zona ensenyament;CE01;Barcelona (municipi)
+Municipi;80193;Barcelona
+Zona ensenyament;DE02;Vallès Occidental
+Municipi;80517;Castellar del Vallès
+Municipi;80543;Castellbisbal
+Municipi;80879;Gallifa
+Municipi;81206;Matadepera
+Municipi;81252;Montcada i Reixac
+Municipi;81568;Palau-solità i Plegamans
+Municipi;81672;Polinyà
+Municipi;81799;Rellinars
+Municipi;81803;Ripollet
+Municipi;81846;Rubí
+Municipi;81878;Sabadell
+Municipi;82055;Sant Cugat del Vallès
+Municipi;82233;Sant Llorenç Savall
+Municipi;82384;Sant Quirze del Vallès
+Municipi;82520;Barberà del Vallès
+Municipi;82606;Santa Perpètua de Mogoda
+Municipi;82665;Cerdanyola del Vallès
+Municipi;82671;Sentmenat
+Municipi;82798;Terrassa
+Municipi;82900;Ullastrell
+Municipi;82917;Vacarisses
+Municipi;83008;Viladecavalls
+Municipi;89045;Badia del Vallès
+Zona ensenyament;DE03;Baix Llobregat
+Municipi;80018;Abrera
+Municipi;80207;Begues
+Municipi;80569;Castelldefels
+Municipi;80667;Castellví de Rosanes
+Municipi;80689;Cervelló
+Municipi;80692;Collbató
+Municipi;80728;Corbera de Llobregat
+Municipi;80734;Cornellà de Llobregat
+Municipi;80765;Esparreguera
+Municipi;80771;Esplugues de Llobregat
+Municipi;80898;Gavà
+Municipi;81141;Martorell
+Municipi;81234;Molins de Rei
+Municipi;81477;Olesa de Montserrat
+Municipi;81574;Pallejà
+Municipi;81580;Papiol, el
+Municipi;81691;Prat de Llobregat, el
+Municipi;81960;Sant Andreu de la Barca
+Municipi;82009;Sant Boi de Llobregat
+Municipi;82042;Sant Climent de Llobregat
+Municipi;82080;Sant Esteve Sesrovires
+Municipi;82114;Sant Feliu de Llobregat
+Municipi;82172;Sant Joan Despí
+Municipi;82212;Sant Just Desvern
+Municipi;82444;Santa Coloma de Cervelló
+Municipi;82634;Sant Vicenç dels Horts
+Municipi;82896;Torrelles de Llobregat
+Municipi;82956;Vallirana
+Municipi;83015;Viladecans
+Municipi;89058;Palma de Cervelló, la
+Zona ensenyament;DE04;Barcelona 2 (comarques)
+Municipi;80155;Badalona
+Municipi;81017;Hospitalet de Llobregat, l'
+Municipi;81944;Sant Adrià de Besòs
+Municipi;82457;Santa Coloma de Gramenet
+Zona ensenyament;DE05;Girona
+Municipi;170010;Agullana
+Municipi;170025;Aiguaviva
+Municipi;170031;Albanyà
+Municipi;170046;Albons
+Municipi;170059;Far d'Empordà, el
+Municipi;170078;Amer
+Municipi;170084;Anglès
+Municipi;170097;Arbúcies
+Municipi;170101;Argelaguer
+Municipi;170118;Armentera, l'
+Municipi;170123;Avinyonet de Puigventós
+Municipi;170139;Begur
+Municipi;170144;Vajol, la
+Municipi;170157;Banyoles
+Municipi;170160;Bàscara
+Municipi;170182;Bellcaire d'Empordà
+Municipi;170195;Besalú
+Municipi;170209;Bescanó
+Municipi;170216;Beuda
+Municipi;170221;Bisbal d'Empordà, la
+Municipi;170237;Blanes
+Municipi;170255;Bordils
+Municipi;170268;Borrassà
+Municipi;170274;Breda
+Municipi;170280;Brunyola i Sant Martí Sapresa
+Municipi;170293;Boadella i les Escaules
+Municipi;170307;Cabanes
+Municipi;170314;Cabanelles
+Municipi;170329;Cadaqués
+Municipi;170335;Caldes de Malavella
+Municipi;170340;Calonge i Sant Antoni
+Municipi;170353;Camós
+Municipi;170366;Campdevànol
+Municipi;170372;Campelles
+Municipi;170388;Campllong
+Municipi;170391;Camprodon
+Municipi;170405;Canet d'Adri
+Municipi;170412;Cantallops
+Municipi;170427;Capmany
+Municipi;170433;Queralbs
+Municipi;170448;Cassà de la Selva
+Municipi;170464;Castellfollit de la Roca
+Municipi;170470;Castelló d'Empúries
+Municipi;170486;Castell d'Aro, Platja d'Aro i s'Agaró
+Municipi;170499;Celrà
+Municipi;170502;Cervià de Ter
+Municipi;170519;Cistella
+Municipi;170524;Siurana
+Municipi;170545;Colera
+Municipi;170558;Colomers
+Municipi;170561;Cornellà del Terri
+Municipi;170577;Corçà
+Municipi;170583;Crespià
+Municipi;170600;Darnius
+Municipi;170622;Escala, l'
+Municipi;170643;Espolla
+Municipi;170656;Esponellà
+Municipi;170669;Figueres
+Municipi;170675;Flaçà
+Municipi;170681;Foixà
+Municipi;170708;Fontanilles
+Municipi;170715;Fontcoberta
+Municipi;170736;Fornells de la Selva
+Municipi;170741;Fortià
+Municipi;170754;Garrigàs
+Municipi;170767;Garrigoles
+Municipi;170773;Garriguella
+Municipi;170792;Girona
+Municipi;170806;Gombrèn
+Municipi;170813;Gualta
+Municipi;170834;Hostalric
+Municipi;170852;Jafre
+Municipi;170865;Jonquera, la
+Municipi;170871;Juià
+Municipi;170887;Lladó
+Municipi;170890;Llagostera
+Municipi;170904;Llambilles
+Municipi;170911;Llanars
+Municipi;170926;Llançà
+Municipi;170932;Llers
+Municipi;170950;Lloret de Mar
+Municipi;170963;Llosses, les
+Municipi;170979;Madremanya
+Municipi;170985;Maià de Montcal
+Municipi;171002;Masarac
+Municipi;171019;Massanes
+Municipi;171024;Maçanet de Cabrenys
+Municipi;171030;Maçanet de la Selva
+Municipi;171058;Mieres
+Municipi;171061;Mollet de Peralada
+Municipi;171077;Molló
+Municipi;171096;Montagut i Oix
+Municipi;171100;Mont-ras
+Municipi;171117;Navata
+Municipi;171122;Ogassa
+Municipi;171143;Olot
+Municipi;171156;Ordis
+Municipi;171169;Osor
+Municipi;171175;Palafrugell
+Municipi;171181;Palamós
+Municipi;171194;Palau de Santa Eulàlia
+Municipi;171208;Palau-saverdera
+Municipi;171215;Palau-sator
+Municipi;171236;Palol de Revardit
+Municipi;171241;Pals
+Municipi;171254;Pardines
+Municipi;171267;Parlavà
+Municipi;171289;Pau
+Municipi;171292;Pedret i Marzà
+Municipi;171306;Pera, la
+Municipi;171328;Peralada
+Municipi;171334;Planes d'Hostoles, les
+Municipi;171349;Planoles
+Municipi;171352;Pont de Molins
+Municipi;171365;Pontós
+Municipi;171371;Porqueres
+Municipi;171387;Portbou
+Municipi;171390;Preses, les
+Municipi;171404;Port de la Selva, el
+Municipi;171426;Quart
+Municipi;171432;Rabós
+Municipi;171447;Regencós
+Municipi;171450;Ribes de Freser
+Municipi;171463;Riells i Viabrea
+Municipi;171479;Ripoll
+Municipi;171485;Riudarenes
+Municipi;171498;Riudaura
+Municipi;171501;Riudellots de la Selva
+Municipi;171518;Riumors
+Municipi;171523;Roses
+Municipi;171539;Rupià
+Municipi;171544;Sales de Llierca
+Municipi;171557;Salt
+Municipi;171576;Sant Andreu Salou
+Municipi;171582;Sant Climent Sescebes
+Municipi;171595;Sant Feliu de Buixalleu
+Municipi;171609;Sant Feliu de Guíxols
+Municipi;171616;Sant Feliu de Pallerols
+Municipi;171621;Sant Ferriol
+Municipi;171637;Sant Gregori
+Municipi;171642;Sant Hilari Sacalm
+Municipi;171655;Sant Jaume de Llierca
+Municipi;171668;Sant Jordi Desvalls
+Municipi;171674;Sant Joan de les Abadesses
+Municipi;171680;Sant Joan de Mollet
+Municipi;171693;Sant Julià de Ramis
+Municipi;171707;Vallfogona de Ripollès
+Municipi;171714;Sant Llorenç de la Muga
+Municipi;171729;Sant Martí de Llémena
+Municipi;171735;Sant Martí Vell
+Municipi;171740;Sant Miquel de Campmajor
+Municipi;171753;Sant Miquel de Fluvià
+Municipi;171766;Sant Mori
+Municipi;171772;Sant Pau de Segúries
+Municipi;171788;Sant Pere Pescador
+Municipi;171805;Santa Coloma de Farners
+Municipi;171812;Santa Cristina d'Aro
+Municipi;171827;Santa Llogaia d'Àlguema
+Municipi;171833;Sant Aniol de Finestres
+Municipi;171848;Santa Pau
+Municipi;171851;Sant Joan les Fonts
+Municipi;171864;Sarrià de Ter
+Municipi;171870;Saus, Camallera i Llampaies
+Municipi;171886;Selva de Mar, la
+Municipi;171899;Cellera de Ter, la
+Municipi;171903;Serinyà
+Municipi;171910;Serra de Daró
+Municipi;171925;Setcases
+Municipi;171931;Sils
+Municipi;171946;Susqueda
+Municipi;171959;Tallada d'Empordà, la
+Municipi;171962;Terrades
+Municipi;171978;Torrent
+Municipi;171984;Torroella de Fluvià
+Municipi;171997;Torroella de Montgrí
+Municipi;172001;Tortellà
+Municipi;172018;Toses
+Municipi;172023;Tossa de Mar
+Municipi;172039;Ultramort
+Municipi;172044;Ullà
+Municipi;172057;Ullastret
+Municipi;172076;Vall d'en Bas, la
+Municipi;172082;Vall de Bianya, la
+Municipi;172095;Vall-llobrega
+Municipi;172109;Ventalló
+Municipi;172116;Verges
+Municipi;172137;Vidreres
+Municipi;172142;Vilabertran
+Municipi;172155;Vilablareix
+Municipi;172168;Viladasens
+Municipi;172174;Viladamat
+Municipi;172180;Vilademuls
+Municipi;172214;Vilafant
+Municipi;172229;Vilaür
+Municipi;172235;Vilajuïga
+Municipi;172240;Vilallonga de Ter
+Municipi;172253;Vilamacolum
+Municipi;172266;Vilamalla
+Municipi;172272;Vilamaniscle
+Municipi;172288;Vilanant
+Municipi;172305;Vila-sacra
+Municipi;172327;Vilopriu
+Municipi;172333;Vilobí d'Onyar
+Municipi;172348;Biure
+Municipi;179011;Cruïlles, Monells i Sant Sadurní de l'Heura
+Municipi;179026;Forallac
+Municipi;179032;Sant Julià del Llor i Bonmatí
+Zona ensenyament;DE06;Lleida
+Municipi;250024;Àger
+Municipi;250030;Agramunt
+Municipi;250045;Alamús, els
+Municipi;250061;Albagés, l'
+Municipi;250077;Albatàrrec
+Municipi;250083;Albesa
+Municipi;250096;Albi, l'
+Municipi;250100;Alcanó
+Municipi;250117;Alcarràs
+Municipi;250122;Alcoletge
+Municipi;250138;Alfarràs
+Municipi;250143;Alfés
+Municipi;250156;Algerri
+Municipi;250169;Alguaire
+Municipi;250194;Almacelles
+Municipi;250208;Almatret
+Municipi;250215;Almenar
+Municipi;250220;Alòs de Balaguer
+Municipi;250236;Alpicat
+Municipi;250273;Anglesola
+Municipi;250292;Arbeca
+Municipi;250334;Artesa de Lleida
+Municipi;250349;Artesa de Segre
+Municipi;250352;Sentiu de Sió, la
+Municipi;250365;Aspa
+Municipi;250371;Avellanes i Santa Linya, les
+Municipi;250387;Aitona
+Municipi;250404;Balaguer
+Municipi;250411;Barbens
+Municipi;250426;Baronia de Rialb, la
+Municipi;250463;Belianes
+Municipi;250479;Bellcaire d'Urgell
+Municipi;250485;Bell-lloc d'Urgell
+Municipi;250498;Bellmunt d'Urgell
+Municipi;250501;Bellpuig
+Municipi;250523;Bellvís
+Municipi;250539;Benavent de Segrià
+Municipi;250557;Biosca
+Municipi;250560;Bovera
+Municipi;250582;Borges Blanques, les
+Municipi;250609;Cabanabona
+Municipi;250621;Camarasa
+Municipi;250674;Castelldans
+Municipi;250680;Castellnou de Seana
+Municipi;250693;Castelló de Farfanya
+Municipi;250707;Castellserà
+Municipi;250729;Cervera
+Municipi;250735;Cervià de les Garrigues
+Municipi;250740;Ciutadilla
+Municipi;250766;Cogul, el
+Municipi;250788;Corbins
+Municipi;250791;Cubells
+Municipi;250812;Espluga Calba, l'
+Municipi;250851;Estaràs
+Municipi;250925;Floresta, la
+Municipi;250931;Fondarella
+Municipi;250946;Foradada
+Municipi;250962;Fuliola, la
+Municipi;250978;Fulleda
+Municipi;250997;Golmés
+Municipi;251018;Granadella, la
+Municipi;251023;Granja d'Escarp, la
+Municipi;251039;Granyanella
+Municipi;251044;Granyena de Segarra
+Municipi;251057;Granyena de les Garrigues
+Municipi;251095;Guimerà
+Municipi;251109;Guissona
+Municipi;251121;Ivars de Noguera
+Municipi;251137;Ivars d'Urgell
+Municipi;251142;Ivorra
+Municipi;251180;Juncosa
+Municipi;251193;Juneda
+Municipi;251207;Lleida
+Municipi;251229;Linyola
+Municipi;251253;Llardecans
+Municipi;251305;Maldà
+Municipi;251312;Massalcoreig
+Municipi;251327;Massoteres
+Municipi;251333;Maials
+Municipi;251348;Menàrguens
+Municipi;251351;Miralcamp
+Municipi;251370;Mollerussa
+Municipi;251386;Montgai
+Municipi;251410;Montoliu de Segarra
+Municipi;251425;Montoliu de Lleida
+Municipi;251431;Montornès de Segarra
+Municipi;251459;Nalec
+Municipi;251500;Oliola
+Municipi;251522;Oluges, les
+Municipi;251538;Omellons, els
+Municipi;251543;Omells de na Gaia, els
+Municipi;251569;Os de Balaguer
+Municipi;251575;Ossó de Sió
+Municipi;251581;Palau d'Anglesola, el
+Municipi;251641;Penelles
+Municipi;251689;Poal, el
+Municipi;251692;Pobla de Cérvoles, la
+Municipi;251706;Bellaguarda
+Municipi;251728;Ponts
+Municipi;251749;Portella, la
+Municipi;251765;Preixana
+Municipi;251771;Preixens
+Municipi;251804;Puiggròs
+Municipi;251811;Puigverd d'Agramunt
+Municipi;251826;Puigverd de Lleida
+Municipi;251898;Rosselló
+Municipi;251919;Sanaüja
+Municipi;251924;Sant Guim de Freixenet
+Municipi;251945;Sant Ramon
+Municipi;251977;Sant Guim de la Plana
+Municipi;252000;Sarroca de Lleida
+Municipi;252043;Seròs
+Municipi;252056;Sidamon
+Municipi;252069;Soleràs, el
+Municipi;252108;Soses
+Municipi;252115;Sudanell
+Municipi;252120;Sunyer
+Municipi;252167;Talavera
+Municipi;252173;Tàrrega
+Municipi;252189;Tarrés
+Municipi;252192;Tarroja de Segarra
+Municipi;252206;Térmens
+Municipi;252228;Tiurana
+Municipi;252234;Torà
+Municipi;252249;Torms, els
+Municipi;252252;Tornabous
+Municipi;252265;Torrebesses
+Municipi;252287;Torrefarrera
+Municipi;252304;Torregrossa
+Municipi;252311;Torrelameu
+Municipi;252326;Torres de Segre
+Municipi;252332;Torre-serona
+Municipi;252385;Vallbona de les Monges
+Municipi;252402;Vallfogona de Balaguer
+Municipi;252424;Verdú
+Municipi;252445;Vilagrassa
+Municipi;252483;Vilanova de Bellpuig
+Municipi;252496;Vilanova de l'Aguda
+Municipi;252509;Vilanova de Meià
+Municipi;252516;Vilanova de Segrià
+Municipi;252521;Vila-sana
+Municipi;252537;Vilosell, el
+Municipi;252542;Vilanova de la Barca
+Municipi;252555;Vinaixa
+Municipi;259025;Sant Martí de Riucorb
+Municipi;259059;Ribera d'Ondara
+Municipi;259078;Torrefeta i Florejacs
+Municipi;259118;Plans de Sió, els
+Municipi;259123;Gimenells i el Pla de la Font
+Zona ensenyament;DE07;Tarragona
+Municipi;430017;Aiguamúrcia
+Municipi;430038;Albiol, l'
+Municipi;430056;Alcover
+Municipi;430075;Aleixar, l'
+Municipi;430094;Alforja
+Municipi;430108;Alió
+Municipi;430115;Almoster
+Municipi;430120;Altafulla
+Municipi;430154;Arbolí
+Municipi;430173;Argentera, l'
+Municipi;430213;Barberà de la Conca
+Municipi;430234;Bellmunt del Priorat
+Municipi;430271;Bisbal de Falset, la
+Municipi;430290;Blancafort
+Municipi;430311;Borges del Camp, les
+Municipi;430332;Botarell
+Municipi;430347;Bràfim
+Municipi;430350;Cabacés
+Municipi;430363;Cabra del Camp
+Municipi;430385;Cambrils
+Municipi;430398;Capafonts
+Municipi;430402;Capçanes
+Municipi;430424;Castellvell del Camp
+Municipi;430430;Catllar, el
+Municipi;430458;Colldejou
+Municipi;430461;Conesa
+Municipi;430477;Constantí
+Municipi;430496;Cornudella de Montsant
+Municipi;430509;Creixell
+Municipi;430537;Duesaigües
+Municipi;430542;Espluga de Francolí, l'
+Municipi;430555;Falset
+Municipi;430574;Febró, la
+Municipi;430580;Figuera, la
+Municipi;430593;Figuerola del Camp
+Municipi;430614;Forès
+Municipi;430666;Garidells, els
+Municipi;430691;Gratallops
+Municipi;430705;Guiamets, els
+Municipi;430727;Lloar, el
+Municipi;430733;Llorac
+Municipi;430751;Margalef
+Municipi;430764;Marçà
+Municipi;430803;Masó, la
+Municipi;430810;Maspujols
+Municipi;430825;Masroig, el
+Municipi;430831;Milà, el
+Municipi;430859;Molar, el
+Municipi;430862;Montblanc
+Municipi;430884;Montbrió del Camp
+Municipi;430897;Montferri
+Municipi;430918;Mont-ral
+Municipi;430923;Mont-roig del Camp
+Municipi;430957;Morell, el
+Municipi;430960;Morera de Montsant, la
+Municipi;430976;Nou de Gaià, la
+Municipi;430982;Nulles
+Municipi;431009;Pallaresos, els
+Municipi;431016;Passanant i Belltall
+Municipi;431037;Perafort
+Municipi;431055;Piles, les
+Municipi;431074;Pira
+Municipi;431080;Pla de Santa Maria, el
+Municipi;431093;Pobla de Mafumet, la
+Municipi;431114;Pobla de Montornès, la
+Municipi;431129;Poboleda
+Municipi;431135;Pont d'Armentera, el
+Municipi;431140;Porrera
+Municipi;431153;Pradell de la Teixeta
+Municipi;431166;Prades
+Municipi;431188;Pratdip
+Municipi;431191;Puigpelat
+Municipi;431205;Querol
+Municipi;431227;Renau
+Municipi;431233;Reus
+Municipi;431248;Riba, la
+Municipi;431264;Riera de Gaià, la
+Municipi;431270;Riudecanyes
+Municipi;431286;Riudecols
+Municipi;431299;Riudoms
+Municipi;431303;Rocafort de Queralt
+Municipi;431310;Roda de Berà
+Municipi;431325;Rodonyà
+Municipi;431346;Rourell, el
+Municipi;431359;Salomó
+Municipi;431397;Santa Coloma de Queralt
+Municipi;431418;Pontils
+Municipi;431423;Sarral
+Municipi;431439;Savallà del Comtat
+Municipi;431444;Secuita, la
+Municipi;431457;Selva del Camp, la
+Municipi;431460;Senan
+Municipi;431476;Solivella
+Municipi;431482;Tarragona
+Municipi;431515;Torre de Fontaubella, la
+Municipi;431536;Torredembarra
+Municipi;431541;Torroja del Priorat
+Municipi;431573;Ulldemolins
+Municipi;431589;Vallclara
+Municipi;431592;Vallfogona de Riucorb
+Municipi;431606;Vallmoll
+Municipi;431613;Valls
+Municipi;431628;Vandellòs i l'Hospitalet de l'Infant
+Municipi;431649;Vespella de Gaià
+Municipi;431652;Vilabella
+Municipi;431665;Vilallonga del Camp
+Municipi;431671;Vilanova d'Escornalbou
+Municipi;431687;Vilanova de Prades
+Municipi;431690;Vilaplana
+Municipi;431704;Vila-rodona
+Municipi;431711;Vila-seca
+Municipi;431726;Vilaverd
+Municipi;431732;Vilella Alta, la
+Municipi;431747;Vilella Baixa, la
+Municipi;431763;Vimbodí i Poblet
+Municipi;431785;Vinyols i els Arcs
+Municipi;439057;Salou
+Municipi;439076;Canonja, la
+Zona ensenyament;DE08;Terres de l'Ebre
+Municipi;430043;Alcanar
+Municipi;430069;Aldover
+Municipi;430081;Alfara de Carles
+Municipi;430136;Ametlla de Mar, l'
+Municipi;430141;Amposta
+Municipi;430189;Arnes
+Municipi;430192;Ascó
+Municipi;430228;Batea
+Municipi;430252;Benifallet
+Municipi;430265;Benissanet
+Municipi;430326;Bot
+Municipi;430419;Caseres
+Municipi;430445;Sénia, la
+Municipi;430483;Corbera d'Ebre
+Municipi;430521;Xerta
+Municipi;430568;Fatarella, la
+Municipi;430607;Flix
+Municipi;430629;Freginals
+Municipi;430635;Galera, la
+Municipi;430640;Gandesa
+Municipi;430653;Garcia
+Municipi;430672;Ginestar
+Municipi;430688;Godall
+Municipi;430712;Horta de Sant Joan
+Municipi;430770;Mas de Barberans
+Municipi;430786;Masdenverge
+Municipi;430846;Miravet
+Municipi;430939;Móra d'Ebre
+Municipi;430944;Móra la Nova
+Municipi;430995;Palma d'Ebre, la
+Municipi;431021;Paüls
+Municipi;431042;Perelló, el
+Municipi;431068;Pinell de Brai, el
+Municipi;431107;Pobla de Massaluca, la
+Municipi;431172;Prat de Comte
+Municipi;431212;Rasquera
+Municipi;431251;Riba-roja d'Ebre
+Municipi;431331;Roquetes
+Municipi;431362;Ràpita, la
+Municipi;431384;Santa Bàrbara
+Municipi;431495;Tivenys
+Municipi;431508;Tivissa
+Municipi;431520;Torre de l'Espanyol, la
+Municipi;431554;Tortosa
+Municipi;431567;Ulldecona
+Municipi;431750;Vilalba dels Arcs
+Municipi;431779;Vinebre
+Municipi;439018;Deltebre
+Municipi;439023;Sant Jaume d'Enveja
+Municipi;439039;Camarles
+Municipi;439044;Aldea, l'
+Municipi;439060;Ampolla, l'
+Zona ensenyament;DE09;Maresme-Vallès Oriental
+Municipi;80039;Alella
+Municipi;80057;Ametlla del Vallès, l'
+Municipi;80060;Arenys de Mar
+Municipi;80076;Arenys de Munt
+Municipi;80095;Argentona
+Municipi;80142;Aiguafreda
+Municipi;80235;Bigues i Riells del Fai
+Municipi;80291;Cabrera de Mar
+Municipi;80305;Cabrils
+Municipi;80327;Caldes d'Estrac
+Municipi;80333;Caldes de Montbui
+Municipi;80351;Calella
+Municipi;80399;Campins
+Municipi;80403;Canet de Mar
+Municipi;80410;Canovelles
+Municipi;80425;Cànoves i Samalús
+Municipi;80462;Cardedeu
+Municipi;80752;Dosrius
+Municipi;80811;Fogars de Montclús
+Municipi;80826;Fogars de la Selva
+Municipi;80863;Franqueses del Vallès, les
+Municipi;80885;Garriga, la
+Municipi;80961;Granollers
+Municipi;80977;Gualba
+Municipi;81056;Llagosta, la
+Municipi;81069;Llinars del Vallès
+Municipi;81075;Lliçà d'Amunt
+Municipi;81081;Lliçà de Vall
+Municipi;81108;Malgrat de Mar
+Municipi;81154;Martorelles
+Municipi;81189;Masnou, el
+Municipi;81213;Mataró
+Municipi;81249;Mollet del Vallès
+Municipi;81265;Montgat
+Municipi;81347;Figaró-Montmany
+Municipi;81350;Montmeló
+Municipi;81363;Montornès del Vallès
+Municipi;81379;Montseny
+Municipi;81537;Òrrius
+Municipi;81555;Palafolls
+Municipi;81593;Parets del Vallès
+Municipi;81635;Pineda de Mar
+Municipi;81727;Premià de Mar
+Municipi;81810;Roca del Vallès, la
+Municipi;81939;Sant Iscle de Vallalta
+Municipi;81976;Sant Andreu de Llavaneres
+Municipi;81982;Sant Antoni de Vilamajor
+Municipi;82021;Sant Celoni
+Municipi;82037;Sant Cebrià de Vallalta
+Municipi;82074;Sant Esteve de Palautordera
+Municipi;82093;Sant Fost de Campsentelles
+Municipi;82107;Sant Feliu de Codines
+Municipi;82140;Vilassar de Dalt
+Municipi;82191;Vilassar de Mar
+Municipi;82303;Premià de Dalt
+Municipi;82346;Sant Pere de Vilamajor
+Municipi;82359;Sant Pol de Mar
+Municipi;82482;Santa Eulàlia de Ronçana
+Municipi;82567;Santa Maria de Martorelles
+Municipi;82592;Santa Maria de Palautordera
+Municipi;82613;Santa Susanna
+Municipi;82649;Sant Vicenç de Montalt
+Municipi;82763;Tagamanent
+Municipi;82819;Teià
+Municipi;82824;Tiana
+Municipi;82845;Tordera
+Municipi;82943;Vallgorguina
+Municipi;82969;Vallromanes
+Municipi;83067;Vilalba Sasserra
+Municipi;89024;Vilanova del Vallès
+Zona ensenyament;DE10;Catalunya Central
+Municipi;80023;Aguilar de Segarra
+Municipi;80044;Alpens
+Municipi;80109;Artés
+Municipi;80116;Avià
+Municipi;80121;Avinyó
+Municipi;80168;Bagà
+Municipi;80174;Balenyà
+Municipi;80180;Balsareny
+Municipi;80229;Berga
+Municipi;80240;Borredà
+Municipi;80266;Brull, el
+Municipi;80312;Calaf
+Municipi;80348;Calders
+Municipi;80364;Calonge de Segarra
+Municipi;80370;Calldetenes
+Municipi;80386;Callús
+Municipi;80459;Capolat
+Municipi;80478;Cardona
+Municipi;80497;Casserres
+Municipi;80500;Castellar del Riu
+Municipi;80522;Castellar de n'Hug
+Municipi;80538;Castellbell i el Vilar
+Municipi;80556;Castellcir
+Municipi;80575;Castell de l'Areny
+Municipi;80594;Castellfollit del Boix
+Municipi;80608;Castellfollit de Riubregós
+Municipi;80615;Castellgalí
+Municipi;80620;Castellnou de Bages
+Municipi;80641;Castellterçol
+Municipi;80673;Centelles
+Municipi;80706;Collsuspina
+Municipi;80787;Espunyola, l'
+Municipi;80790;Estany, l'
+Municipi;80804;Fígols
+Municipi;80832;Folgueroles
+Municipi;80847;Fonollosa
+Municipi;80902;Gaià
+Municipi;80924;Gironella
+Municipi;80930;Gisclareny
+Municipi;80958;Granera
+Municipi;80983;Sant Salvador de Guardiola
+Municipi;80996;Guardiola de Berguedà
+Municipi;81000;Gurb
+Municipi;81094;Lluçà
+Municipi;81115;Malla
+Municipi;81120;Manlleu
+Municipi;81136;Manresa
+Municipi;81167;Masies de Roda, les
+Municipi;81173;Masies de Voltregà, les
+Municipi;81271;Monistrol de Montserrat
+Municipi;81287;Monistrol de Calders
+Municipi;81290;Muntanyola
+Municipi;81304;Montclar
+Municipi;81311;Montesquiu
+Municipi;81326;Montmajor
+Municipi;81385;Moià
+Municipi;81398;Mura
+Municipi;81402;Navarcles
+Municipi;81419;Navàs
+Municipi;81424;Nou de Berguedà, la
+Municipi;81445;Olvan
+Municipi;81496;Olost
+Municipi;81509;Orís
+Municipi;81516;Oristà
+Municipi;81607;Perafita
+Municipi;81666;Pobla de Lillet, la
+Municipi;81705;Prats de Rei, els
+Municipi;81712;Prats de Lluçanès
+Municipi;81751;Puig-reig
+Municipi;81764;Pujalt
+Municipi;81770;Quar, la
+Municipi;81786;Rajadell
+Municipi;81825;Pont de Vilomara i Rocafort, el
+Municipi;81831;Roda de Ter
+Municipi;81884;Sagàs
+Municipi;81897;Sant Pere Sallavinera
+Municipi;81901;Saldes
+Municipi;81918;Sallent
+Municipi;81923;Santpedor
+Municipi;81957;Sant Agustí de Lluçanès
+Municipi;81995;Sant Bartomeu del Grau
+Municipi;82016;Sant Boi de Lluçanès
+Municipi;82129;Sant Feliu Sasserra
+Municipi;82135;Sant Fruitós de Bages
+Municipi;82153;Sant Hipòlit de Voltregà
+Municipi;82166;Sant Jaume de Frontanyà
+Municipi;82188;Sant Joan de Vilatorrada
+Municipi;82205;Sant Julià de Vilatorta
+Municipi;82248;Sant Martí de Centelles
+Municipi;82251;Sant Martí d'Albars
+Municipi;82286;Sant Martí Sesgueioles
+Municipi;82299;Sant Mateu de Bages
+Municipi;82331;Sant Pere de Torelló
+Municipi;82378;Sant Quirze de Besora
+Municipi;82397;Sant Quirze Safaja
+Municipi;82418;Sant Sadurní d'Osormort
+Municipi;82423;Marganell
+Municipi;82439;Santa Cecília de Voltregà
+Municipi;82460;Santa Eugènia de Berga
+Municipi;82476;Santa Eulàlia de Riuprimer
+Municipi;82536;Santa Maria de Besora
+Municipi;82541;Esquirol, l'
+Municipi;82554;Santa Maria de Merlès
+Municipi;82589;Santa Maria d'Oló
+Municipi;82628;Sant Vicenç de Castellet
+Municipi;82652;Sant Vicenç de Torelló
+Municipi;82687;Cercs
+Municipi;82690;Seva
+Municipi;82711;Sobremunt
+Municipi;82726;Sora
+Municipi;82747;Súria
+Municipi;82750;Tavèrnoles
+Municipi;82779;Talamanca
+Municipi;82785;Taradell
+Municipi;82802;Tavertet
+Municipi;82830;Tona
+Municipi;82858;Torelló
+Municipi;82938;Vallcebre
+Municipi;82975;Veciana
+Municipi;82981;Vic
+Municipi;82994;Vilada
+Municipi;83036;Vilanova de Sau
+Municipi;83089;Viver i Serrateix
+Municipi;89019;Rupit i Pruit
+Municipi;89030;Sant Julià de Cerdanyola
+Municipi;170638;Espinelves
+Municipi;172121;Vidrà
+Municipi;172207;Viladrau
+Municipi;250642;Castellar de la Ribera
+Municipi;250753;Clariana de Cardener
+Municipi;251001;Gósol
+Municipi;251116;Guixers
+Municipi;251240;Lladurs
+Municipi;251291;Llobera
+Municipi;251364;Molsosa, la
+Municipi;251462;Navès
+Municipi;251484;Odèn
+Municipi;251517;Olius
+Municipi;251636;Coma i la Pedra, la
+Municipi;251667;Pinell de Solsonès
+Municipi;251673;Pinós
+Municipi;251863;Riner
+Municipi;251930;Sant Llorenç de Morunys
+Municipi;252075;Solsona
+Zona ensenyament;DE11;Alt Pirineu i Aran
+Municipi;170062;Alp
+Municipi;170242;Bolvir
+Municipi;170617;Das
+Municipi;170694;Fontanals de Cerdanya
+Municipi;170789;Ger
+Municipi;170828;Guils de Cerdanya
+Municipi;170849;Isòvol
+Municipi;170947;Llívia
+Municipi;170998;Meranges
+Municipi;171411;Puigcerdà
+Municipi;172060;Urús
+Municipi;250019;Abella de la Conca
+Municipi;250058;Alàs i Cerc
+Municipi;250175;Alins
+Municipi;250241;Alt Àneu
+Municipi;250254;Naut Aran
+Municipi;250306;Pont de Bar, el
+Municipi;250313;Arres
+Municipi;250328;Arsèguel
+Municipi;250390;Baix Pallars
+Municipi;250432;Vall de Boí, la
+Municipi;250447;Bassella
+Municipi;250450;Bausen
+Municipi;250518;Bellver de Cerdanya
+Municipi;250576;Bòrdes, Es
+Municipi;250595;Bossòst
+Municipi;250616;Cabó
+Municipi;250637;Canejan
+Municipi;250714;Cava
+Municipi;250772;Coll de Nargó
+Municipi;250827;Espot
+Municipi;250864;Esterri d'Àneu
+Municipi;250870;Esterri de Cardós
+Municipi;250886;Estamariu
+Municipi;250899;Farrera
+Municipi;250984;Gavet de la Conca
+Municipi;251155;Isona i Conca Dellà
+Municipi;251214;Les
+Municipi;251235;Lladorre
+Municipi;251266;Llavorsí
+Municipi;251272;Lles de Cerdanya
+Municipi;251288;Llimiana
+Municipi;251399;Montellà i Martinet
+Municipi;251403;Montferrer i Castellbò
+Municipi;251497;Oliana
+Municipi;251556;Organyà
+Municipi;251615;Conca de Dalt
+Municipi;251654;Peramola
+Municipi;251713;Pobla de Segur, la
+Municipi;251734;Pont de Suert, el
+Municipi;251752;Prats i Sansor
+Municipi;251790;Prullans
+Municipi;251832;Rialp
+Municipi;251850;Ribera d'Urgellet
+Municipi;251902;Salàs de Pallars
+Municipi;251961;Sant Esteve de la Sarga
+Municipi;252017;Sarroca de Bellera
+Municipi;252022;Senterada
+Municipi;252038;Seu d'Urgell, la
+Municipi;252081;Soriguera
+Municipi;252094;Sort
+Municipi;252154;Talarn
+Municipi;252213;Tírvia
+Municipi;252271;Torre de Cabdella, la
+Municipi;252347;Tremp
+Municipi;252398;Valls de Valira, les
+Municipi;252430;Vielha e Mijaran
+Municipi;252458;Vilaller
+Municipi;252477;Vilamòs
+Municipi;259010;Vall de Cardós
+Municipi;259031;Guingueta d'Àneu, la
+Municipi;259046;Castell de Mur
+Municipi;259062;Valls d'Aguilar, les
+Municipi;259084;Fígols i Alinyà
+Municipi;259097;Vansa i Fórnols, la
+Municipi;259101;Josa i Tuixén
+Municipi;259139;Riu de Cerdanya
+Zona ensenyament;DE12;Penedès
+Municipi;80082;Argençola
+Municipi;80137;Avinyonet del Penedès
+Municipi;80214;Bellprat
+Municipi;80253;Bruc, el
+Municipi;80272;Cabanyes, les
+Municipi;80288;Cabrera d'Anoia
+Municipi;80431;Canyelles
+Municipi;80446;Capellades
+Municipi;80484;Carme
+Municipi;80581;Castellet i la Gornal
+Municipi;80636;Castellolí
+Municipi;80654;Castellví de la Marca
+Municipi;80713;Copons
+Municipi;80749;Cubelles
+Municipi;80850;Font-rubí
+Municipi;80919;Gelida
+Municipi;80945;Granada, la
+Municipi;81022;Igualada
+Municipi;81038;Jorba
+Municipi;81043;Llacuna, la
+Municipi;81192;Masquefa
+Municipi;81228;Mediona
+Municipi;81332;Montmaneu
+Municipi;81430;Òdena
+Municipi;81458;Olèrdola
+Municipi;81461;Olesa de Bonesvalls
+Municipi;81483;Olivella
+Municipi;81521;Orpí
+Municipi;81542;Pacs del Penedès
+Municipi;81614;Piera
+Municipi;81629;Hostalets de Pierola, els
+Municipi;81640;Pla del Penedès, el
+Municipi;81653;Pobla de Claramunt, la
+Municipi;81688;Pontons
+Municipi;81748;Puigdàlber
+Municipi;81859;Rubió
+Municipi;82068;Sant Cugat Sesgarrigues
+Municipi;82227;Sant Llorenç d'Hortons
+Municipi;82264;Sant Martí de Tous
+Municipi;82270;Sant Martí Sarroca
+Municipi;82310;Sant Pere de Ribes
+Municipi;82325;Sant Pere de Riudebitlles
+Municipi;82362;Sant Quintí de Mediona
+Municipi;82401;Sant Sadurní d'Anoia
+Municipi;82495;Santa Fe del Penedès
+Municipi;82508;Santa Margarida de Montbui
+Municipi;82515;Santa Margarida i els Monjos
+Municipi;82573;Santa Maria de Miralles
+Municipi;82704;Sitges
+Municipi;82732;Subirats
+Municipi;82861;Torre de Claramunt, la
+Municipi;82877;Torrelavit
+Municipi;82883;Torrelles de Foix
+Municipi;82922;Vallbona d'Anoia
+Municipi;83020;Vilanova del Camí
+Municipi;83041;Vilobí del Penedès
+Municipi;83054;Vilafranca del Penedès
+Municipi;83073;Vilanova i la Geltrú
+Municipi;430022;Albinyana
+Municipi;430167;Arboç, l'
+Municipi;430206;Banyeres del Penedès
+Municipi;430249;Bellvei
+Municipi;430287;Bisbal del Penedès, la
+Municipi;430304;Bonastre
+Municipi;430379;Calafell
+Municipi;430516;Cunit
+Municipi;430748;Llorenç del Penedès
+Municipi;430799;Masllorenç
+Municipi;430901;Montmell, el
+Municipi;431378;Sant Jaume dels Domenys
+Municipi;431401;Santa Oliva
+Municipi;431634;Vendrell, el
+Municipi;0;Altres

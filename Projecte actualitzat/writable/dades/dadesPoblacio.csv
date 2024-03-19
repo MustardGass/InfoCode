@@ -1,0 +1,737 @@
+﻿Codi_municipi;Nom_municipi;Codi_comarca
+8001;Abrera;11
+8003;Alella;21
+8004;Alpens;24
+8005;L'Ametlla del VallŠs;41
+8006;Arenys de Mar;21
+8007;Arenys de Munt;21
+8009;Argentona;21
+8010;Art‚s;7
+8011;Avi…;14
+8013;Avinyonet del PenedŠs;3
+8014;Aiguafreda;41
+8015;Badalona;13
+8016;Bag…;14
+8019;Barcelona;13
+8194;Sant Adri… de Bes•s;13
+8125;Montcada i Reixac;40
+8020;Begues;11
+8022;Berga;14
+8023;Bigues i Riells del Fai;41
+8024;Borred…;14
+8025;El Bruc;6
+8028;Cabrera d'Anoia;6
+8029;Cabrera de Mar;21
+8030;Cabrils;21
+8031;Calaf;6
+8032;Caldes d'Estrac;21
+8033;Caldes de Montbui;41
+8034;Calders;42
+8035;Calella;21
+8037;Calldetenes;24
+8298;Vic;24
+8038;Call£s;7
+8039;Campins;41
+8040;Canet de Mar;21
+8041;Canovelles;41
+8042;C…noves i Samal£s;41
+8043;Canyelles;17
+8044;Capellades;6
+8046;Cardedeu;41
+8047;Cardona;7
+8048;Carme;6
+8049;Casserres;14
+8051;Castellar del VallŠs;40
+8053;Castellbell i el Vilar;7
+8054;Castellbisbal;40
+8055;Castellcir;42
+8056;Castelldefels;11
+8058;Castellet i la Gornal;3
+8060;Castellfollit de Riubreg¢s;6
+8061;Castellgal¡;7
+8063;Castellol¡;6
+8065;Castellv¡ de la Marca;3
+8066;Castellv¡ de Rosanes;11
+8067;Centelles;24
+8068;Cervell¢;11
+8905;La Palma de Cervell¢;11
+8071;Copons;6
+8072;Corbera de Llobregat;11
+8073;Cornell… de Llobregat;11
+8074;Cubelles;17
+8076;Esparreguera;11
+8077;Esplugues de Llobregat;11
+8084;Fonollosa;7
+8085;Font-rub¡;3
+8086;Les Franqueses del VallŠs;41
+8088;La Garriga;41
+8089;Gav…;11
+8091;Gelida;3
+8092;Gironella;14
+8094;La Granada;3
+8096;Granollers;41
+8097;Gualba;41
+8098;Sant Salvador de Guardiola;7
+8099;Guardiola de Bergued…;14
+8903;Sant Juli… de Cerdanyola;14
+8100;Gurb;24
+8101;L'Hospitalet de Llobregat;13
+8102;Igualada;6
+8103;Jorba;6
+8104;La Llacuna;6
+8105;La Llagosta;41
+8106;Llinars del VallŠs;41
+8108;Lli‡… de Vall;41
+8109;Llu‡…;24
+8110;Malgrat de Mar;21
+8112;Manlleu;24
+8113;Manresa;7
+8114;Martorell;11
+8115;Martorelles;41
+8117;Les Masies de Voltreg…;24
+8118;El Masnou;21
+8119;Masquefa;6
+8120;Matadepera;40
+8121;Matar¢;21
+8122;Mediona;3
+8123;Molins de Rei;11
+8124;Mollet del VallŠs;41
+8126;Montgat;21
+8127;Monistrol de Montserrat;7
+8128;Monistrol de Calders;42
+8131;Montesquiu;24
+8132;Montmajor;14
+8134;Figar¢-Montmany;41
+8135;Montmel¢;41
+8136;MontornŠs del VallŠs;41
+8137;Montseny;41
+8138;Moi…;42
+8140;Navarcles;7
+8141;Nav…s;7
+8144;Olvan;14
+8145;OlŠrdola;3
+8146;Olesa de Bonesvalls;3
+8147;Olesa de Montserrat;11
+8149;Olost;24
+8151;Orist…;24
+8153;ãrrius;21
+8154;Pacs del PenedŠs;3
+8155;Palafolls;21
+8156;Palau-solit… i Plegamans;40
+8157;Pallej…;11
+8158;El Papiol;11
+8159;Parets del VallŠs;41
+8161;Piera;6
+8163;Pineda de Mar;21
+8164;El Pla del PenedŠs;3
+8165;La Pobla de Claramunt;6
+8166;La Pobla de Lillet;14
+8169;El Prat de Llobregat;11
+8170;Els Prats de Rei;6
+8171;Prats de Llu‡anŠs;24
+8172;Premi… de Mar;21
+8174;Puigd…lber;3
+8175;Puig-reig;14
+8180;Ripollet;40
+8181;La Roca del VallŠs;41
+8183;Roda de Ter;24
+8184;Rub¡;40
+8187;Sabadell;40
+8279;Terrassa;40
+8191;Sallent;7
+8192;Santpedor;7
+8193;Sant Iscle de Vallalta;21
+8196;Sant Andreu de la Barca;11
+8198;Sant Antoni de Vilamajor;41
+8199;Sant Bartomeu del Grau;24
+8200;Sant Boi de Llobregat;11
+8201;Sant Boi de Llu‡anŠs;24
+8202;Sant Celoni;41
+8204;Sant Climent de Llobregat;11
+8205;Sant Cugat del VallŠs;40
+8206;Sant Cugat Sesgarrigues;3
+8207;Sant Esteve de Palautordera;41
+8208;Sant Esteve Sesrovires;11
+8209;Sant Fost de Campsentelles;41
+8210;Sant Feliu de Codines;41
+8211;Sant Feliu de Llobregat;11
+8212;Sant Feliu Sasserra;7
+8213;Sant Fruit¢s de Bages;7
+8214;Vilassar de Dalt;21
+8217;Sant Joan Desp¡;11
+8218;Sant Joan de Vilatorrada;7
+8219;Vilassar de Mar;21
+8220;Sant Juli… de Vilatorta;24
+8221;Sant Just Desvern;11
+8222;Sant Lloren‡ d'Hortons;3
+8223;Sant Lloren‡ Savall;40
+8226;Sant Mart¡ de Tous;6
+8227;Sant Mart¡ Sarroca;3
+8228;Sant Mart¡ Sesgueioles;6
+8231;Sant Pere de Ribes;17
+8232;Sant Pere de Riudebitlles;3
+8234;Sant Pere de Vilamajor;41
+8235;Sant Pol de Mar;21
+8237;Sant Quirze de Besora;24
+8240;Sant Sadurn¡ d'Anoia;3
+8245;Santa Coloma de Gramenet;13
+8246;Santa EugŠnia de Berga;24
+8247;Santa Eul…lia de Riuprimer;24
+8248;Santa Eul…lia de Ron‡ana;41
+8249;Santa Fe del PenedŠs;3
+8250;Santa Margarida de Montbui;6
+8251;Santa Margarida i els Monjos;3
+8252;Barber… del VallŠs;40
+8254;L'Esquirol;24
+8256;Santa Maria de Martorelles;41
+8258;Santa Maria d'Ol¢;42
+8259;Santa Maria de Palautordera;41
+8260;Santa PerpŠtua de Mogoda;40
+8261;Santa Susanna;21
+8262;Sant Vicen‡ de Castellet;7
+8263;Sant Vicen‡ dels Horts;11
+8265;Sant Vicen‡ de Torell¢;24
+8266;Cerdanyola del VallŠs;40
+8904;Badia del VallŠs;40
+8267;Sentmenat;40
+8268;Cercs;14
+8269;Seva;24
+8270;Sitges;17
+8273;Subirats;3
+8274;S£ria;7
+8278;Taradell;24
+8281;Tei…;21
+8282;Tiana;21
+8283;Tona;24
+8284;Tordera;21
+8285;Torell¢;24
+8286;La Torre de Claramunt;6
+8287;Torrelavit;3
+8288;Torrelles de Foix;3
+8290;Ullastrell;40
+8291;Vacarisses;40
+8292;Vallbona d'Anoia;6
+8293;Vallcebre;14
+8295;Vallirana;11
+8299;Vilada;14
+8300;Viladecavalls;40
+8301;Viladecans;11
+8302;Vilanova del Cam¡;6
+8303;Vilanova de Sau;24
+8304;Vilob¡ del PenedŠs;3
+8305;Vilafranca del PenedŠs;3
+8306;Vilalba Sasserra;41
+8307;Vilanova i la Geltr£;17
+8264;Sant Vicen‡ de Montalt;21
+8238;Sant Quirze del VallŠs;40
+8069;Collbat¢;11
+8160;Perafita;24
+8230;Premi… de Dalt;21
+8079;L'Estany;42
+8229;Sant Mateu de Bages;7
+8253;Santa Maria de Besora;24
+8902;Vilanova del VallŠs;41
+8901;Rupit i Pruit;24
+8244;Santa Coloma de Cervell¢;11
+8233;Sant Pere de Torell¢;24
+8064;Castellter‡ol;42
+8197;Sant Andreu de Llavaneres;21
+8203;Sant Cebri… de Vallalta;21
+8167;Poliny…;40
+8107;Lli‡… d'Amunt;41
+8168;Pontons;3
+8294;Vallgorguina;41
+8236;Sant Quint¡ de Mediona;3
+8215;Sant Hip•lit de Voltreg…;24
+8296;Vallromanes;41
+8027;Les Cabanyes;3
+8162;Els Hostalets de Pierola;6
+8139;Mura;7
+8059;Castellfollit del Boix;7
+8075;Dosrius;21
+8182;El Pont de Vilomara i Rocafort;7
+8062;Castellnou de Bages;7
+8129;Muntanyola;24
+8082;Fogars de la Selva;34
+8224;Sant Mart¡ de Centelles;24
+8239;Sant Quirze Safaja;42
+8070;Collsuspina;42
+8179;Rellinars;40
+8083;Folgueroles;24
+8148;Olivella;17
+8289;Torrelles de Llobregat;11
+8018;Balsareny;7
+8017;Baleny…;24
+8012;Aviny¢;7
+8116;Les Masies de Roda;24
+8143;ãdena;6
+8272;Sora;24
+17001;Agullana;2
+17002;Aiguaviva;20
+17004;Albons;10
+17005;El Far d'Empord…;2
+17006;Alp;15
+17007;Amer;34
+17903;Sant Juli… del Llor i Bonmat¡;34
+17008;AnglŠs;34
+17009;Arb£cies;34
+17011;L'Armentera;2
+17012;Avinyonet de Puigvent¢s;2
+17013;Begur;10
+17015;Banyoles;28
+17016;B…scara;2
+17018;Bellcaire d'Empord…;10
+17020;Bescan¢;20
+17022;La Bisbal d'Empord…;10
+17023;Blanes;34
+17025;Bordils;20
+17026;Borrass…;2
+17029;Boadella i les Escaules;2
+17033;Caldes de Malavella;34
+17034;Calonge i Sant Antoni;10
+17036;Campdev…nol;31
+17039;Camprodon;31
+17042;Capmany;2
+17044;Cass… de la Selva;20
+17046;Castellfollit de la Roca;19
+17047;Castell¢ d'Emp£ries;2
+17048;Castell-Platja d'Aro;10
+17049;Celr…;20
+17050;Cervi… de Ter;20
+17051;Cistella;2
+17054;Colera;2
+17056;Cornell… del Terri;28
+17057;Cor‡…;10
+17901;Cru‹lles, Monells i Sant Sadurn¡ de l'He;10
+17060;Darnius;2
+17062;L'Escala;2
+17064;Espolla;2
+17065;Esponell…;28
+17066;Figueres;2
+17067;Fla‡…;20
+17073;Fornells de la Selva;20
+17074;Forti…;2
+17075;Garrig…s;2
+17077;Garriguella;2
+17078;Ger;15
+17079;Girona;20
+17083;Hostalric;34
+17086;La Jonquera;2
+17088;Llad¢;2
+17089;Llagostera;20
+17091;Llanars;31
+17092;Llan‡…;2
+17093;Llers;2
+17094;Ll¡via;15
+17095;Lloret de Mar;34
+17102;Ma‡anet de Cabrenys;2
+17103;Ma‡anet de la Selva;34
+17169;Sant Juli… de Ramis;20
+17105;Mieres;19
+17109;Montagut i Oix;19
+17110;Mont-ras;10
+17111;Navata;2
+17114;Olot;19
+17115;Ordis;2
+17116;Osor;34
+17117;Palafrugell;10
+17118;Palam¢s;10
+17120;Palau-saverdera;2
+17124;Pals;10
+17128;Pau;2
+17130;La Pera;10
+17132;Peralada;2
+17133;Les Planes d'Hostoles;19
+17134;Planoles;31
+17135;Pont de Molins;2
+17137;Porqueres;28
+17138;Portbou;2
+17140;El Port de la Selva;2
+17141;Puigcerd…;15
+17142;Quart;20
+17146;Riells i Viabrea;34
+17147;Ripoll;31
+17148;Riudarenes;34
+17149;Riudaura;19
+17150;Riudellots de la Selva;34
+17152;Roses;2
+17155;Salt;20
+17158;Sant Climent Sescebes;2
+17160;Sant Feliu de Gu¡xols;10
+17161;Sant Feliu de Pallerols;19
+17163;Sant Gregori;20
+17164;Sant Hilari Sacalm;34
+17165;Sant Jaume de Llierca;19
+17166;Sant Jordi Desvalls;20
+17170;Vallfogona de RipollŠs;31
+17175;Sant Miquel de Fluvi…;2
+17177;Sant Pau de Seg£ries;31
+17178;Sant Pere Pescador;2
+17180;Santa Coloma de Farners;34
+17181;Santa Cristina d'Aro;10
+17184;Santa Pau;19
+17185;Sant Joan les Fonts;19
+17186;Sarri… de Ter;20
+17187;Saus, Camallera i Llampaies;2
+17189;La Cellera de Ter;34
+17190;Seriny…;28
+17193;Sils;34
+17199;Torroella de Montgr¡;10
+17200;Tortell…;19
+17202;Tossa de Mar;34
+17204;Ull…;10
+17205;Ullastret;10
+17207;La Vall d'en Bas;19
+17210;Ventall¢;2
+17212;Vidr…;24
+17213;Vidreres;34
+17214;Vilabertran;2
+17215;Vilablareix;20
+17217;Viladamat;2
+17218;Vilademuls;28
+17220;Viladrau;24
+17221;Vilafant;2
+17223;Vilaju‹ga;2
+17224;Vilallonga de Ter;31
+17225;Vilamacolum;2
+17226;Vilamalla;2
+17228;Vilanant;2
+17233;Vilob¡ d'Onyar;34
+17234;Biure;2
+17071;Fontcoberta;28
+17024;Bolvir;15
+17112;Ogassa;31
+17010;Argelaguer;19
+17139;Les Preses;19
+17032;Cadaqu‚s;2
+17027;Breda;34
+17003;Albany…;2
+17211;Verges;10
+17208;La Vall de Bianya;19
+17209;Vall-llobrega;10
+17030;Cabanes;2
+17159;Sant Feliu de Buixalleu;34
+17902;Forallac;10
+17167;Sant Joan de les Abadesses;31
+17126;Parlav…;10
+17019;Besal£;19
+17145;Ribes de Freser;31
+17151;Riumors;2
+17038;Campllong;20
+17035;Cam¢s;28
+17173;Sant Mart¡ Vell;20
+17119;Palau de Santa Eul…lia;2
+25002;·ger;23
+25003;Agramunt;38
+25004;Els Alam£s;33
+25005;Al…s i Cerc;4
+25006;L'Albag‚s;18
+25007;Albat…rrec;33
+25008;Albesa;23
+25009;L'Albi;18
+25010;Alcan¢;33
+25011;Alcarr…s;33
+25012;Alcoletge;33
+25013;Alfarr…s;33
+25014;Alf‚s;33
+25015;Algerri;23
+25017;Alins;26
+25019;Almacelles;33
+25023;Alpicat;33
+25912;Gimenells i el Pla de la Font;33
+25025;Naut Aran;39
+25027;Anglesola;38
+25029;Arbeca;18
+25033;Artesa de Lleida;33
+25034;Artesa de Segre;23
+25035;La Sentiu de Si¢;23
+25037;Les Avellanes i Santa Linya;23
+25038;Aitona;33
+25040;Balaguer;23
+25240;Vallfogona de Balaguer;23
+25041;Barbens;27
+25046;Belianes;38
+25047;Bellcaire d'Urgell;23
+25048;Bell-lloc d'Urgell;27
+25049;Bellmunt d'Urgell;23
+25050;Bellpuig;38
+25051;Bellver de Cerdanya;15
+25052;Bellv¡s;27
+25053;Benavent de Segri…;33
+25056;Bovera;18
+25057;Es B•rdes;39
+25058;Les Borges Blanques;18
+25059;Boss•st;39
+25062;Camarasa;23
+25203;La Seu d'Urgell;4
+25067;Castelldans;18
+25068;Castellnou de Seana;27
+25069;Castell¢ de Farfanya;23
+25070;Castellser…;38
+25072;Cervera;32
+25073;Cervi… de les Garrigues;18
+25074;Ciutadilla;38
+25077;Coll de Narg¢;4
+25078;Corbins;33
+25079;Cubells;23
+25081;L'Espluga Calba;18
+25086;Esterri d'·neu;26
+25093;Fondarella;27
+25096;La Fuliola;38
+25099;Golm‚s;27
+25100;G¢sol;14
+25101;La Granadella;18
+25102;La Granja d'Escarp;33
+25109;Guimer…;38
+25110;Guissona;32
+25112;Ivars de Noguera;23
+25113;Ivars d'Urgell;27
+25115;Isona i Conca Dell…;25
+25118;Juncosa;18
+25119;Juneda;18
+25120;Lleida;33
+25121;Les;39
+25122;Linyola;27
+25124;Lladurs;35
+25125;Llardecans;33
+25126;Llavors¡;26
+25127;Lles de Cerdanya;15
+25129;Llobera;35
+25131;Massalcoreig;33
+25133;Maials;33
+25134;Men…rguens;23
+25135;Miralcamp;27
+25137;Mollerussa;27
+25138;Montgai;23
+25139;Montell… i Martinet;15
+25140;Montferrer i Castellb•;4
+25142;Montoliu de Lleida;33
+25146;NavŠs;35
+25155;Organy…;4
+25156;Os de Balaguer;23
+25158;El Palau d'Anglesola;27
+25911;Els Plans de Si¢;32
+25163;La Coma i la Pedra;35
+25164;Penelles;23
+25165;Peramola;4
+25166;Pinell de SolsonŠs;35
+25168;El Poal;27
+25170;Bellaguarda;18
+25171;La Pobla de Segur;25
+25172;Ponts;23
+25173;El Pont de Suert;5
+25174;La Portella;33
+25176;Preixana;38
+25177;Preixens;23
+25179;Prullans;15
+25181;Puigverd d'Agramunt;38
+25182;Puigverd de Lleida;33
+25183;Rialp;26
+25901;Vall de Card¢s;26
+25185;Ribera d'Urgellet;4
+25186;Riner;35
+25189;Rossell¢;33
+25191;Sanaja;32
+25192;Sant Guim de Freixenet;32
+25194;Sant Ramon;32
+25905;Ribera d'Ondara;32
+25902;Sant Mart¡ de Riucorb;38
+25200;Sarroca de Lleida;33
+25204;Ser•s;33
+25205;Sidamon;27
+25206;El Soler…s;18
+25207;Solsona;35
+25151;Olius;35
+25210;Soses;33
+25211;Sudanell;33
+25212;Sunyer;33
+25217;T…rrega;38
+25220;T‚rmens;23
+25221;T¡rvia;26
+25223;Tor…;35
+25225;Tornabous;38
+25226;Torrebesses;33
+25228;Torrefarrera;33
+25230;Torregrossa;27
+25232;Torres de Segre;33
+25233;Torre-serona;33
+25234;Tremp;25
+25215;Talarn;25
+25910;Josa i Tuix‚n;4
+25242;Verd£;38
+25243;Vielha e Mijaran;39
+25244;Vilagrassa;38
+25245;Vilaller;5
+25248;Vilanova de Bellpuig;27
+25250;Vilanova de Mei…;23
+25251;Vilanova de Segri…;33
+25252;Vila-sana;27
+25254;Vilanova de la Barca;33
+25255;Vinaixa;18
+25016;Alguaire;33
+25209;Sort;26
+25130;Mald…;38
+25180;Puiggr•s;18
+25175;Prats i Sansor;15
+25167;Pin¢s;35
+25021;Almenar;33
+25227;La Torre de Cabdella;25
+25043;La Vall de Bo¡;5
+25231;Torrelameu;23
+25149;Oliana;4
+25193;Sant Lloren‡ de Morunys;35
+25190;Tor…;32
+43001;Sal…s de Pallars;25
+43004;Aiguam£rcia;1
+43005;Alcanar;22
+43007;Alcover;1
+43009;L'Aleixar;8
+43010;Alforja;8
+43012;Ali¢;1
+43013;Altafulla;36
+43014;L'Ametlla de Mar;9
+43016;Amposta;22
+43018;L'Arbo‡;12
+43019;Arnes;37
+43021;Asc¢;30
+43023;Barber… de la Conca;16
+43024;Bellmunt del Priorat;29
+43025;Bellvei;12
+43026;Benifallet;9
+43028;Benissanet;30
+43029;La Bisbal del PenedŠs;12
+43030;Blancafort;16
+43031;Bonastre;12
+43032;Les Borges del Camp;8
+43033;Bot;37
+43034;Botarell;8
+43035;Br…fim;1
+43036;Cabac‚s;29
+43037;Cabra del Camp;1
+43038;Calafell;12
+43040;Cambrils;8
+43041;Cap‡anes;29
+43044;Caseres;37
+43047;La S‚nia;22
+43048;Constant¡;36
+43051;Corbera d'Ebre;37
+43052;Cunit;12
+43054;Xerta;9
+43055;L'Espluga de Francol¡;16
+43056;Falset;29
+43059;La Fatarella;37
+43060;Figuerola del Camp;1
+43064;Flix;30
+43067;Gandesa;37
+43069;Ginestar;30
+43070;Gratallops;29
+43071;Els Guiamets;29
+43074;Horta de Sant Joan;37
+43076;Lloren‡ del PenedŠs;12
+43077;Mar‡…;29
+43078;Mas de Barberans;22
+43080;Masdenverge;22
+43082;La Mas¢;1
+43086;El Masroig;29
+43088;Montblanc;16
+43090;Montbri¢ del Camp;8
+43092;El Montmell;12
+43093;Mont-roig del Camp;8
+43095;M¢ra d'Ebre;30
+43098;El Morell;36
+43100;Nulles;1
+43102;Els Pallaresos;36
+43106;Pals;9
+43107;El Pinell de Brai;37
+43108;Pira;16
+43110;El Pla de Santa Maria;1
+43112;La Pobla de Massaluca;37
+43117;Poboleda;29
+43119;Prat de Comte;37
+43123;Puigpelat;1
+43125;Reus;8
+43129;Riba-roja d'Ebre;30
+43131;Riudoms;8
+43133;Roda de Ber…;36
+43136;Roquetes;9
+43138;La R…pita;22
+43139;Santa B…rbara;22
+43142;Santa Coloma de Queralt;16
+43144;Sarral;16
+43145;La Secuita;36
+43147;La Selva del Camp;8
+43148;Solivella;16
+43907;Tarragona;36
+43149;La Canonja;36
+43150;Tivenys;9
+43153;Tivissa;30
+43155;Torredembarra;36
+43903;Tortosa;9
+43901;Camarles;9
+43904;Deltebre;9
+43902;L'Aldea;9
+43156;Sant Jaume d'Enveja;22
+43157;Ulldecona;22
+43160;Ulldemolins;29
+43161;Vallmoll;1
+43162;Valls;1
+43163;Vandell•s i l'Hospitalet de l'Infant;8
+43166;El Vendrell;12
+43167;Vilallonga del Camp;36
+43170;Vilanova d'Escornalbou;8
+43905;Vila-rodona;1
+43171;Salou;36
+43172;Vila-seca;36
+43176;Vilaverd;16
+43177;Vimbod¡ i Poblet;16
+43178;Vinebre;30
+43020;Vinyols i els Arcs;8
+43111;Banyeres del PenedŠs;12
+43126;La Pobla de MontornŠs;36
+43906;La Riera de Gai…;36
+43002;L'Ampolla;9
+43006;Albinyana;12
+43008;Aldover;9
+43011;Alfara de Carles;9
+43027;Almoster;8
+43042;La Bisbal de Falset;29
+43050;Castellvell del Camp;8
+43053;Creixell;36
+43062;Duesaiges;8
+43063;Freginals;22
+43065;La Galera;22
+43068;Garcia;30
+43079;Godall;22
+43084;Maslloren‡;12
+43085;Miravet;30
+43097;El Molar;29
+43099;La Nou de Gai…;36
+43109;La Palma d'Ebre;30
+43113;La Pobla de Mafumet;36
+43114;El Pont d'Armentera;1
+43116;Porrera;29
+43118;Prades;8
+43121;Pratdip;8
+43124;Rasquera;30
+43127;La Riba;1
+43128;Riudecanyes;8
+43132;Riudecols;8
+43137;Rodony…;1
+43140;Sant Jaume dels Domenys;12
+43152;Santa Oliva;12
+43165;La Torre de l'Espanyol;30
+43175;Vilabella;1
+43135;Vilalba dels Arcs;37
+43130;Salom¢;36
+43103;Rocafort de Queralt;16
+43094;Perafort;36
+43081;M¢ra la Nova;30
+43043;Maspujols;8
+43169;El Catllar;36
+43174;Vilaplana;8
+43022;La Vilella Baixa;29
+43104;Batea;37
+43049;El Perell¢;9
+43083;Cornudella de Montsant;29
+43091;El Mil…;1
+;Mont-ral;1
