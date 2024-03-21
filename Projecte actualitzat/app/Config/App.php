@@ -82,7 +82,7 @@ class App extends BaseConfig
      *
      * If false, no automatic detection will be performed.
      */
-    public bool $negotiateLocale = true;
+    public bool $negotiateLocale = false;
 
     /**
      * --------------------------------------------------------------------------
@@ -97,7 +97,7 @@ class App extends BaseConfig
      *
      * @var string[]
      */
-    public array $supportedLocales = ['ca'];
+    public array $supportedLocales = ['ca', 'es'];
 
     /**
      * --------------------------------------------------------------------------

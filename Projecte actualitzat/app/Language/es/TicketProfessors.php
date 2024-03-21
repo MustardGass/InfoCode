@@ -18,8 +18,5 @@
         'dia_sortida_taula' => 'F. SALIDA',
         'estat_taula' => 'ESTADO',
         'cerca' => 'Buscar'
-
-    
-    
     ]
 ?>
