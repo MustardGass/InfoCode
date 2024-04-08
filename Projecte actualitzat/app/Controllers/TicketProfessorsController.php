@@ -3,25 +3,39 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\TiquetModel;
+use SIENSIS\KpaCrud\Libraries\KpaCrud;
 
 class TicketProfessorsController extends BaseController
 {
-    public function index()
+    public function vista_ticket_profes()
     {
+        // Cargar modelo TiquetModel
+        $tiquetModel = new TiquetModel();
 
-        helper('language');
+        // Configurar KpaCrud
+        $config = [
+            'editable' => true,
+            'removable' => true,
+            // Aquí puedes agregar más configuraciones según tus necesidades
+        ];
 
-        $data['title'] = "pagina";
-        $data['saludo'] = "Ticket professors";
-        return view("bienvenida", $data);
-    }
-    
-    public function vista_ticket_profes() {
+        // Crear instancia de KpaCrud
+        $crud = new KpaCrud();
+        $crud->setConfig($config);
 
-        helper('language');
+        $data['tiquets'] = $tiquetModel->obtenirTiquets();
 
-        $data['titol_reparacions']= "Reparacions Assigandes";
+        $crud->setTable('tiquet'); // Establecer el nombre de la tabla
+        $crud->setPrimaryKey('id_tiquet'); // Establecer la clave primaria
+
+        // Configurar las columnas que deseas mostrar
+        $crud->setColumns(['id_tiquet', 'codi_equip', 'descripcio_avaria', 'data_alta', 'data_ultima_modificacio', 'idFK_dispositiu', 'idFK_codiCentre', 'idFK_idProfessor']);
+
+        // Generar la tabla con KpaCrud
+        $data['table'] = $crud->render();
+
+        // Pasar los datos a la vista
         return view('pages/TicketProfessors', $data);
     }
 }

@@ -48,14 +48,14 @@ class TipusIntervencioModel extends Model
     }
 
     public function obtindreID() {
-        $builder = $this->db->table('tipus_intervencio');
-        $builder->select('id_tipus_intervencio');
-        $query = $builder->get();
-        $result = $query->getResult();
-
-        //obtener id_tipus_intervencio random
-        $id_random = array_rand($result);
-
-        return $result[$id_random]->id_tipus_intervencio;
+        $query = $this->db->query('SELECT id_tipus_intervencio FROM tipus_intervencio ORDER BY RAND() LIMIT 1');
+        $row = $query->getRow();
+    
+        if ($row) {
+            return $row->id_tipus_intervencio;
+        } else {
+            return null; // O manejar de otra forma cuando no se encuentra ningún registro
+        }
     }
+    
 }
