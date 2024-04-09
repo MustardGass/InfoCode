@@ -4,6 +4,11 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\ProfessorModel;
+use App\Models\CentreModel;
+use App\Models\LoginModel;
+use App\Models\RolsModel;
+use App\Models\UsersRolsModel;
+
 use CodeIgniter\HTTP\ResponseInterface;
 use Faker\Factory;
 
@@ -16,7 +21,15 @@ class UsuarisController extends BaseController
     }
     public function registre_professor() {
     
+        //verificar si el usuari es admin
+        if(session()->get('rol') !== 'admin') {
+            return redirect()->to(base_url('login'));
+        }
+
         $fake = Factory::create("es_ES");
+
+        $modelProfessor = new ProfessorModel();
+        $modelCentre = new CentreModel();
 
         helper("form");
 
