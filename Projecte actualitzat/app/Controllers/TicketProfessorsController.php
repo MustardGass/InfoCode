@@ -10,32 +10,32 @@ class TicketProfessorsController extends BaseController
 {
     public function vista_ticket_profes()
     {
-        // Cargar modelo TiquetModel
+        // Model tiquet
         $tiquetModel = new TiquetModel();
 
         // Configurar KpaCrud
         $config = [
             'editable' => true,
             'removable' => true,
-            // Aquí puedes agregar más configuraciones según tus necesidades
+            // hi ha més configuració ademés d'aquesta
         ];
 
-        // Crear instancia de KpaCrud
+        // Crear instancia KpaCrud
         $crud = new KpaCrud();
         $crud->setConfig($config);
 
         $data['tiquets'] = $tiquetModel->obtenirTiquets();
 
-        $crud->setTable('tiquet'); // Establecer el nombre de la tabla
-        $crud->setPrimaryKey('id_tiquet'); // Establecer la clave primaria
+        $crud->setTable('tiquet'); // Nom de la taula
+        $crud->setPrimaryKey('id_tiquet'); // Clau primària
 
-        // Configurar las columnas que deseas mostrar
-        $crud->setColumns(['id_tiquet', 'codi_equip', 'descripcio_avaria', 'data_alta', 'data_ultima_modificacio', 'idFK_dispositiu', 'idFK_codiCentre', 'idFK_idProfessor']);
+        // Columnes que volem veure
+        $crud->setColumns(['id_tiquet', 'codi_equip', 'data_alta', 'data_ultima_modificacio']);
 
-        // Generar la tabla con KpaCrud
+        // Generar la taula KpaCrud
         $data['table'] = $crud->render();
 
-        // Pasar los datos a la vista
+        // Passar dades a la vista
         return view('pages/TicketProfessors', $data);
     }
 }
