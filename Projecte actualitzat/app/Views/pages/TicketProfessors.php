@@ -135,7 +135,7 @@
             <form class="form-inline">
               <input class="form-control mr-sm-2 border border-primary rounded-pill" type="search" placeholder="<?= lang('TicketProfessors.cerca');?>" aria-label="Search">
               <img style="height:30px;" src=<?= base_url('img/filtre.png');?>>
-              <a class="btn ms-2" style="background-color:#86eba9;"><img style="height:20px; margin-bottom: 3px;" src=<?= base_url('img/afegir.png');?>>&nbsp <?= lang('TicketProfessors.afegir_button');?></a>
+              <!-- <a class="btn ms-2" style="background-color:#86eba9;"><img style="height:20px; margin-bottom: 3px;" src=<?= base_url('img/afegir.png');?>>&nbsp <?= lang('TicketProfessors.afegir_button');?></a> -->
             </form>
 
       </nav>
@@ -143,7 +143,7 @@
     
 
 
-  <table  class="table" id="table_detail" cellpadding=10> 
+  <!-- <table  class="table" id="table_detail" cellpadding=10> 
 
 
     <tr> 
@@ -157,17 +157,16 @@
         <th scope="col" style='background-color: #4d82bc;'></th>
     </tr> 
 
-    <!-- Aqui van los tr con el foreach -->
 
-    
+  </table> -->
 
-  </table>
+
+  <?= $table ?>
+
 
 
 
 </div>
-
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

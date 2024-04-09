@@ -64,4 +64,9 @@ class TiquetModel extends Model
 
         return $result[$id_random]->id_tiquet;
     }
+
+    public function obtenirTiquets()
+    {
+        return $this->findAll();
+    }
 }

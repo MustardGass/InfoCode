@@ -24,12 +24,37 @@ class Database extends Config
     /**
      * The default database connection.
      */
+
+
+
+
+    // public array $default = [
+    //     'DSN'          => '',
+    //     'hostname'     => 'localhost:3306',
+    //     'username'     => 'HugFrancino',
+    //     'password'     => '5u9Avs5&4',
+    //     'database'     => 'kpatek5_databaseG5',
+    //     'DBDriver'     => 'MySQLi',
+    //     'DBPrefix'     => '',
+    //     'pConnect'     => false,
+    //     'DBDebug'      => true,
+    //     'charset'      => 'utf8',
+    //     'DBCollat'     => 'utf8_general_ci',
+    //     'swapPre'      => '',
+    //     'encrypt'      => false,
+    //     'compress'     => false,
+    //     'strictOn'     => false,
+    //     'failover'     => [],
+    //     'port'         => 3306,
+    //     'numberNative' => false,
+    // ];
+
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost:3306',
-        'username'     => 'HugFrancino',
-        'password'     => '5u9Avs5&4',
-        'database'     => 'kpatek5_databaseG5',
+        'hostname'     => 'localhost',
+        'username'     => 'root',
+        'password'     => '',
+        'database'     => 'bd_proyecte',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -44,6 +69,8 @@ class Database extends Config
         'port'         => 3306,
         'numberNative' => false,
     ];
+
+
 
     /**
      * This database connection is used when
