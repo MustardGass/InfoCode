@@ -65,7 +65,11 @@ class Taules2 extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100'
             ],
-            'tipus_centre' => [
+            'centre_emitent' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ],
+            'centre_reparador' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100'
             ],
