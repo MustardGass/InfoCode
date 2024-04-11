@@ -8,7 +8,6 @@
     "packages": [
         {
             "name": "codeigniter4/framework",
-<<<<<<< HEAD
             "version": "v4.5.0",
             "source": {
                 "type": "git",
