@@ -12,7 +12,7 @@ class RolsModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_rol', 'rol'];
+    protected $allowedFields    = ['id_rol', 'tipus_rol'];
 
     protected bool $allowEmptyInserts = false;
 
