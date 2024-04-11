@@ -90,7 +90,8 @@ class Taules2 extends Migration
         ]);
         $this->forge->addKey("id_tiquet", true);
         $this->forge->addForeignKey("idFK_dispositiu", "tipus_dispositiu", "id_tipus");
-        $this->forge->addForeignKey("idFK_codiCentre", "centre", "codi_centre");
+        $this->forge->addForeignKey("idFK_codiCentre_emitent", "centre", "codi_centre");
+        $this->forge->addForeignKey("idFK_codiCentre_reparador", "centre", "codi_centre");
         $this->forge->addForeignKey("idFK_idProfessor", "professor", "id_xtec");
         $this->forge->createTable("tiquet");
 
