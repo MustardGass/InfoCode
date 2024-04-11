@@ -65,6 +65,10 @@ class Taules2 extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '100'
             ],
+            'tipus_centre' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ],
             'idFK_dispositiu' => [
                 'type' => 'INT',
                 'constraint' => 4,
