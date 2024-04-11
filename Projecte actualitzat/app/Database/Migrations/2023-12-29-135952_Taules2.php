@@ -71,7 +71,7 @@ class Taules2 extends Migration
             ],
             'centre_reparador' => [
                 'type' => 'VARCHAR',
-                'constraint' => '100'
+                'constraint' => '100' 
             ],
             'idFK_dispositiu' => [
                 'type' => 'INT',
