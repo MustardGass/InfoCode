@@ -61,6 +61,10 @@ class Taules2 extends Migration
             'data_ultima_modificacio' => [
                 'type' => 'DATETIME'
             ],
+            'estat_tiquet' => [
+                'type' => 'VARCHAR',
+                'constraint' => '100'
+            ],
             'idFK_dispositiu' => [
                 'type' => 'INT',
                 'constraint' => 4,
