@@ -78,7 +78,12 @@ class Taules2 extends Migration
                 'constraint' => 4,
                 'unsigned'  => true,
             ],
-            'idFK_codiCentre' => [
+            'idFK_codiCentre_emitent' => [
+                'type' => 'INT',
+                'constraint' => 16,
+                'unsigned'  => true
+            ],
+            'idFK_codiCentre_reparador' => [
                 'type' => 'INT',
                 'constraint' => 16,
                 'unsigned'  => true
