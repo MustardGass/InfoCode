@@ -34,9 +34,9 @@ class TiquetSeeder extends Seeder
 
         //obtener codi_centre randoms
         $total_lineas = count($codis);
-        $codis_random = array_rand($codis, 15);
+        $codis_random = array_rand($codis, 5);
         $arr_estat =["Reparat", "Pendent", "Cancel·lat"];
-        $num_registros = 5;
+        // $num_registros = 5;
         shuffle($arr_estat);
 
         foreach($codis_random as $idx){
@@ -46,9 +46,11 @@ class TiquetSeeder extends Seeder
             $descripcio_avaria = $fake->text();
             $data_alta = $fake->dateTimeBetween('2020-01-01', '+1 year')->format('Y_m_d H:i:s');
             $data_ultim_modif = $fake->dateTimeBetween($data_alta, '+1 month')->format('Y_m_d');
-            $estat_tiquet = array_rand($arr_estat);
-            // $centre_emitent =
-            // $centre_reparador =
+            $estat_tiquet = $arr_estat[0];
+            $centre_emitent = $centreModel->obtindreNomCentreEmitent();
+                do {
+                    $centre_reparador = $centreModel->obtindreNomCentreRepador();
+                } while($centre_emitent === $centre_reparador);
 
 
 
@@ -61,7 +63,7 @@ class TiquetSeeder extends Seeder
             //obtener idFK_idProfessor
             $idFK_professor = $professorModel->obtindreID();
 
-            $model->addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $estat_tiquet, $idFK_dispositiu, $data, $idFK_professor); 
+            $model->addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $estat_tiquet, $centre_emitent, $centre_reparador, $idFK_dispositiu, $idFK_codiCenctre_emitent, $idFK_codiCentre_reparador, $idFK_professor); 
 
         }
     }

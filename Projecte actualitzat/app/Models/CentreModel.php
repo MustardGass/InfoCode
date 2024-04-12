@@ -63,4 +63,23 @@ class CentreModel extends Model
 
         return $result[$codiCentre_random]-> codi_centre;
     }
+
+    public function obtindreNomCentreEmitent() {
+        $builder = $this->db->table('centre');
+        $builder->select('nom');
+        $query = $builder->get();
+        $result = $query->getResult();
+
+        $nom_random = array_rand($result);
+         return $result[$nom_random]->nom;
+    }
+    public function obtindreNomCentreRepador() {
+        $builder = $this->db->table('centre');
+        $builder->select('nom');
+        $query = $builder->get();
+        $result = $query->getResult();
+
+        $nom_random = array_rand($result);
+         return $result[$nom_random]->nom;
+    }
 }

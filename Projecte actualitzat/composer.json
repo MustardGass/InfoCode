@@ -15,7 +15,7 @@
         "siensis/kpacrud": "dev-master"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
+        "fakerphp/faker": "*",
         "mikey179/vfsstream": "^1.6",
         "phpunit/phpunit": "^9.1"
     },
