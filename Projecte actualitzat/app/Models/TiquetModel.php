@@ -12,7 +12,7 @@ class TiquetModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_tiquet', 'codi_equip', 'descripcio_avaria', 'data_alta', 'data_ultima_modificacio', 'idFK_dispositiu', 'idFK_codiCentre', 'idFK_idProfessor'];
+    protected $allowedFields    = ['id_tiquet', 'codi_equip', 'descripcio_avaria', 'data_alta', 'data_ultima_modificacio', 'estat_tiquet', 'centre_emitent', 'centre_reparador', 'idFK_dispositiu', 'idFK_codiCentre_emitent', 'idFK_codiCentre_reparador', 'idFK_idProfessor'];
 
     protected bool $allowEmptyInserts = false;
 

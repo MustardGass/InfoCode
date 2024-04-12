@@ -2,6 +2,7 @@
 
 namespace App\Database\Seeds;
 
+use App\Models\CentreModel;
 use App\Models\ProfessorModel;
 use App\Models\TipusDispositiuModel;
 use App\Models\TiquetModel;
@@ -21,6 +22,7 @@ class TiquetSeeder extends Seeder
         $model = new TiquetModel;
         $dispositiuModel = new TipusDispositiuModel;
         $professorModel = new ProfessorModel;
+        $centreModel = new CentreModel();
 
         while(($data = fgetcsv($tiquetFile, 2000, ";")) !== false) {
             if(!$firstLine) {
@@ -33,6 +35,9 @@ class TiquetSeeder extends Seeder
         //obtener codi_centre randoms
         $total_lineas = count($codis);
         $codis_random = array_rand($codis, 15);
+        $arr_estat =["Reparat", "Pendent", "Cancel·lat"];
+        $num_registros = 5;
+        shuffle($arr_estat);
 
         foreach($codis_random as $idx){
             $data = $codis[$idx];
@@ -41,13 +46,22 @@ class TiquetSeeder extends Seeder
             $descripcio_avaria = $fake->text();
             $data_alta = $fake->dateTimeBetween('2020-01-01', '+1 year')->format('Y_m_d H:i:s');
             $data_ultim_modif = $fake->dateTimeBetween($data_alta, '+1 month')->format('Y_m_d');
+            $estat_tiquet = array_rand($arr_estat);
+            // $centre_emitent =
+            // $centre_reparador =
+
+
+
+            //obtindre idFK_centre
+            $idFK_codiCenctre_emitent = $centreModel->obtindreID();
+            $idFK_codiCentre_reparador = $centreModel->obtindreID();
 
             //obtener idFK_dispositiu
             $idFK_dispositiu = $dispositiuModel->obtindreID();
             //obtener idFK_idProfessor
             $idFK_professor = $professorModel->obtindreID();
 
-            $model->addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $idFK_dispositiu, $data, $idFK_professor); 
+            $model->addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $estat_tiquet, $idFK_dispositiu, $data, $idFK_professor); 
 
         }
     }
