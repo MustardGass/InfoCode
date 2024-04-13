@@ -49,7 +49,7 @@ class TiquetModel extends Model
             'data_ultima_modificacio' => $data_ultim_modif,
             'estat_tiquet' => $estat_tiquet,
             'centre_emitent' => $centre_emitent,
-            'centre_repardor' => $centre_reparador,
+            'centre_reparador' => $centre_reparador,
             'idFK_dispositiu' => $idFK_dispositiu,
             'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
             'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
@@ -60,7 +60,7 @@ class TiquetModel extends Model
 
     public function obtindreID() {
         $builder = $this->db->table('tiquet');
-        $builder->select('id_tiquet');
+        $builder->select('tipus');
         $query = $builder->get();
         $result = $query->getResult();
 

@@ -12,14 +12,9 @@ class DispositiuSeeder extends Seeder
         $model = new TipusDispositiuModel;
 
         $tipus_dispositiu = ["Portátil", "SobreTaula", "Impressora", "Altres"];
-        $num_registros = 20;
 
-        shuffle($tipus_dispositiu); //Mezclar array
-
-        for ($i = 0; $i < $num_registros; $i++) {
-            $indice = array_rand($tipus_dispositiu);  // Obtener un índice aleatorio del array
-
-            $model->addDispositius($tipus_dispositiu[$indice]);
+        foreach($tipus_dispositiu as $dispositiu){
+            $model->addDispositius($dispositiu);
         }
     }
 }

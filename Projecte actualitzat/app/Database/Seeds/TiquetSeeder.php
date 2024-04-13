@@ -37,7 +37,7 @@ class TiquetSeeder extends Seeder
         $codis_random = array_rand($codis, 5);
         $arr_estat =["Reparat", "Pendent", "Cancel·lat"];
         // $num_registros = 5;
-        shuffle($arr_estat);
+        // shuffle($arr_estat);
 
         foreach($codis_random as $idx){
             $data = $codis[$idx];
@@ -46,7 +46,7 @@ class TiquetSeeder extends Seeder
             $descripcio_avaria = $fake->text();
             $data_alta = $fake->dateTimeBetween('2020-01-01', '+1 year')->format('Y_m_d H:i:s');
             $data_ultim_modif = $fake->dateTimeBetween($data_alta, '+1 month')->format('Y_m_d');
-            $estat_tiquet = $arr_estat[0];
+            $estat_tiquet = $arr_estat[array_rand($arr_estat)];
             $centre_emitent = $centreModel->obtindreNomCentreEmitent();
                 do {
                     $centre_reparador = $centreModel->obtindreNomCentreRepador();

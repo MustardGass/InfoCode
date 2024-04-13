@@ -12,7 +12,7 @@ class TipusDispositiuModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['tipus'];
+    protected $allowedFields    = ['id_tipus','tipus'];
 
     protected bool $allowEmptyInserts = false;
 
@@ -56,5 +56,9 @@ class TipusDispositiuModel extends Model
         $id_random = array_rand($result);
 
         return $result[$id_random]->id_tipus;
+    }
+
+    public function obtindreDipositiu() {
+        return $this->findAll();
     }
 }

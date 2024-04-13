@@ -10,6 +10,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"> </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="<?= base_url('css/styles.css') ?>">
+  
   <title>Assignats</title>
 
 
@@ -60,6 +62,9 @@
     .menuEsquerra {
       background-color: #344450;
     }
+
+    /* estils taula KpaCrud */
+   
   </style>
 
 
