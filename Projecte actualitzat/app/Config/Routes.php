@@ -21,6 +21,7 @@ $routes->post('/registre', 'UsuarisController::registre');
 $routes->get('/pagina/login', 'UsuarisController::login');
 $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 
+$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
 
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
 // $routes->post('/pagina/TicketSSTT', 'TicketSSTTController::guardarDades');
@@ -33,4 +34,4 @@ $routes->get('/noticia/(:num)', 'UsuarisController::mostrar_numero');
 $routes->get('/pagina/(:segment)', 'UsuarisController::mostrar_pagina/$1');
 
 
-$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
+

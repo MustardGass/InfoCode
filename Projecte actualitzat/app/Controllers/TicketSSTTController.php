@@ -74,14 +74,10 @@ class TicketSSTTController extends BaseController
        return view('pages/TicketSSTT', $data);
     }
 
-    public function guardarDades() {
-    
-    }
-
-
    
 
     public function showVistaAfegir() {
+        
         return view('pages/afegirTicket');
     }
 

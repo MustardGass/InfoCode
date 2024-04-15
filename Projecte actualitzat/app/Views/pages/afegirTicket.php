@@ -131,9 +131,7 @@
               <h1><?= lang('TicketProfessors.titol_reparacions');?></h1>
             </div>
 
-            <div>
-              <a href="<?= 'afegirTicket' ?>" class="btn btn-primary">+ Afegir</a>
-            </div>
+           
 
             
 
