@@ -237,7 +237,7 @@ if (isset($newID)) {
 
         <div class="d-grid p-3 mt-5" style="background-color: #005188">
             <div class="row">
-                <div class="col-sm" >
+                <div class="col-sm">
                     <button type="submit" class="btn btn-primary btn-block" ><?= lang('crud.btnSave'); ?></button>
                     <a href="<?= base_url($_route) ?>" class="btn btn-danger btn-block" ><?= lang('crud.btnCancel'); ?></a>
                 </div>

@@ -74,4 +74,19 @@ class TiquetModel extends Model
     {
         return $this->findAll();
     }
+
+    public function afegirTiquets($id_tiquet, $idFK_tipus_dispositiu, $descripcio_avaria, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $data_alta, $estat) {
+        $tiquet_model = new TiquetModel();
+        $data = [
+            'id_tiquet' => $id_tiquet,
+            'descripcio_avaria' => $descripcio_avaria,
+            'data_alta' => $data_alta,
+            'estat_tiquet' => $estat,
+            'idFk_dispositiu' => $idFK_tipus_dispositiu,
+            'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
+            'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador
+        ];
+
+        $this->insert($data);
+    }
 }

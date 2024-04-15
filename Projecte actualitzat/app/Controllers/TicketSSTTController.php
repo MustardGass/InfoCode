@@ -78,6 +78,27 @@ class TicketSSTTController extends BaseController
 
     public function showVistaAfegir() {
         
+        helper("form");
+
+        $modelTiquet = new TiquetModel();
+
+        $validationRules = [
+            'id_tiquet' => 'required'
+        ];
+
+        if($this->validate($validationRules)) {
+            $id_tiquet = $this->request->getPost('id_tiquet');
+            $idFK_tipus_dispositiu = $this->request->getPost('tipus_dispositiu');
+            $descripcio_avaria = $this->request->getPost('descripcio_avaria');
+            $idFK_codiCentreEmissor = $this->request->getPost('centre_emitent');
+            $idFK_codiCentreReparador = $this->request->getPost('centre_reparador');
+            $data_alta = $this->request->getPost('data_alta');
+            $estat = $this->request->getPost('estat_tiquet');
+
+            $modelTiquet->afegirTiquet($id_tiquet, $idFK_tipus_dispositiu, $descripcio_avaria, $idFK_codiCentreEmissor, $idFK_codiCentreReparador, $data_alta, $estat);
+
+        }
+
         return view('pages/afegirTicket');
     }
 
