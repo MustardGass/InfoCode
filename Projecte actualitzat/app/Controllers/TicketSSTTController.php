@@ -20,7 +20,7 @@ class TicketSSTTController extends BaseController
            'numerate' => false,
            'editable' => true,
            'removable' => true,
-           'add_button' => true,
+           'add_button' => false,
            // hi ha més configuració ademés d'aquesta
        ];
 
@@ -77,5 +77,13 @@ class TicketSSTTController extends BaseController
     public function guardarDades() {
     
     }
+
+
+   
+
+    public function showVistaAfegir() {
+        return view('pages/afegirTicket');
+    }
+
 
 }

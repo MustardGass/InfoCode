@@ -135,10 +135,7 @@
               <a href="<?= 'afegirTicket' ?>" class="btn btn-primary">+ Afegir</a>
             </div>
 
-            <div>
-
-              <?= $table ?>
-            </div>
+            
 
 
 

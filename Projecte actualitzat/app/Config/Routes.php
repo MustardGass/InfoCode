@@ -31,3 +31,6 @@ $routes->get('/pagina/alumnes', 'UsuarisController:: alumnes');
 
 $routes->get('/noticia/(:num)', 'UsuarisController::mostrar_numero');
 $routes->get('/pagina/(:segment)', 'UsuarisController::mostrar_pagina/$1');
+
+
+$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
