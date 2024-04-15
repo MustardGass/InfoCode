@@ -86,38 +86,24 @@ if (isset($newID)) {
         <input type="hidden" name="op" value="add">
         <?= csrf_field(); ?>
 
-        <div class="bg-secondary p-2 text-white">
+        <div class=" p-2 text-white" style="background-color: #005188">
             <h1><?= lang('crud.titles.create'); ?></h1>
         </div>
         <div class="d-grid" style="margin-top:20px">
             <?php
             foreach ($tableFields as $dbfield) {
 
-                if ($config['useTimestamps'] == true) {
-
-                    // show all fields
-                    // if !useSoftDeletes && field==delete
-                    if ($dbfield->Field == $config['deletedField']) {
-                        if ($config['useSoftDeletes'] == false)
-                            ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
-                    } else {
-                        //show if not created || updated
-                        if ($dbfield->Field != $config['createdField'] && $dbfield->Field != $config['updatedField']) {
-                            ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
-                        } else {
-                            if ($config['showTimestamps'] == true) {   //useTimestamps && showTimestamps
-                                ShowField($dbfield, null, $_data_columns, $_relations, $oldForm, false);
-                            }
-                        }
-                    }
-                } else {
-                    // show all fields 
-                    if ($dbfield->Field == $config['deletedField']) {
-                        if ($config['useSoftDeletes'] == false)
-                            ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
-                    } else
-                        ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
-                }
+                if($dbfield->Field === "id_tiquet" ||
+                   $dbfield->Field === "idFK_dispositiu" ||
+                   $dbfield->Field === "descripcio_avaria" ||
+                   $dbfield->Field === "centre_emitent" ||
+                   $dbfield->Field === "centre_reparador" ||
+                   $dbfield->Field === "data_alta" ||
+                   $dbfield->Field === "estat")
+                   {
+                    // $dbfield->Field = ($dbfield->Field === "idFK_dispositiu") ? "Tipus de dispositiu" : $dbfield->Field;
+                    ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
+                   }
             } //end foreach field
 
             /** @ignore */
@@ -247,14 +233,16 @@ if (isset($newID)) {
 
         </div>
 
-        <div class="d-grid p-3 bg-secondary mt-5">
+            
+
+        <div class="d-grid p-3 mt-5" style="background-color: #005188">
             <div class="row">
-                <div class="col-sm">
-                    <button type="submit" class="btn btn-primary btn-block"><?= lang('crud.btnSave'); ?></button>
-                    <a href="<?= base_url($_route) ?>" class="btn btn-light btn-block"><?= lang('crud.btnCancel'); ?></a>
+                <div class="col-sm" >
+                    <button type="submit" class="btn btn-primary btn-block" ><?= lang('crud.btnSave'); ?></button>
+                    <a href="<?= base_url($_route) ?>" class="btn btn-danger btn-block" ><?= lang('crud.btnCancel'); ?></a>
                 </div>
                 <div class="col-sm-2">
-                    <a href="<?= base_url($_route) ?>" class="btn btn-light btn-block "><?= lang('crud.btnGoBack'); ?></a>
+                    <a href="<?= base_url($_route) ?>" class="btn btn-info btn-block "><?= lang('crud.btnGoBack'); ?></a>
                 </div>
             </div>
         </div>

@@ -47,6 +47,8 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
+        // 'SIENSIS\KpaCrud' => ROOTPATH . 'ThirdParty\SIENSIS\KpaCrud\src'
+
         'SIENSIS\KpaCrud' => ROOTPATH . 'ThirdParty'.DIRECTORY_SEPARATOR.'SIENSIS'.DIRECTORY_SEPARATOR.'KpaCrud'.DIRECTORY_SEPARATOR.'src'
     ];
 

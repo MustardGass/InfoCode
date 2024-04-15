@@ -18,7 +18,7 @@ class KpaCrud extends \SIENSIS\KpaCrud\Config\KpaCrud
      * @var string
      * @version 1.3
      */
-    public $configDefaultName = "default";
+    public $configDefaultName = "onlyView";
 
     /**
      * $default - A collection named default, used by KpaCrud if no config is supplied

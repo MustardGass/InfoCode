@@ -62,7 +62,7 @@ return [
         'callbackCancel'=>"<i class='fa-solid fa-triangle-exclamation'></i> Error callback ha cancel.lat l'operació",
     ],
     'titles' => [
-        'create' => 'Afegir item',
+        'create' => 'Nou Tiquet',
         'delete' => 'Eliminar item',
         'edit' => 'Actualitzar item',
         'view' => 'Fitxa item',

@@ -23,6 +23,8 @@ $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_tick
 
 
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
+// $routes->post('/pagina/TicketSSTT', 'TicketSSTTController::guardarDades');
+// $routes->post('/TicketSSTTController/guardarDades', 'TicketSSTTController::guardarDades');
 
 $routes->get('/pagina/TicketAlumnes', 'TicketAlumnesController::vista_layout');
 $routes->get('/pagina/alumnes', 'UsuarisController:: alumnes');

@@ -33,9 +33,11 @@ class TicketSSTTController extends BaseController
        $crud->setTable('tiquet'); // Nom de la taula
        $crud->setPrimaryKey('id_tiquet'); // Clau primària
        $crud->setRelation('idFK_dispositiu', 'tipus_dispositiu', 'id_tipus', 'tipus'); //relacio entre taula tiquet i tipus_dispositiu
-       
+       $crud->setRelation('idFK_codiCentre_emitent', 'centre', 'codi_centre', 'nom');
+    //    $crud->setRelation('idFK_codiCentre_reparador', 'centre', 'codi_centre', 'nom');
+
        // Columnes que volem veure
-       $crud->setColumns(['id_tiquet', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'centre_emitent', 'centre_reparador', 'codi_equip', 'data_alta', 'estat_tiquet']);
+       $crud->setColumns(['id_tiquet', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'centre__nom', 'centre_reparador', 'codi_equip', 'data_alta', 'estat_tiquet']);
        $crud->setColumnsInfo([
            'id_tiquet' => [
                'name' => 'Codi del tiquet'
@@ -46,7 +48,7 @@ class TicketSSTTController extends BaseController
            'descripcio_avaria' => [
                'name' => 'Descripció'
            ],
-           'centre_emitent' => [
+           'centre__nom' => [
                'name' => 'Centre emisor'
            ],
            'centre_reparador' => [
@@ -57,9 +59,13 @@ class TicketSSTTController extends BaseController
            ],
            'estat' => [
                'name' => 'Estat'
+           ],
+           'idFK_dispositiu'=> [
+            'name' => 'Tipus de dispositiu'
            ]
        ]);
 
+    //    $crud->addItemFunction('mailing', 'fa-paper-plane', array($this, 'myCustomPage'), "Send mail");
 
        // Generar la taula KpaCrud
        $data['table'] = $crud->render();
@@ -67,4 +73,9 @@ class TicketSSTTController extends BaseController
        // Passar dades a la vista
        return view('pages/TicketSSTT', $data);
     }
+
+    public function guardarDades() {
+    
+    }
+
 }
