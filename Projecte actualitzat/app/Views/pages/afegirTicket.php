@@ -132,12 +132,12 @@
             </div>
 
            
-          <form action="<?= base_url("/pagina/afegirTicket")?>" method="POST">
+          <form action="<?= base_url("pagina/afegirTicket")?>" method="POST">
                 <div class="mb-3">
-                  <label for="id_tiquet" class="form-label">Codi Tiquet</label>
-                  <input type="number" name="id_tiquet" id="id_tiquet" class="form-control" />
+                  <label for="id" class="form-label">Codi Tiquet</label>
+                  <input type="number" name="id" id="id" class="form-control" />
                 </div>
-                <div class="mb-3">
+                <!-- <div class="mb-3">
                   <label for="descripcio_avaria" class="form-label">Descripció</label><br>
                   <textarea name="descripcio_avaria" rows="5" cols="40"></textarea>
                 </div>
@@ -160,7 +160,7 @@
                 <div class="mb-3">
                   <label for="centre_reparador" class="form-label">Centre reparador</label>
                   <input type="text" name="centre_reparador" id="centre_reparador" class="form-control" />
-                </div>
+                </div> -->
                 <button type="submit" class="btn btn-primary">Crear tiquet</button>
           </form>
             

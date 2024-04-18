@@ -21,12 +21,11 @@ $routes->post('/registre', 'UsuarisController::registre');
 $routes->get('/pagina/login', 'UsuarisController::login');
 $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 
-$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
-
-
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
-// $routes->post('/pagina/TicketSSTT', 'TicketSSTTController::guardarDades');
-// $routes->post('/TicketSSTTController/guardarDades', 'TicketSSTTController::guardarDades');
+$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
+$routes->post('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
+
+
 
 $routes->get('/pagina/TicketAlumnes', 'TicketAlumnesController::vista_layout');
 $routes->get('/pagina/alumnes', 'UsuarisController:: alumnes');
