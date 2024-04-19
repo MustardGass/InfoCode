@@ -41,9 +41,9 @@
                     <img src="<?= base_url('img/loginRegistre_img.jpg');?>" id="img_logo" class="img-fluid">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="text-center my-3">LOGIN</h3>
-
-                    <form action="<? base_url("pagina/login")?>" method="POST" class="mt-5">
+                    <h3 class="text-center mt-5">LOGIN</h3>
+                    
+                    <form action="<?=base_url('/login')?>" class="mt-5" method="POST">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="idioma">Idioma</label>
                             <select class="form-select" id="idioma" name="idioma">
@@ -54,20 +54,20 @@
 
                         <div class="mb-4">
                             <label for="usuari" class="form-label">Usuari</label>
-                            <input type="text" class="form-control mb-4" id="usuari">
+                            <input type="text" class="form-control mb-4"  name="usuari">
                         </div>
                         <div class="mb-4">
                             <label for="contrasenya" class="form-label">Contrasenya</label>
-                            <input type="password" class="form-control mb-4" id="contrasenya">
+                            <input type="password" class="form-control mb-4"  name="contrasenya">
                         </div>
                         <div class="mb-4 form-check">
                             <input type="checkbox" class="form-check-input" id="recordar_usuari">
                             <label class="form-check-label" for="recordar_usuari">Recordar usuari</label>
                         </div>
-                        <button type="submit" class="btn" id="btn_accedir">Iniciar Sessió</button>
+                        <input type="submit" class="btn" id="btn_accedir">Iniciar Sessió</input>
                         <div class="mt-3 text-center">
                             <a href="#" class="text-decoration-none">He oblidat la contrasenya</a>
-                        </div>   
+                        </div>
                     </form>
                 </div>
             </div>

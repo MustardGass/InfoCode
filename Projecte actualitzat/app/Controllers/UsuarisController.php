@@ -110,62 +110,34 @@ class UsuarisController extends BaseController
 
 
     public function login() {
+
         helper("form");
-
-        $modelProfessor = new ProfessorModel();
-        $modelAlumne = new AlumnesModel();
-        $modelAdmin = new AdminModel();
-
-        if($this->request->getMethod() === 'post') {
+        
             //info del post professor
-            $correu = $this->request->getPost('usuari');
+            $id_admin = $this->request->getPost('usuari');
             $password = $this->request->getPost('contrasenya');
 
-            //info post admin
-            $usuari_admin = $modelAdmin->obtindreAdmin($correu);
+            $modelAdmin = new AdminModel();
+            $datosUser = $modelAdmin->obtindreAdmin(['id_admin'=>$id_admin]);
 
-                if(!$usuari_admin) {
-                    $usuari_professor = $modelProfessor->obtindreProfessorID($correu);
-                }
+            if(count($datosUser)>0){
 
-             //Buscar usuari per correu
-            //  $usuari_professor = $modelProfessor->obtindreProfessorID($correu);
+                if(password_verify($password,$datosUser[0]['password'])){
+    
+                $data = [
+                    "id_admin"=>$datosUser[0]['id_admin'],
+                    'isLogged' => true
+                ];
 
-            //  //Si usuari no es professor
-            // if(!$usuari_professor) {
-            //     $usuari_alumne = $modelAlumne->obtindreAlumneID($correu);   //cercar en la taula alumnes per trobar si el usuari es alumne
-            // }
+             $session = session();
 
-            //verificar si usuari i contrasenya de admin son correctes
-            if($usuari_admin && password_verify($password, $usuari_admin['password'])) {
-                session()->set('isLogged', true);
-                session()->set('user_id', $usuari_admin['id_admin']);
+             $session->set($data);
+             $session->set('id_admin',$id_admin);
 
-                return redirect()->to(base_url('pagina/TicketSSTT'));
-            }elseif ($usuari_professor && password_verify($password, $usuari_professor['password'])) {
-                session()->set('isLogged', true);
-                session()->set('user_id', $usuari_professor['id_xtec']);
-
-                return redirect()->to(base_url('pagina/TicketSSTT'));
-            } else {
-                $data['error'] = "Correu i contrasenya no son correctes";
+             return redirect()->to('/pagina/TicketSSTT');
+            } else{
+                return redirect()->to('/login');
             }
-            
-            // //verificar si usuari y contrasenya son correctes
-            // if($usuari_professor && password_verify($password, $usuari_professor['password'])) {
-            //     session()->set('isLogged', true);
-            //     session()->set('user_id', $usuari_professor['id_xtec']);
-
-            //     return redirect()->to(base_url("ticket/professor"));
-            // } elseif($usuari_alumne && password_verify($password, $usuari_alumne['password'])){
-            //     session()->set('isLogged', true);
-            //     session()->set('user_id', $usuari_alumne['correu_alumne']);
-
-            //     return redirect()->to(base_url("ticket/alumne"));
-            // } else {
-            //     $data['error'] = "Correu i contrasenya no son correctes";
-            // }
-
         }
 
         return view("pagines/login");
