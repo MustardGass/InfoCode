@@ -77,24 +77,30 @@ class TicketSSTTController extends BaseController
    
 
     public function showVistaAfegir() {
-        helper("form");
-    
-        $modelTiquet = new TiquetModel();
-    
-        $validationRules = [
-            'id_tiquet' => 'required'
-        ];
-    
-        if($this->validate($validationRules)) {
-            $id_tiquet = $this->request->getPost('id_tiquet');
-            $modelTiquet->afegirTiquet($id_tiquet);
-            return redirect()->to('/pagina/TicketSSTT');
-        }
+        
     
         echo view('pages/afegirTicket');
     }
     
     
-
+    public function afegirTiquet() {
+        helper('form'); // Cargar el helper "form" aquí
+    
+        $modelTiquet = new TiquetModel();
+        $validationRules = [
+            'id_tiquet' => 'required'
+        ];
+    
+        if($this->validate($validationRules)) {
+            // Aquí es donde se llama a getPost(), asegúrate de que estás cargando el helper "form" antes de esto
+            $id_tiquet = $this->request->getPost('id_tiquet');
+            // dd($id_tiquet);
+            $modelTiquet->afegirTiquet($id_tiquet);
+            return redirect()->to('/pagina/TicketSSTT');
+        } else {
+            return view('pages/afegirTicket', ['validation' => $this->validator]);
+        }
+    }
+    
 
 }
