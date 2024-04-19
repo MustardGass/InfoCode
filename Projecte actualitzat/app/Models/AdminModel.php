@@ -43,4 +43,11 @@ class AdminModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+    public function addAdmin($dades) {
+        return $this->insert($dades);
+    }
+
+    public function obtindreAdmin($id_admin) {
+        return $this->where('id_admin', $id_admin)->first();
+    }
 }

@@ -4,14 +4,13 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\AdminModel;
+use App\Models\AlumnesModel;
 use App\Models\CentreModel;
 use App\Models\LoginModel;
-use App\Models\AlumnesModel;
 use App\Models\ProfessorModel;
 use App\Models\RolsModel;
 use App\Models\UsersRolsModel;
 use Faker\Factory;
-
 
 class UsuarisController extends BaseController
 {
@@ -20,6 +19,7 @@ class UsuarisController extends BaseController
         $data['title']="Pagina" . $pagina;
         return view("pagines/" . $pagina, $data);
     }
+
     public function registre() {
         //verificar si el usuari es admin
         if(session()->get('rol') !== 'admin') {
@@ -84,7 +84,7 @@ class UsuarisController extends BaseController
 
                 $pass_hash = password_hash($this->request->getPost('contrasenya'), PASSWORD_DEFAULT);
                 $data['password'] = $pass_hash;
-                $modelLogin->addUserLogin($data);
+                $modelLogin->insert($data);
 
                 //obtindre id del rol professor
                 $rol_professor = $modelRols->where('tipus_rol', 'professor')->first();
@@ -99,7 +99,7 @@ class UsuarisController extends BaseController
                     'idFK_rol' => $idRol_professor
                 ];
 
-                $model_UsersRols->addUserRols($data_UsersRols);
+                $model_UsersRols->insert($data_UsersRols);
 
                 return redirect()->to(base_url("login"));
             }
@@ -141,12 +141,12 @@ class UsuarisController extends BaseController
                 session()->set('isLogged', true);
                 session()->set('user_id', $usuari_admin['id_admin']);
 
-                return redirect()->to(base_url('pagina_admin'));
+                return redirect()->to(base_url('pagina/TicketSSTT'));
             }elseif ($usuari_professor && password_verify($password, $usuari_professor['password'])) {
                 session()->set('isLogged', true);
                 session()->set('user_id', $usuari_professor['id_xtec']);
 
-                return redirect()->to(base_url('ticket/professor'));
+                return redirect()->to(base_url('pagina/TicketSSTT'));
             } else {
                 $data['error'] = "Correu i contrasenya no son correctes";
             }
@@ -171,24 +171,32 @@ class UsuarisController extends BaseController
         return view("pagines/login");
     }
 
+    
+
     public function logout() {
         session()->destroy();
         return redirect()->to(base_url('login'));
     }
+
+    public function vista_admin() {
+        $data['titol'] = "Pagina de Administrador";
+        return view('pages/Admin', $data);
+    }
+
 
     public function mostrar_numero($numero) {
         $data['elnum'] = $numero;
         return view("pagines", $data);
     }
 
-    //imprimir info dels alumnes
-    public function alumnes() {
-        $model = new \App\Models\AlumnesModel();
+    // imprimir info dels alumnes
+    // public function alumnes() {
+    //     $model = new \App\Models\AlumnesModel();
 
-        $data['title'] = "Alumnes";
-        $data['alumne'] = $model->getAlumne();
+    //     $data['title'] = "Alumnes";
+    //     $data['alumne'] = $model->getAlumnes();
         
-        return view("pagines/alumnes", $data);
-    }
+    //     return view("pagines/alumnes", $data);
+    // }
 
 }

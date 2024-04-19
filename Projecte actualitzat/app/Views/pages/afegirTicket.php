@@ -132,37 +132,15 @@
             </div>
 
            
-          <form action="<?= base_url("pagina/afegirTicket")?>" method="POST">
-                <div class="mb-3">
-                  <label for="id" class="form-label">Codi Tiquet</label>
-                  <input type="number" name="id" id="id" class="form-control" />
-                </div>
-                <!-- <div class="mb-3">
-                  <label for="descripcio_avaria" class="form-label">Descripció</label><br>
-                  <textarea name="descripcio_avaria" rows="5" cols="40"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="data_alta" class="form-label">Data creació</label>
-                  <input type="date" name="data_alta" id="data_alta" />
-                </div>
-                <div class="mb-3">
-                  <label for="estat_tiquet" class="form-label">Estat del Tiquet</label>
-                  <input type="text" name="estat_tiquet" id="estat_tiquet" class="form-control" />
-                </div>
-                <div class="mb-3">
-                  <label for="tipus_dispositiu" class="form-label">Tipus de dispositiu</label>
-                  <input type="text" name="tipus_dispositiu" id="tipus_dispositiu" class="form-control" />
-                </div>
-                <div class="mb-3">
-                  <label for="centre_emitent" class="form-label">Centre Emitent</label>
-                  <input type="text" name="centre_emitent" id="centre_emitent" class="form-control" />
-                </div>
-                <div class="mb-3">
-                  <label for="centre_reparador" class="form-label">Centre reparador</label>
-                  <input type="text" name="centre_reparador" id="centre_reparador" class="form-control" />
-                </div> -->
-                <button type="submit" class="btn btn-primary">Crear tiquet</button>
-          </form>
+            <form action="<?= base_url("pagina/afegirTicket") ?>" method="POST">
+    <div class="mb-3">
+        <label for="id_tiquet" class="form-label">Codi Tiquet</label>
+        <input type="number" name="id_tiquet" id="id_tiquet" class="form-control" required>
+    </div>
+    <!-- Otros campos del formulario (si los hay) -->
+    <button type="submit" class="btn btn-primary">Crear Tiquet</button>
+</form>
+
             
 
 

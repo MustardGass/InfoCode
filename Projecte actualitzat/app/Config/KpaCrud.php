@@ -163,7 +163,7 @@ class KpaCrud extends \SIENSIS\KpaCrud\Config\KpaCrud
         'defaultPageSize' =>   10,
         'rememberState' =>   false,
 
-        'add_button' =>  false,
+        'add_button' =>  true,
         'show_button' => false,
         'recycled_button' =>  false,
         'exportXLS' =>   true,

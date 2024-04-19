@@ -43,7 +43,7 @@
                 <div class="col-md-6">
                     <h3 class="text-center my-3">LOGIN</h3>
 
-                    <form action="#" class="mt-5">
+                    <form action="<? base_url("pagina/login")?>" method="POST" class="mt-5">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="idioma">Idioma</label>
                             <select class="form-select" id="idioma" name="idioma">

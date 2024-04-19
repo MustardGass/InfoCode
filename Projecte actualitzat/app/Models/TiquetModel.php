@@ -91,7 +91,7 @@ class TiquetModel extends Model
 
     // }
 
-    public function afegirTiquets($id) {
+    public function afegirTiquet($id) {
         $data = [
             'id_tiquet' => $id
             // Aquí puedes agregar otros campos si los necesitas
@@ -99,5 +99,7 @@ class TiquetModel extends Model
     
         $this->insert($data);
     }
+    
+    
     
 }

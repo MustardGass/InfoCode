@@ -9,8 +9,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('/home', 'Home::informacio' );
 //login
-$routes->get('/login', 'UsuarisController::login');
-$routes->post('/login', 'UsuarisController::login');
+
 $routes->get('/logout', 'UsuarisController::logout');
 
 $routes->get('/pagina_admin', 'UsuarisController::vista_admin');
@@ -19,6 +18,8 @@ $routes->get('/registre', 'UsuarisController::registre');
 $routes->post('/registre', 'UsuarisController::registre');
 
 $routes->get('/pagina/login', 'UsuarisController::login');
+$routes->post('/pagina/login', 'UsuarisController::login');
+
 $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
