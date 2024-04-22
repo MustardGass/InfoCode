@@ -91,14 +91,15 @@ class TiquetModel extends Model
 
     // }
 
-    public function afegirTiquet($id) {
-        $data = [
-            'id_tiquet' => $id,
+    public function afegirTicket($id_tiquet, $idFK_dispositiu, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor) {
+        $this->insert([
+            'id_tiquet' => $id_tiquet,
+            'idFK_dispositiu' => $idFK_dispositiu,
+            'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
+            'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
+            'idFK_idProfessor' => $idFK_professor
 
-            // Aquí puedes agregar otros campos si los necesitas
-        ];
-    
-        $this->insert($data);
+        ]);
     }
     
     

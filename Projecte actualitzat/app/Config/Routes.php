@@ -22,11 +22,8 @@ $routes->get('/pagina/login', 'UsuarisController::login');
 $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
-$routes->get('/pagina/afegirTicket', 'TicketSSTTController::showVistaAfegir');
-
-
-$routes->post('/pagina/afegirTicket', 'TicketSSTTController::afegirTiquet');
-
+$routes->get('/pagina/afegirTicket', 'TicketSSTTController::afegir_ticket');
+$routes->post('/pagina/afegirTicket', 'TicketSSTTController::afegir_ticket');
 
 
 $routes->get('/pagina/TicketAlumnes', 'TicketAlumnesController::vista_layout');

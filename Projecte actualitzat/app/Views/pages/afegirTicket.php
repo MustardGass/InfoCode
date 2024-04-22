@@ -132,15 +132,41 @@
             </div>
 
            
-            <form action="<?= base_url("pagina/afegirTicket") ?>" method="POST">
-    <div class="mb-3">
-        <label for="id_tiquet" class="form-label">Codi Tiquet</label>
-        <input type="number" name="id_tiquet" id="id_tiquet" class="form-control" required>
-    </div>
-    <!-- Otros campos del formulario (si los hay) -->
-    <button type="submit" class="btn btn-primary">Crear Tiquet</button>
-</form>
+            <form action="<?= base_url("pagina/afegirTicket") ?>" method="post">
+                <label for="idTicket">Codi Ticket</label>
+                <input type="text" name="idTicket" id="idTicket" />
 
+                <label for="t_dispositiu">Dispositiu</label>
+                <select name="t_dispositiu" id="t_dispositiu">
+                    <?php foreach($tipus_dispositiu as $dispositiu) : ?>
+                        <option value="<?= $dispositiu['id_tipus'] ?>"><?= $dispositiu['tipus'] ?> </option>
+                    <?php endforeach; ?>
+                </select>
+
+                <label for="c_emitent">Centre Emitent</label>
+                <select name="c_emitent" id="c_emitent">
+                    <?php foreach($centre_emitent as $centre_e) : ?>
+                        <option value="<?= $centre_e['codi_centre'] ?>"><?= $centre_e['nom'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+             
+                <label for="c_reparador">Centre Reparador</label>
+                <select name="c_reparador" id="c_reparador">
+                    <?php foreach($centre_reparador as $centre_r) : ?>
+                        <option value="<?= $centre_r['codi_centre'] ?>"><?= $centre_r['nom'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+
+                <label for="professor">professor</label>
+                <select name="professor" id="professor">
+                    <?php foreach($professor as $profe) : ?>
+                        <option value="<?= $profe['id_xtec'] ?>"><?= $profe['id_xtec'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+
+                <button type="submit">Crear Ticket</button>
+            </form>
+           
             
 
 

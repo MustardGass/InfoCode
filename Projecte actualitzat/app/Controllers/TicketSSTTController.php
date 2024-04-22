@@ -3,6 +3,8 @@
 namespace App\Controllers;
 use App\Models\TiquetModel;
 use App\Models\TipusDispositiuModel;
+use App\Models\CentreModel;
+use App\Models\ProfessorModel;
 
 use App\Controllers\BaseController;
 use SIENSIS\KpaCrud\Libraries\KpaCrud;
@@ -73,33 +75,48 @@ class TicketSSTTController extends BaseController
        // Passar dades a la vista
        return view('pages/TicketSSTT', $data);
     }
+    
+    
+    public function afegir_ticket() {
 
-   
+        $data['titulo'] = "Afegir Ticket";
 
-    public function showVistaAfegir() {
-        
-    
-        echo view('pages/afegirTicket');
-    }
-    
-    
-    public function afegirTiquet() {
-        helper('form'); // Cargar el helper "form" aquí
-    
         $modelTiquet = new TiquetModel();
+        $modelDispositiu = new TipusDispositiuModel();
+        $modelCentre = new CentreModel();
+        $modelProfessor = new ProfessorModel();
+
         $validationRules = [
-            'id_tiquet' => 'required'
+            'idTicket' => 'required'
         ];
-    
+
         if($this->validate($validationRules)) {
-            // Aquí es donde se llama a getPost(), asegúrate de que estás cargando el helper "form" antes de esto
-            $id_tiquet = $this->request->getPost('id_tiquet');
-            // dd($id_tiquet);
-            $modelTiquet->afegirTiquet($id_tiquet);
-            return redirect()->to('/pagina/TicketSSTT');
-        } else {
-            return view('pages/afegirTicket', ['validation' => $this->validator]);
+            $idTicket = $this->request->getPost("idTicket");
+            $dispositiu = $this->request->getPost('t_dispositiu');
+            $centre_emitent = $this->request->getPost('c_emitent');
+            $centre_reparador = $this->request->getPost('c_reparador');
+            $professor = $this->request->getPost('professor');
+
+            $dispositiu_exists = $modelDispositiu->find($dispositiu);
+
+            if($dispositiu_exists){
+                $modelTiquet->afegirTicket($idTicket, $dispositiu, $centre_emitent, $centre_reparador, $professor);
+                return redirect()->to("pagina/TicketSSTT");
+            } else {
+                echo "Dispositivo seleccionado no existe";
+            }
         }
+
+        $data['tipus_dispositiu'] = $modelDispositiu->findAll();
+        $data['centre_emitent'] = $modelCentre->select('codi_centre, nom')->findAll();
+        $data['centre_reparador'] = $modelCentre->select('codi_centre, nom')->findAll();
+        $data['professor'] = $modelProfessor->findAll();
+        // $data['professor'] = $modelProfessor->select('id_xtec')->findAll();
+
+        // var_dump($data['centre_emitent']);
+
+
+        return view("pages/afegirTicket", $data);
     }
     
 
