@@ -91,10 +91,14 @@ class TiquetModel extends Model
 
     // }
 
-    public function afegirTicket($id_tiquet, $idFK_dispositiu, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor) {
+    public function afegirTicket($id_tiquet, $codi_equip, $idFK_dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor) {
         $this->insert([
             'id_tiquet' => $id_tiquet,
+            'codi_equip' => $codi_equip,
             'idFK_dispositiu' => $idFK_dispositiu,
+            'descripcio_avaria' => $descripcio_avaria,
+            'data_alta' => $data_alta,
+            'estat_tiquet' => $estat_tiquet,
             'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
             'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
             'idFK_idProfessor' => $idFK_professor
@@ -102,6 +106,8 @@ class TiquetModel extends Model
         ]);
     }
     
-    
+    public function borrarTicket($id_ticket) {
+        return $this->where('id_tiquet', $id_ticket)->delete();
+    }
     
 }

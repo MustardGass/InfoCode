@@ -133,8 +133,9 @@
 
            
             <form action="<?= base_url("pagina/afegirTicket") ?>" method="post">
-                <label for="idTicket">Codi Ticket</label>
-                <input type="text" name="idTicket" id="idTicket" />
+
+                <label for="cod_equip">Codi del equip</label>
+                <input type="text" name="cod_equip"id="cod_equip" />
 
                 <label for="t_dispositiu">Dispositiu</label>
                 <select name="t_dispositiu" id="t_dispositiu">
@@ -142,6 +143,9 @@
                         <option value="<?= $dispositiu['id_tipus'] ?>"><?= $dispositiu['tipus'] ?> </option>
                     <?php endforeach; ?>
                 </select>
+
+                <label for="descripcio">Descripcio de la avaria</label>
+                <input type="text" name="descripcio" id="descripcio">
 
                 <label for="c_emitent">Centre Emitent</label>
                 <select name="c_emitent" id="c_emitent">

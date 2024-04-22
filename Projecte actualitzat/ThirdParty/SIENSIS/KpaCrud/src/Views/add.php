@@ -103,6 +103,8 @@ if (isset($newID)) {
                    {
                     // $dbfield->Field = ($dbfield->Field === "idFK_dispositiu") ? "Tipus de dispositiu" : $dbfield->Field;
                     ShowField($dbfield, null, $_data_columns, $_relations, $oldForm);
+
+                    
                    }
             } //end foreach field
 

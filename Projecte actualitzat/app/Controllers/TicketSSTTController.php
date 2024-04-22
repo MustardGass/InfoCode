@@ -7,6 +7,7 @@ use App\Models\CentreModel;
 use App\Models\ProfessorModel;
 
 use App\Controllers\BaseController;
+use Faker\Factory;
 use SIENSIS\KpaCrud\Libraries\KpaCrud;
 
 class TicketSSTTController extends BaseController
@@ -79,6 +80,8 @@ class TicketSSTTController extends BaseController
     
     public function afegir_ticket() {
 
+        $fake = Factory::create("es_ES");
+
         $data['titulo'] = "Afegir Ticket";
 
         $modelTiquet = new TiquetModel();
@@ -87,12 +90,18 @@ class TicketSSTTController extends BaseController
         $modelProfessor = new ProfessorModel();
 
         $validationRules = [
-            'idTicket' => 'required'
+            'cod_equip' => 'required'
         ];
 
+        $idTicket = $fake->randomNumber(5, true);
+        $data_alta = date("Y-m-d H:i:s");
+        $estat_tiquet = "Pendent";
+
+
         if($this->validate($validationRules)) {
-            $idTicket = $this->request->getPost("idTicket");
+            $codi_equip = $this->request->getPost('cod_equip');
             $dispositiu = $this->request->getPost('t_dispositiu');
+            $descripcio_avaria = $this->request->getPost('descripcio');
             $centre_emitent = $this->request->getPost('c_emitent');
             $centre_reparador = $this->request->getPost('c_reparador');
             $professor = $this->request->getPost('professor');
@@ -100,7 +109,7 @@ class TicketSSTTController extends BaseController
             $dispositiu_exists = $modelDispositiu->find($dispositiu);
 
             if($dispositiu_exists){
-                $modelTiquet->afegirTicket($idTicket, $dispositiu, $centre_emitent, $centre_reparador, $professor);
+                $modelTiquet->afegirTicket($idTicket, $codi_equip, $dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $centre_emitent, $centre_reparador, $professor);
                 return redirect()->to("pagina/TicketSSTT");
             } else {
                 echo "Dispositivo seleccionado no existe";
@@ -111,13 +120,17 @@ class TicketSSTTController extends BaseController
         $data['centre_emitent'] = $modelCentre->select('codi_centre, nom')->findAll();
         $data['centre_reparador'] = $modelCentre->select('codi_centre, nom')->findAll();
         $data['professor'] = $modelProfessor->findAll();
-        // $data['professor'] = $modelProfessor->select('id_xtec')->findAll();
-
-        // var_dump($data['centre_emitent']);
-
 
         return view("pages/afegirTicket", $data);
     }
     
+    public function eliminar_ticket($id_ticket) {
+
+        $modelTiquet = new TiquetModel();
+        $modelTiquet->borrarTicket($id_ticket);
+
+        return redirect()->to("pagina/TicketSSTT");
+
+    }
 
 }
