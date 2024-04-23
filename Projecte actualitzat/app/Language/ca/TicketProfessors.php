@@ -17,7 +17,8 @@
         'dia_entrada_taula' => 'D. ENTRADA',
         'dia_sortida_taula' => 'D. SORTIDA',
         'estat_taula' => 'ESTAT',
-        'cerca' => 'Cerca'
-    
+        'cerca' => 'Cerca',
+        'titol_afegirTicket' => 'Afegir tiquet'
+
     ]
 ?>

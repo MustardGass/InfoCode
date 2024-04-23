@@ -28,11 +28,11 @@ class ProfessorSeeder extends Seeder
       
         fclose($profesorFile);
 
-        $total_lineas = count($codis);  //calcular total de lineas.
-        $codis_random = array_rand($codis, 10);    //obtener 10  codigos randoms
+        $total_lineas = count($codis);  // Linies totals
+        $codis_random = array_rand($codis, 10); // Obtindre 10 codis aleatoris
 
-        foreach($codis_random as $idx){   //idx-> contiene la posi de una linea random
-            $data = $codis[$idx];   //contiene una linea random del array codis y esta linea es almacenada en $data
+        foreach($codis_random as $idx){   //idx-> conté la posició d'una linia aleatoria
+            $data = $codis[$idx];   //conté una linia aleatoria de l'array codis i s'emmagatzema a $data
             $id_xtec = $fake->companyEmail();
             $nom = $fake->firstName();
             $cognoms = $fake->lastName();

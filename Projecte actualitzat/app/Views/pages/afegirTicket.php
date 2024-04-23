@@ -128,47 +128,76 @@
           <div class="col py-3">
 
             <div class="mt-3 mb-5">
-              <h1><?= lang('TicketProfessors.titol_reparacions');?></h1>
+              <h1><?= lang('TicketProfessors.titol_afegirTicket');?></h1>
             </div>
 
            
             <form action="<?= base_url("pagina/afegirTicket") ?>" method="post">
+            
+            <div class="container">
+              
+            <div class="row">
+              <div class="col">
+                  <label for="cod_equip" class="form-label h5 ">Codi de l'equip</label><br>
+                  <input type="text" class="form-control" name="cod_equip"id="cod_equip" />
+              </div>  
 
-                <label for="cod_equip">Codi del equip</label>
-                <input type="text" name="cod_equip"id="cod_equip" />
-
-                <label for="t_dispositiu">Dispositiu</label>
-                <select name="t_dispositiu" id="t_dispositiu">
+              <div class="col">
+                <label for="t_dispositiu"  class="form-label h5 ">Dispositiu</label><br>
+                  <select name="t_dispositiu" id="t_dispositiu" class="form-select">
                     <?php foreach($tipus_dispositiu as $dispositiu) : ?>
                         <option value="<?= $dispositiu['id_tipus'] ?>"><?= $dispositiu['tipus'] ?> </option>
                     <?php endforeach; ?>
                 </select>
-
-                <label for="descripcio">Descripcio de la avaria</label>
-                <input type="text" name="descripcio" id="descripcio">
-
-                <label for="c_emitent">Centre Emitent</label>
-                <select name="c_emitent" id="c_emitent">
-                    <?php foreach($centre_emitent as $centre_e) : ?>
-                        <option value="<?= $centre_e['codi_centre'] ?>"><?= $centre_e['nom'] ?></option>
-                    <?php endforeach; ?>
-                </select>
-             
-                <label for="c_reparador">Centre Reparador</label>
-                <select name="c_reparador" id="c_reparador">
-                    <?php foreach($centre_reparador as $centre_r) : ?>
-                        <option value="<?= $centre_r['codi_centre'] ?>"><?= $centre_r['nom'] ?></option>
-                    <?php endforeach; ?>
-                </select>
-
-                <label for="professor">professor</label>
-                <select name="professor" id="professor">
+              </div>
+              <div class="col">
+                <label for="professor" class="form-label h5 ">Professor</label><br>
+                <select name="professor" id="professor" class="form-select">
                     <?php foreach($professor as $profe) : ?>
                         <option value="<?= $profe['id_xtec'] ?>"><?= $profe['id_xtec'] ?></option>
                     <?php endforeach; ?>
                 </select>
+              </div>
+            </div>
+              
+            <br>
 
-                <button type="submit">Crear Ticket</button>
+            <div class="row">
+              
+      
+              <div class="col">
+                <label for="c_emitent" class="form-label h5 ">Centre Emitent</label><br>
+                <select name="c_emitent" id="c_emitent" class="form-select">
+                    <?php foreach($centre_emitent as $centre_e) : ?>
+                        <option value="<?= $centre_e['codi_centre'] ?>"><?= $centre_e['nom'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+              </div>
+
+              <div class="col">
+                <label for="c_reparador" class="form-label h5 ">Centre Reparador</label><br>
+                <select name="c_reparador" id="c_reparador" class="form-select">
+                    <?php foreach($centre_reparador as $centre_r) : ?>
+                        <option value="<?= $centre_r['codi_centre'] ?>"><?= $centre_r['nom'] ?></option>
+                    <?php endforeach; ?>
+                </select>
+              </div>
+            </div>
+                
+              <br>
+
+               <div>
+                <label for="descripcio" class="h5 form-label">Descripcio de l'avaria</label><br>
+                <textarea class="form-control" rows="4"  type="text" name="descripcio" id="descripcio"></textarea>
+              </div>
+                      
+              <br>
+
+             
+
+              <button type="submit" class="btn btn-primary px-3">Crear Ticket</button>
+            
+            </div>  
             </form>
            
             
