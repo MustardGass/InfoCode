@@ -28,33 +28,12 @@ class Database extends Config
 
 
 
-    // public array $default = [
-    //     'DSN'          => '',
-    //     'hostname'     => '85.214.28.48',
-    //     'username'     => 'HugFrancino',
-    //     'password'     => '?85l95unZ',
-    //     'database'     => 'kpatek5_databaseG5',
-    //     'DBDriver'     => 'MySQLi',
-    //     'DBPrefix'     => '',
-    //     'pConnect'     => false,
-    //     'DBDebug'      => true,
-    //     'charset'      => 'utf8',
-    //     'DBCollat'     => 'utf8_general_ci',
-    //     'swapPre'      => '',
-    //     'encrypt'      => false,
-    //     'compress'     => false,
-    //     'strictOn'     => false,
-    //     'failover'     => [],
-    //     'port'         => 3306,
-    //     'numberNative' => false,
-    // ];
-
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'bd_proyecte',
+        'hostname'     => '85.214.28.48',
+        'username'     => 'HugFrancino',
+        'password'     => '?85l95unZ',
+        'database'     => 'kpatek5_databaseG5',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -69,6 +48,27 @@ class Database extends Config
         'port'         => 3306,
         'numberNative' => false,
     ];
+
+    // public array $default = [
+    //     'DSN'          => '',
+    //     'hostname'     => 'localhost',
+    //     'username'     => 'root',
+    //     'password'     => '',
+    //     'database'     => 'bd_proyecte',
+    //     'DBDriver'     => 'MySQLi',
+    //     'DBPrefix'     => '',
+    //     'pConnect'     => false,
+    //     'DBDebug'      => true,
+    //     'charset'      => 'utf8',
+    //     'DBCollat'     => 'utf8_general_ci',
+    //     'swapPre'      => '',
+    //     'encrypt'      => false,
+    //     'compress'     => false,
+    //     'strictOn'     => false,
+    //     'failover'     => [],
+    //     'port'         => 3306,
+    //     'numberNative' => false,
+    // ];
 
 
 
