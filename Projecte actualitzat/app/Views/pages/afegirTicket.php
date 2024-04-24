@@ -78,7 +78,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page"
-              href="#"><?= lang('TicketProfessors.sstt_header'); ?></a>
+            href="<?= base_url('/pagina/TicketSSTT'); ?>"><?= lang('TicketProfessors.sstt_header'); ?></a>
           </li>
         </ul>
         <div class="d-flex">
@@ -112,7 +112,7 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
               <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start ms-0 text-start" id="menu">
                 <li class="nav-item mt-3">
-                  <a class="nav-link text-white" href="#"> <img src=<?= base_url('img/iconMenuRosca.png'); ?> alt="Logo"
+                  <a class="nav-link text-white" href="<?= base_url('/pagina/TicketSSTT'); ?>"> <img src=<?= base_url('img/iconMenuRosca.png'); ?> alt="Logo"
                       style="max-height: 30px;"><?= lang('TicketProfessors.reparacions_menu'); ?></a>
                 </li>
 
@@ -166,7 +166,7 @@
               
       
               <div class="col">
-                <label for="c_emitent" class="form-label h5 ">Centre Emitent</label><br>
+                <label for="c_emitent" class="form-label h5 ">Centre Emisor</label><br>
                 <select name="c_emitent" id="c_emitent" class="form-select">
                     <?php foreach($centre_emitent as $centre_e) : ?>
                         <option value="<?= $centre_e['codi_centre'] ?>"><?= $centre_e['nom'] ?></option>
