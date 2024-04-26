@@ -133,6 +133,7 @@
 
             <div>
               <a href="<?= base_url("pagina/afegirTicket") ?>" class="btn btn-primary">+ Afegir</a>
+              <a href="<?= base_url("logout") ?>" class="btn btn-danger">Tancar sessió</a>
             </div>
 
             <div>

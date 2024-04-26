@@ -14,6 +14,11 @@ class TicketSSTTController extends BaseController
 {
     public function vista_ticket_sstt()
     {
+
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
+        
        // Model tiquet
        $tiquetModel = new TiquetModel();
        $modelTipus_dispositiu = new TipusDispositiuModel();
