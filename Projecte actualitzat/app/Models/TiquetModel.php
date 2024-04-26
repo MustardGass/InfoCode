@@ -40,23 +40,23 @@ class TiquetModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    // public function addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $estat_tiquet, $centre_emitent, $centre_reparador, $idFK_dispositiu, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor){
-    //     $this->insert([
-    //         'id_tiquet' => $id_tiquet,
-    //         'codi_equip' => $codi_equip,
-    //         'descripcio_avaria' => $descripcio_avaria,
-    //         'data_alta' => $data_alta,
-    //         'data_ultima_modificacio' => $data_ultim_modif,
-    //         'estat_tiquet' => $estat_tiquet,
-    //         'centre_emitent' => $centre_emitent,
-    //         'centre_reparador' => $centre_reparador,
-    //         'idFK_dispositiu' => $idFK_dispositiu,
-    //         'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
-    //         'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
-    //         // 'idFK_codiCentre' => $idFK_codiCentre[0],   //acceder a la posicion 0 del CSV
-    //         'idFK_idProfessor' => $idFK_professor
-    //     ]);
-    // }
+    public function addTiquets($id_tiquet, $codi_equip, $descripcio_avaria, $data_alta, $data_ultim_modif, $estat_tiquet, $centre_emitent, $centre_reparador, $idFK_dispositiu, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor){
+        $this->insert([
+            'id_tiquet' => $id_tiquet,
+            'codi_equip' => $codi_equip,
+            'descripcio_avaria' => $descripcio_avaria,
+            'data_alta' => $data_alta,
+            'data_ultima_modificacio' => $data_ultim_modif,
+            'estat_tiquet' => $estat_tiquet,
+            'centre_emitent' => $centre_emitent,
+            'centre_reparador' => $centre_reparador,
+            'idFK_dispositiu' => $idFK_dispositiu,
+            'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
+            'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
+            // 'idFK_codiCentre' => $idFK_codiCentre[0],   //acceder a la posicion 0 del CSV
+            'idFK_idProfessor' => $idFK_professor
+        ]);
+    }
 
     public function obtindreID() {
         $builder = $this->db->table('tiquet');
