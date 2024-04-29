@@ -36,7 +36,7 @@ class TicketSSTTController extends BaseController
        $crud = new KpaCrud();
        $crud->setConfig($config);
 
-       $id_tiquet = $tiquetModel->obtindreID();
+    //    $id_tiquet = $tiquetModel->obtindreID();
 
        $crud->setTable('tiquet'); // Nom de la taula
        $crud->setPrimaryKey('id_tiquet'); // Clau primària
