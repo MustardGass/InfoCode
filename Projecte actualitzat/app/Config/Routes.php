@@ -27,8 +27,8 @@ $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');
 $routes->get('/pagina/afegirTicket', 'TicketSSTTController::afegir_ticket');
 $routes->post('/pagina/afegirTicket', 'TicketSSTTController::afegir_ticket');
 
-$routes->get("/pagina/eliminarTicket/(:num)", 'TicketSSTTController::eliminar_ticket/$1');
-$routes->post("/pagina/eliminarTicket/(:num)", 'TicketSSTTController::eliminar_ticket/$1');
+$routes->get("/pagina/eliminar/(:segment)", 'TicketSSTTController::eliminar_ticket/$1');
+$routes->get("/pagina/(:segment)/eliminar", 'TicketSSTTController::delete/$1');
 //-----------------------------------------
 
 $routes->get('/pagina/TicketAlumnes', 'TicketAlumnesController::vista_layout');

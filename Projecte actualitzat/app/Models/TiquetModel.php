@@ -60,7 +60,7 @@ class TiquetModel extends Model
 
     public function obtindreID() {
         $builder = $this->db->table('tiquet');
-        $builder->select('tipus');
+        $builder->select('id_tiquet');
         $query = $builder->get();
         $result = $query->getResult();
 

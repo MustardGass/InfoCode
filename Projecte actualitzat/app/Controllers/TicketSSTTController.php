@@ -27,7 +27,7 @@ class TicketSSTTController extends BaseController
        $config = [
            'numerate' => false,
            'editable' => true,
-           'removable' => true,
+           'removable' => false,
            'add_button' => false,
            // hi ha més configuració ademés d'aquesta
        ];
@@ -36,7 +36,7 @@ class TicketSSTTController extends BaseController
        $crud = new KpaCrud();
        $crud->setConfig($config);
 
-       // $tipus_tiquet = $tiquetModel->obtindreID();
+       $id_tiquet = $tiquetModel->obtindreID();
 
        $crud->setTable('tiquet'); // Nom de la taula
        $crud->setPrimaryKey('id_tiquet'); // Clau primària
@@ -72,12 +72,12 @@ class TicketSSTTController extends BaseController
             'name' => 'Tipus de dispositiu'
            ]
        ]);
-
+       $crud->addItemLink('view','fa-solid fa-trash', base_url('pagina/eliminar/'), 'Eliminar tick');
     //    $crud->addItemFunction('mailing', 'fa-paper-plane', array($this, 'myCustomPage'), "Send mail");
-
+       
        // Generar la taula KpaCrud
        $data['table'] = $crud->render();
-
+       
        // Passar dades a la vista
        return view('pages/TicketSSTT', $data);
     }
@@ -98,7 +98,10 @@ class TicketSSTTController extends BaseController
             'cod_equip' => 'required'
         ];
 
-        $idTicket = $fake->randomNumber(5, true);
+        $n_rand1 = $fake->randomNumber(8, true);
+        $n_rand2 = $fake->randomNumber(8, true);
+        $idTicket = $n_rand1 . $n_rand2;
+        
         $data_alta = date("Y-m-d H:i:s");
         $estat_tiquet = "Pendent";
 
@@ -131,11 +134,16 @@ class TicketSSTTController extends BaseController
     
     public function eliminar_ticket($id_ticket) {
 
-        $modelTiquet = new TiquetModel();
-        $modelTiquet->borrarTicket($id_ticket);
-
-        return redirect()->to("pagina/TicketSSTT");
+         $modelTiquet = new TiquetModel();
+         $data['tiquet']=$id_ticket;
+         
+         return view("pages/eliminar",$data);
+       
 
     }
-
+     public function delete($codi_equip){
+        $tiquet_Model=new TiquetModel();
+        $tiquet_Model->borrarTicket($codi_equip);
+        return redirect()->to("pagina/TicketSSTT");
+     }
 }
