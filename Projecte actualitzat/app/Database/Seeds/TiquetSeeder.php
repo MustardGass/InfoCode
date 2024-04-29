@@ -41,7 +41,9 @@ class TiquetSeeder extends Seeder
 
         foreach($codis_random as $idx){
             $data = $codis[$idx];
-            $id_tiquet = $fake->randomNumber(5, true);
+            $n_rand1 = $fake->randomNumber(8, true);
+            $n_rand2 = $fake->randomNumber(8, true);
+            $id_tiquet = $n_rand1 . $n_rand2;
             $codi_equip = $fake->randomNumber(5, true);
             $descripcio_avaria = $fake->text();
             $data_alta = $fake->dateTimeBetween('2020-01-01', '+1 year')->format('Y_m_d H:i:s');
