@@ -72,7 +72,7 @@ class TicketSSTTController extends BaseController
             'name' => 'Tipus de dispositiu'
            ]
        ]);
-       $crud->addItemLink('view','fa-solid fa-trash', base_url('pagina/eliminar/'), 'Eliminar tick');
+       $crud->addItemLink('view','fa-solid fa-trash text-danger', base_url('pagina/eliminar/'), 'Eliminar ticket');
     //    $crud->addItemFunction('mailing', 'fa-paper-plane', array($this, 'myCustomPage'), "Send mail");
        
        // Generar la taula KpaCrud
@@ -131,19 +131,43 @@ class TicketSSTTController extends BaseController
 
         return view("pages/afegirTicket", $data);
     }
-    
-    public function eliminar_ticket($id_ticket) {
 
-         $modelTiquet = new TiquetModel();
-         $data['tiquet']=$id_ticket;
-         
-         return view("pages/eliminar",$data);
-       
+    public function eliminar_ticket($id_ticket){
 
+        $modelTiquet = new TiquetModel();
+        $modelDispositiu = new TipusDispositiuModel();
+        // $modelProfessor = new ProfessorModel();
+        $modelCentre = new CentreModel();
+
+        $ticket = $modelTiquet->find($id_ticket);   //buscar en la bd el id del tiquet que sera eliminado
+
+        //Dispositiu
+        $FK_dispositiu = $ticket['idFK_dispositiu'];    //obtener id del tipus_dispositiu del tiquet
+        $dispositiu = $modelDispositiu->find($FK_dispositiu);   //buscar en la bd el id tipus_dispositiu anterior
+        $tipus_dispositiu = $dispositiu['tipus'];   //obtener el campo tipus del id buscado, guarda el texto enves del num de la FK 
+
+        //Centre
+        $FK_centreEmissor = $ticket['idFK_codiCentre_emitent'];
+        $centre_e = $modelCentre->find($FK_centreEmissor);
+        $centre_emissor = $centre_e['nom'];
+
+        $FK_centreReparador = $ticket['idFK_codiCentre_reparador'];
+        $centre_r = $modelCentre->find($FK_centreReparador);
+        $centre_reparador = $centre_r['nom'];
+
+
+        $data['tiquet'] = $id_ticket;
+        $data['codi_equip'] = $ticket['codi_equip'];
+        $data['t_dispositiu'] = $tipus_dispositiu;
+        $data['professor'] = $ticket['idFK_idProfessor'];
+        $data['centre_emissor'] = $centre_emissor;
+        $data['centre_reparador'] = $centre_reparador;
+
+        return view("pages/eliminar", $data);
     }
-     public function delete($codi_equip){
-        $tiquet_Model=new TiquetModel();
+    public function delete($codi_equip){
+        $tiquet_Model = new TiquetModel();
         $tiquet_Model->borrarTicket($codi_equip);
         return redirect()->to("pagina/TicketSSTT");
-     }
+    }
 }

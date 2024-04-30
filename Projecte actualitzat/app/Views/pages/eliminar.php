@@ -10,6 +10,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"> </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  
+  <link rel="stylesheet" href="<?= base_url("css/style.css") ?>">
   <title>Assignats</title>
 
 
@@ -128,20 +130,35 @@
           <div class="col py-3">
 
             <div class="mt-3 mb-5">
-              <h1><?= lang('TicketProfessors.titol_afegirTicket');?></h1>
+              <h1><?= lang('TicketProfessors.titol_eliminarTicket');?></h1>
             </div>
 
-           
+
+          
+            <!-- Mostrar los datos del ticket -->
+
             <form action="<?= base_url("pagina/".$tiquet."/eliminar"); ?>" method="get">
             <div class="container">
-            <h1>Seguro que quieres eliminar este tiquet?</h1>
+
+              <h3>ID ticket</h3>
+              <p><?= $tiquet ?></p>
+              <h3>Codi del equip</h3>
+              <p><?= $codi_equip ?></p>
+              <h3>Dispositiu</h3>
+              <p><?= $t_dispositiu ?></p>
+              <h3>Professor</h3>
+              <p><?= $professor ?></p>
+              <h3>Centre emissor</h3>
+              <p><?= $centre_emissor ?></p>
+              <h3>Centre reparador</h3>
+              <p><?= $centre_reparador ?></p>
+
            
-              <button >Eliminar Ticket</button>
+              <button>Eliminar Ticket</button>
+              <a href="<?= base_url('pagina/TicketSSTT') ?>">Cancelar</a>
             
             </div>  
             </form>
-           
-            
 
 
 

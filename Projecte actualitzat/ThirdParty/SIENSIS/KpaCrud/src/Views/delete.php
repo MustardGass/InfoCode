@@ -35,6 +35,8 @@ renderJS($js_files, $_hidden_head_links);
             <h1><?= lang('crud.titles.delete'); ?></h1>
         </div>
         <div class="d-grid" style="margin-top:20px">
+
+        <!---------------------------- imprime los campos y sus datos --------------------------------------->
             <?php
 
             foreach ($tableFields as $dbfield) {
@@ -65,7 +67,7 @@ renderJS($js_files, $_hidden_head_links);
                         ShowField($dbfield, $data, $_data_columns, $_relations);
                 }
             } //end foreach field
-
+// --------------------------------------------------------------------------------------------------------
             /** @ignore */
             function ShowField($dbfield, $data, $_data_columns, $_relations, $editable = false)
             {
