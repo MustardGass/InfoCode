@@ -66,7 +66,6 @@ class TiquetModel extends Model
 
         //obtener id_tiquet random
         $id_random = array_rand($result);
-
         return $result[$id_random]->id_tiquet;
     }
 
