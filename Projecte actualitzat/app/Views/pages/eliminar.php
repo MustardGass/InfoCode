@@ -140,19 +140,48 @@
             <form action="<?= base_url("pagina/".$tiquet."/eliminar"); ?>" method="get">
             <div class="container">
 
-              <h3>ID ticket</h3>
-              <p><?= $tiquet ?></p>
-              <h3>Codi del equip</h3>
-              <p><?= $codi_equip ?></p>
-              <h3>Dispositiu</h3>
-              <p><?= $t_dispositiu ?></p>
-              <h3>Professor</h3>
-              <p><?= $professor ?></p>
-              <h3>Centre emissor</h3>
-              <p><?= $centre_emissor ?></p>
-              <h3>Centre reparador</h3>
-              <p><?= $centre_reparador ?></p>
+            <div class="row">
+              <div class="col">
+                <h3>ID tiquet</h3>
+                <p><?= $tiquet ?></p>
+              </div>
 
+              <div class="col">
+                <h3>Codi de l'equip</h3>
+                <p><?= $codi_equip ?></p>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="col">
+                <h3>Dispositiu</h3>
+                <p><?= $t_dispositiu ?></p>
+              </div>
+
+              <div class="col">
+                <h3>Professor</h3>
+                <p><?= $professor ?></p>
+              </div>
+            </div>
+
+
+              
+            <div class="row">
+              <div class="col">
+                <h3>Centre emissor</h3>
+                <p><?= $centre_emissor ?></p>
+              </div>
+
+              <div class="col">
+                <h3>Centre reparador</h3>
+                <p><?= $centre_reparador ?></p>
+              </div>
+            </div>
+              
+             
+              
            
               <button>Eliminar Ticket</button>
               <a href="<?= base_url('pagina/TicketSSTT') ?>">Cancelar</a>
