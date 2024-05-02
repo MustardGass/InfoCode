@@ -19,7 +19,8 @@
         'estat_taula' => 'ESTAT',
         'cerca' => 'Cerca',
         'titol_afegirTicket' => 'Afegir tiquet',
-        'titol_eliminarTicket' => 'Eliminar tiquet'
+        'titol_eliminarTicket' => 'Eliminar ticket',
+        'titol_editarTicket' => 'Editar Ticket'
 
     ]
 ?>

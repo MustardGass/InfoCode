@@ -55,5 +55,4 @@ class AdminModel extends Model
         return $usuario->get()->getResultArray();
     }
 
-
 }

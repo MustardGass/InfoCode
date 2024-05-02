@@ -62,4 +62,11 @@ class AlumnesModel extends Model
     public function getAlumne() {
         return $this->findAll();
     }
+
+    public function registrarAlumne($correu_alumne, $idFK_codi_centre) {
+        $this->insert([
+            "correu_alumne" => $correu_alumne,
+            "idFK_codi_centre" => $idFK_codi_centre
+        ]);
+    }
 }

@@ -26,11 +26,9 @@ class AfegirTaulesNoves extends Migration
 
          //Taula Login
          $this->forge->addField([
-            'id_login' => [
-                'type' => 'INT',
-                'constraint' => '18',
-                'unsigned' => true,
-                'auto_increment' => true
+            'idFK_user' => [
+                'type'  => 'VARCHAR',
+                'constraint' => 60
             ],
             'password' => [
                 'type' => 'VARCHAR',
@@ -39,6 +37,7 @@ class AfegirTaulesNoves extends Migration
         ]);
 
         $this->forge->addKey('id_login', true);
+        $this->forge->addForeignKey('idFK_user', 'professor', 'id_xtec');
         $this->forge->createTable("login");
 
         //Taula Roles
@@ -72,7 +71,7 @@ class AfegirTaulesNoves extends Migration
         ]);
 
         $this->forge->addKey("idFK_user", true);
-        $this->forge->addForeignKey("idFK_user", "administrador", "id_admin");
+        $this->forge->addForeignKey("idFK_user", "professor", "id_xtec");
         $this->forge->addForeignKey("idFK_rol", "rols", "id_rol");
         $this->forge->createTable("users_rols");
     }

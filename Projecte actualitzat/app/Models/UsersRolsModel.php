@@ -12,7 +12,7 @@ class UsersRolsModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_user', 'idFK_rol'];
+    protected $allowedFields    = ['idFK_user', 'idFK_rol'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

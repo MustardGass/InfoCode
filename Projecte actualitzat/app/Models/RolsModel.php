@@ -43,7 +43,7 @@ class RolsModel extends Model
     public function registrarRols($roles) {
         $data = [];
         foreach ($roles as $rol) {
-            $data[] = ['rol' => $rol];
+            $data[] = ['tipus_rol' => $rol];
         }
         return $this->insertBatch($data);
     }

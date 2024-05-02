@@ -12,7 +12,7 @@ class LoginModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id_login', 'password'];
+    protected $allowedFields    = ['idFK_user', 'password'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
@@ -51,4 +51,8 @@ class LoginModel extends Model
     public function obtindreDadesID($id_login) {
         return $this->where('id_login', $id_login)->first();
     }   
+
+    public function registroUser($dades) {
+        return $this->insert($dades);
+    }
 }

@@ -38,6 +38,7 @@ class ProfessorModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+    //guardar info del csv ingresado por el seeder
     public function addProfessors($id_xtec, $nom, $cognoms, $correu, $idFK_codi_centre) {
         
         $this->insert([
@@ -52,6 +53,17 @@ class ProfessorModel extends Model
     public function registrarProfessor($dades) {
         return $this->insert($dades);
     }
+
+    // public function registrarProfessor($id_xtec, $nom, $cognoms, $correu, $idFK_codi_centre) {
+    //     $this->insert([
+    //         'id_xtec' => $id_xtec,
+    //         'nom' => $nom,
+    //         'cognoms' => $cognoms,
+    //         'correu' => $correu,
+    //         'idFK_codi_centre' => $idFK_codi_centre
+    //     ]);
+    // }
+
 
     public function obtindreID() {
         $builder = $this->db->table('professor');

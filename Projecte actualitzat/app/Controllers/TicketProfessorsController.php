@@ -11,6 +11,10 @@ class TicketProfessorsController extends BaseController
 {
     public function vista_ticket_profes()
     {
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
+
         // Model tiquet
         $tiquetModel = new TiquetModel();
         $modelTipus_dispositiu = new TipusDispositiuModel();
@@ -18,9 +22,9 @@ class TicketProfessorsController extends BaseController
         // Configurar KpaCrud
         $config = [
             'numerate' => false,
-            'editable' => true,
-            'removable' => true,
-            'add_button' => true,
+            'editable' => false,
+            'removable' => false,
+            'add_button' => false,
             // hi ha més configuració ademés d'aquesta
         ];
 
@@ -35,10 +39,10 @@ class TicketProfessorsController extends BaseController
         $crud->setRelation('idFK_dispositiu', 'tipus_dispositiu', 'id_tipus', 'tipus'); //relacio entre taula tiquet i tipus_dispositiu
         
         // Columnes que volem veure
-        $crud->setColumns(['id_tiquet', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'centre_emitent', 'centre_reparador', 'codi_equip', 'data_alta', 'estat_tiquet']);
+        $crud->setColumns(['codi_equip', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'estat_tiquet']);
         $crud->setColumnsInfo([
-            'id_tiquet' => [
-                'name' => 'Codi del tiquet'
+            'codi_equip' => [
+                'name' => 'Codi del equip'
             ],
             'tipus_dispositiu__tipus' => [
                 'name' => 'Tipus de dispositiu'
@@ -46,18 +50,10 @@ class TicketProfessorsController extends BaseController
             'descripcio_avaria' => [
                 'name' => 'Descripció'
             ],
-            'centre_emitent' => [
-                'name' => 'Centre emisor'
-            ],
-            'centre_reparador' => [
-                'name' => 'Centre taller'
-            ],
-            'data_alta' => [
-                'name' => 'Data creació'
-            ],
-            'estat' => [
-                'name' => 'Estat'
+            'estat_tiquet' => [
+                'name' =>  'Estat'
             ]
+
         ]);
 
 
@@ -66,5 +62,10 @@ class TicketProfessorsController extends BaseController
 
         // Passar dades a la vista
         return view('pages/TicketProfessors', $data);
+    }
+
+    public function afegir_ticket() {
+
+        
     }
 }

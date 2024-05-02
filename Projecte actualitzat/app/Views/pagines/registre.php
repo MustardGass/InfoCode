@@ -41,24 +41,35 @@
                 </div>
                 <div class="col-md-6">
                     <h3 class="text-center mt-5">REGISTRE</h3>
-                    <form action="" method="POST" class="mt-5">
+                    <form action="<?= base_url('registre') ?>" method="POST" class="mt-5">
                         <div>
-                            <label for="nom_cognom" class="form-label">Nom i cognom</label>
-                            <input type="text" name="nom_cognom" id="nom_cognom" class="form-control mb-4" />
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" name="nom" id="nom" class="form-control mb-4" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="apellido" class="form-label">Cognoms</label>
+                            <input type="text" name="apellido" id="apellido" class="form-control mb-4" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="correu_xtec" class="form-label">Correu xtec</label>
+                            <input type="email" name="correu_xtec" id="correu_xtec" class="form-control mb-4"/>
                         </div>
                         <div class="mb-4">
                             <label for="correu" class="form-label">Correu</label>
                             <input type="email" name="correu" id="correu" class="form-control mb-4"/>
                         </div>
-                        <div class="mb-4">
+                        <!-- <div class="mb-4">
                             <label for="contrasenya" class="form-label">Contrasenya</label>
                             <input type="password" name="contrasenya" id="contrasenya" class="form-control mb-4" />
-                        </div>
-                        <div class="mb-4">
-                            <label for="confirm_contrasenya" class="form-label">Confirmar contrasenya</label>
-                            <input type="password" name="confirm_contrasenya" id="confirm_contrasenya" class="form-control mb-4" />
-                        </div>
-        
+                        </div> -->
+
+                        <label for="centre">Centre</label>
+                        <select name="centre" id="centre">
+                            <?php foreach($centre_profe as $centre) : ?>
+                                <option value="<?= $centre['codi_centre'] ?>"><?= $centre['nom'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+
                         <button type="submit" class="btn" id="btn_accedir">Registrar</button>
 
                     </form>

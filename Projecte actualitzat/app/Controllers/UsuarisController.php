@@ -20,92 +20,102 @@ class UsuarisController extends BaseController
         return view("pagines/" . $pagina, $data);
     }
 
+
+    // public function registre() {
+    //     helper("form");
+    
+    //     // $modelProfessor = new ProfessorModel();
+    //     // $modelCentre = new CentreModel();
+    //     // $modelRols = new RolsModel();
+    //     $modelAdmin = new AdminModel();
+    
+    //     // $data['centre_profe'] = $modelCentre->select('codi_centre, nom')->findAll();
+    
+    //     // if($this->request->getMethod() === "post") {
+    //     //     echo "El formulario se ha enviado correctamente."; // Agrega un echo para verificar que se llega a este punto
+    //     //     $id_xtec = $this->request->getPost("correu_xtec");
+    //     //     $nom = $this->request->getPost("nom");
+    //     //     $cognoms = $this->request->getPost("cognoms");
+    //     //     $correu = $this->request->getPost("correu_personal");
+    //     //     $idFK_codi_centre = $this->request->getPost("centre");
+    
+    //     //     // Intenta guardar los datos en la base de datos
+    //     //     $modelProfessor->registrarProfessor($id_xtec, $nom, $cognoms, $correu, $idFK_codi_centre);
+    //     // }
+
+    //     if($this->request->getMethod() === "post"){
+
+    //         $modelAdmin->addAdmin([
+    //             'id_admin' => $this->request->getPost("id_admin"),
+    //             'password' => password_hash('1234', PASSWORD_DEFAULT)
+    //         ]);
+    //         // $id_admin = $this->request->getPost("id_admin");
+
+    //         // $modelAdmin->registrarAdmin($id_admin);
+    //     }
+    //     echo "holaaaaaaaaaa";
+    //     return view('pages/session/registre');
+    // }
+    
+    
+
     public function registre() {
         //verificar si el usuari es admin
-        if(session()->get('rol') !== 'admin') {
-            return redirect()->to(base_url('login'));
-        }
+        // if(session()->get('rol') !== 'admin') {
+        //     return redirect()->to(base_url('login'));
+        // }
         
-        helper("form");
-
         $modelProfessor = new ProfessorModel();
         $modelCentre = new CentreModel();
         $modelLogin = new LoginModel();
         $modelRols = new RolsModel();
         $model_UsersRols = new UsersRolsModel();
-
-        // $modelAlumne = new AlumnesModel();
+        
+        $modelAlumnes = new AlumnesModel();
         
         $fake = Factory::create("es_ES");
+        $data['centre_profe'] = $modelCentre->select('codi_centre, nom')->findAll();
 
-        $validationRules = [
-            'nom' => [
-                'label' => 'nom',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'El campo nom es obligatori'
-                ]
-            ],
-            'cognoms' => [
-                'label' => 'cognoms',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'El camp cognoms es obligatori'
-                ]
-            ],
-            'correu' => [
-                'label' => 'correu',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'El camp correu es obligatori'
-                ]
-                ],
-            'contrasenya' => [
-                'label' => 'password',
-                'rules' => 'required|min_length[8]',
-                'errors' => [
-                    'required' => 'El camp de contrasenya es obligatori',
-                    'min_length' => '{field} massa curt'
-                ]
-            ]
-        ];
+        if($this->request->getMethod() === 'POST') {
 
-        if($this->request->getMethod() === 'post') {
-            if($this->validate($validationRules)) {
-                $data = [
-                    'id_xtec' => $fake->userName . "@xtec.cat",
-                    'nom' => $this->request->getPost('nom'),
-                    'cognoms' => $this->request->getPost('cognoms'),
-                    'correu' => $this->request->getPost('correu'),
-                    'idFK_codi_centre'=> $modelCentre->obtindreID()
-                ];
+            $data = [
+                'id_xtec' => $this->request->getPost('correu_xtec'),
+                'nom' => $this->request->getPost('nom'),
+                'cognoms' => $this->request->getPost('apellido'),
+                'correu' => $this->request->getPost('correu'),
+                'idFK_codi_centre'=> $this->request->getPost('centre')
+            ];
 
-                $modelProfessor->registrarProfessor($data);
+            $modelProfessor->registrarProfessor($data);
 
-                $pass_hash = password_hash($this->request->getPost('contrasenya'), PASSWORD_DEFAULT);
-                $data['password'] = $pass_hash;
-                $modelLogin->insert($data);
+            //guardar correu_xtec y password a la taula Login
+            $data = [
+                'idFK_user' => $this->request->getPost('correu_xtec'),
+                'password' => $fake->password(6, 9)
+            ];
+            $modelLogin->registroUser($data);
 
-                //obtindre id del rol professor
-                $rol_professor = $modelRols->where('tipus_rol', 'professor')->first();
-                $idRol_professor = $rol_professor['id_rol'];
+            //Guardar correu_xtec y rol a la taula UsersRols
+            $rolProfe = $modelRols->where('tipus_rol', 'professor')->first();
+            $id_rol = $rolProfe['id_rol'];
 
-                //obtindre id del professor registrat
-                $id_professor = $modelProfessor->where('correu', $data['correu'])->first()['id_xtec'];
+            $data = [
+                'idFK_user' => $this->request->getPost('correu_xtec'),
+                'idFK_rol' => $id_rol
+            ];
 
-                //guardar asociació del professor amb rol "professor" a la taula users_rols
-                $data_UsersRols = [
-                    'id_user' => $id_professor,
-                    'idFK_rol' => $idRol_professor
-                ];
+            $model_UsersRols->addUserRols($data);
 
-                $model_UsersRols->insert($data_UsersRols);
+            // $pass_hash = password_verify();
+                // $pass_hash = password_hash($this->request->getPost('contrasenya'), PASSWORD_DEFAULT);
+                // $data['password'] = $pass_hash;
+                // $modelLogin->insert($data);
 
-                return redirect()->to(base_url("login"));
-            }
+
+            return redirect()->to(base_url("login")); 
         }
 
-        return view("pagines/registre");
+        return view("pagines/registre", $data);
     }
 
 
@@ -151,8 +161,8 @@ class UsuarisController extends BaseController
     }
 
     public function vista_admin() {
-        $data['titol'] = "Pagina de Administrador";
-        return view('pages/Admin', $data);
+        $data['title'] = "Pagina de Administrador";
+        return view('pages/admin', $data);
     }
 
 

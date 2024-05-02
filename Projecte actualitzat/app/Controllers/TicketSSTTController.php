@@ -14,7 +14,6 @@ class TicketSSTTController extends BaseController
 {
     public function vista_ticket_sstt()
     {
-
         if(!session()->get('isLogged')) {
             return redirect()->to(base_url('login'));
         }
@@ -26,7 +25,7 @@ class TicketSSTTController extends BaseController
        // Configurar KpaCrud
        $config = [
            'numerate' => false,
-           'editable' => true,
+           'editable' => false,
            'removable' => false,
            'add_button' => false,
            // hi ha més configuració ademés d'aquesta
@@ -65,14 +64,15 @@ class TicketSSTTController extends BaseController
            'data_alta' => [
                'name' => 'Data creació'
            ],
-           'estat' => [
+           'estat_tiquet' => [
                'name' => 'Estat'
            ],
            'idFK_dispositiu'=> [
             'name' => 'Tipus de dispositiu'
            ]
        ]);
-       $crud->addItemLink('view','fa-solid fa-trash text-danger', base_url('pagina/eliminar/'), 'Eliminar ticket');
+       $crud->addItemLink('edit', 'fa-solid fa-pen text-success', base_url('pagina/editar/'), 'Editar ticket');
+       $crud->addItemLink('delete','fa-solid fa-trash text-danger', base_url('pagina/eliminar/'), 'Eliminar ticket');
     //    $crud->addItemFunction('mailing', 'fa-paper-plane', array($this, 'myCustomPage'), "Send mail");
        
        // Generar la taula KpaCrud
@@ -84,6 +84,10 @@ class TicketSSTTController extends BaseController
     
     
     public function afegir_ticket() {
+
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
 
         $fake = Factory::create("es_ES");
 
@@ -132,7 +136,12 @@ class TicketSSTTController extends BaseController
         return view("pages/afegirTicket", $data);
     }
 
+    //Vista eliminar tiquet
     public function eliminar_ticket($id_ticket){
+
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
 
         $modelTiquet = new TiquetModel();
         $modelDispositiu = new TipusDispositiuModel();
@@ -165,9 +174,27 @@ class TicketSSTTController extends BaseController
 
         return view("pages/eliminar", $data);
     }
-    public function delete($codi_equip){
-        $tiquet_Model = new TiquetModel();
-        $tiquet_Model->borrarTicket($codi_equip);
+    public function delete($id_ticket){
+        $modelTiquet = new TiquetModel();
+        $modelTiquet->borrarTicket($id_ticket);
         return redirect()->to("pagina/TicketSSTT");
     }
+
+    public function editar_ticket($id_ticket) {
+
+        // $modelTiquet = new TiquetModel();
+
+        // $ticket = $modelTiquet->find($id_ticket);
+        // $data['id_ticket'] = $ticket['id_tiquet'];
+
+
+        return view("pages/editarTicket");
+        // return redirect()->to('pages/editarTicket');
+    }
+
+    // public function editar($codi_equip){
+    //     $tiquet_Model = new TiquetModel();
+    //     $tiquet_Model->editarTicket($codi_equip);
+    //     return redirect()->to("pagina/TicketSSTT");
+    // }
 }

@@ -10,9 +10,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"> </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="<?= base_url('css/styles.css') ?>">
   
-  <title>Ticket Professors</title>
+  <link rel="stylesheet" href="<?= base_url("css/style.css") ?>">
+  <title>Assignats</title>
 
 
   <script type="text/javascript">
@@ -62,9 +62,6 @@
     .menuEsquerra {
       background-color: #344450;
     }
-
-    /* estils taula KpaCrud */
-   
   </style>
 
 
@@ -83,7 +80,7 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active text-white" aria-current="page"
-              href="#"><?= lang('TicketProfessors.sstt_header'); ?></a>
+            href="<?= base_url('/pagina/TicketSSTT'); ?>"><?= lang('TicketProfessors.sstt_header'); ?></a>
           </li>
         </ul>
         <div class="d-flex">
@@ -117,7 +114,7 @@
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
               <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start ms-0 text-start" id="menu">
                 <li class="nav-item mt-3">
-                  <a class="nav-link text-white" href="#"> <img src=<?= base_url('img/iconMenuRosca.png'); ?> alt="Logo"
+                  <a class="nav-link text-white" href="<?= base_url('/pagina/TicketSSTT'); ?>"> <img src=<?= base_url('img/iconMenuRosca.png'); ?> alt="Logo"
                       style="max-height: 30px;"><?= lang('TicketProfessors.reparacions_menu'); ?></a>
                 </li>
 
@@ -133,36 +130,16 @@
           <div class="col py-3">
 
             <div class="mt-3 mb-5">
-              <h1><?= lang('TicketProfessors.titol_reparacions'); ?></h1>
+              <h1><?= lang('TicketProfessors.titol_editarTicket');?></h1>
             </div>
 
-    
-            <!-- <table  class="table" id="table_detail" cellpadding=10> 
 
+          
+            <!-- Mostrar los datos del ticket -->
 
-            <tr> 
-                <th scope="col" style='background-color: #4d82bc;'><input type="checkbox"/></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.codi_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.equip_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.supervisor_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.dia_entrada_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.dia_sortida_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.estat_taula'); ?></th>
-                <th scope="col" style='background-color: #4d82bc;'></th>
-            </tr> 
-
-
-            </table> -->
-
-          <div>
-            <a href="<?= base_url("pagina/") ?>"></a>
-          </div>
-
-            <div>
-
-              <?= $table ?>
-            </div>
-
+            
+            <h3>ID ticket</h3>
+            
 
 
 
