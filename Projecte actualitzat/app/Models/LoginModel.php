@@ -55,4 +55,8 @@ class LoginModel extends Model
     public function registroUser($dades) {
         return $this->insert($dades);
     }
+
+    public function obtindreProfessor($correu_user) {
+        return $this->where('idFK_user', $correu_user)->first();
+    }
 }

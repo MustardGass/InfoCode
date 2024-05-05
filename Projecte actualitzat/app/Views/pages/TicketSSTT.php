@@ -85,15 +85,14 @@
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <img src=<?= base_url('img/user.png'); ?> alt="User" style="max-height: 30px;">
-              <?= lang('TicketProfessors.usuari'); ?>
+              <?= session()->get('user_id') ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.opt1'); ?></a></li>
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.opt2'); ?></a></li>
+              <li><a class="dropdown-item" href="<?= base_url("/pagina/panelSSTT") ?>"><?= lang('TicketProfessors.opt1'); ?></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.desconnectar'); ?></a></li>
+              <li><a class="dropdown-item" href="<?= base_url("logout") ?>"><?= lang('TicketProfessors.desconnectar'); ?></a></li>
             </ul>
           </li>
         </div>
@@ -132,7 +131,6 @@
 
             <div>
               <a href="<?= base_url("pagina/afegirTicket") ?>" class="btn btn-primary">+ Afegir</a>
-              <a href="<?= base_url("logout") ?>" class="btn btn-danger">Tancar sessió</a>
             </div>
 
             <div>

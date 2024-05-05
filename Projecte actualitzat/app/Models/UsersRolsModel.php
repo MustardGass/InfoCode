@@ -47,4 +47,9 @@ class UsersRolsModel extends Model
     public function addUserRols($dades) {
         return $this->insert($dades);
     }
+
+    public function obtindreRols($correu_user) {
+        // $rol = $this->where('idFK_user', $correu_user)->first();
+        return $this->where('idFK_user', $correu_user)->first();
+    }
 }

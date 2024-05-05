@@ -1,10 +1,3 @@
-
-
-
-<!-- No se usara ya esta implementado en otra vista (BORRAR) -->
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

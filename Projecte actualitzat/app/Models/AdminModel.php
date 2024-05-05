@@ -49,10 +49,16 @@ class AdminModel extends Model
         $this->db->table('administrador')->insert($data);
 
     }
-    public function obtindreAdmin($data){
-        $usuario=$this->db->table('administrador');
-        $usuario->where($data);
-        return $usuario->get()->getResultArray();
+    // public function obtindreAdmin($data){
+    //     $usuario=$this->db->table('administrador');
+    //     $usuario->where($data);
+    //     return $usuario->get()->getResultArray();
+    // }
+
+    public function obtindreAdmin($id_admin) {
+        //el $id_admin introducido por POST sera buscado y comparado con el campo 'id_admin' hasta encontrar el que coincide
+        //En sql seria asi: SELECT * FROM administrador WHERE id_admin = :id_admin LIMIT 1;
+        return $this->where('id_admin', $id_admin)->first();
     }
 
 }

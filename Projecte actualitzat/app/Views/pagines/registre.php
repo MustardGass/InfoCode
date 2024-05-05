@@ -58,10 +58,10 @@
                             <label for="correu" class="form-label">Correu</label>
                             <input type="email" name="correu" id="correu" class="form-control mb-4"/>
                         </div>
-                        <!-- <div class="mb-4">
+                        <div class="mb-4">
                             <label for="contrasenya" class="form-label">Contrasenya</label>
                             <input type="password" name="contrasenya" id="contrasenya" class="form-control mb-4" />
-                        </div> -->
+                        </div>
 
                         <label for="centre">Centre</label>
                         <select name="centre" id="centre">

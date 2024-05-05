@@ -4,7 +4,7 @@
 
         'sstt_header' => 'Serveis Territorials',
         'usuari' => "Usuari d'exemple",
-        'opt1' => 'Opció 1',
+        'opt1' => 'Informació',
         'opt2' => 'Opció 2',
         'desconnectar' => 'Desconnectar',
         'reparacions_menu' => 'Reparacions',
