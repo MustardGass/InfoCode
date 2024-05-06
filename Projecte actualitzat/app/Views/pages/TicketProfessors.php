@@ -65,6 +65,7 @@
 
     /* estils taula KpaCrud */
    
+    
   </style>
 
 

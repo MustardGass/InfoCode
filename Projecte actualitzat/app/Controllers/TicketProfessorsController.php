@@ -11,7 +11,7 @@ class TicketProfessorsController extends BaseController
 {
     public function vista_ticket_profes()
     {
-        if(!session()->get('isLogged')) {
+        if (!session()->get('isLogged')) {
             return redirect()->to(base_url('login'));
         }
 
@@ -37,24 +37,28 @@ class TicketProfessorsController extends BaseController
         $crud->setTable('tiquet'); // Nom de la taula
         $crud->setPrimaryKey('id_tiquet'); // Clau primària
         $crud->setRelation('idFK_dispositiu', 'tipus_dispositiu', 'id_tipus', 'tipus'); //relacio entre taula tiquet i tipus_dispositiu
-        
-        // Columnes que volem veure
-        $crud->setColumns(['codi_equip', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'estat_tiquet']);
-        $crud->setColumnsInfo([
-            'codi_equip' => [
-                'name' => 'Codi del equip'
-            ],
-            'tipus_dispositiu__tipus' => [
-                'name' => 'Tipus de dispositiu'
-            ],
-            'descripcio_avaria' => [
-                'name' => 'Descripció'
-            ],
-            'estat_tiquet' => [
-                'name' =>  'Estat'
-            ]
 
-        ]);
+        // Columnes que volem veure
+$crud->setColumns(['codi_equip', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'estat_tiquet']);
+
+$crud->setColumnsInfo([
+    'codi_equip' => [
+        'name' => 'Codi del equip'
+    ],
+    'tipus_dispositiu__tipus' => [
+        'name' => 'Tipus de dispositiu',
+        'width' => '20%' // Ajustar el ancho del campo
+    ],
+    'descripcio_avaria' => [
+        'name' => 'Descripció',
+        'width' => '40%' // Ajustar el ancho del campo
+    ],
+    'estat_tiquet' => [
+        'name' =>  'Estat'
+    ]
+]);
+
+
 
 
         // Generar la taula KpaCrud
@@ -64,8 +68,9 @@ class TicketProfessorsController extends BaseController
         return view('pages/TicketProfessors', $data);
     }
 
-    public function afegir_ticket() {
+    public function afegir_ticket()
+    {
 
-        
+
     }
 }

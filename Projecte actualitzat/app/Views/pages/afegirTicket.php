@@ -177,6 +177,7 @@
               <div class="col">
                 <label for="c_reparador" class="form-label h5 ">Centre Reparador</label><br>
                 <select name="c_reparador" id="c_reparador" class="form-select">
+                  
                     <?php foreach($centre_reparador as $centre_r) : ?>
                         <option value="<?= $centre_r['codi_centre'] ?>"><?= $centre_r['nom'] ?></option>
                     <?php endforeach; ?>
