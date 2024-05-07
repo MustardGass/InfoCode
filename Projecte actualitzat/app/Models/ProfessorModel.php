@@ -76,4 +76,12 @@ class ProfessorModel extends Model
         
         return $result[$id_random]->id_xtec;
     }
+
+    public function obtindreProfessor($correu_user) {
+        return $this->where('id_xtec', $correu_user)->first();
+    }
+
+    public function obtindreCentreProfessor($correu_user) {
+        return $this->where('idFK_codi_centre', $correu_user)->first();
+    }
 }

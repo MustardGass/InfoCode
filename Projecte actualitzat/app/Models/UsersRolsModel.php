@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class UsersRolsModel extends Model
 {
     protected $table            = 'users_rols';
-    protected $primaryKey       = 'id_user';
+    protected $primaryKey       = 'idFK_user';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;

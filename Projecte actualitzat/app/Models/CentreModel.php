@@ -82,4 +82,5 @@ class CentreModel extends Model
         $nom_random = array_rand($result);
          return $result[$nom_random]->nom;
     }
+
 }

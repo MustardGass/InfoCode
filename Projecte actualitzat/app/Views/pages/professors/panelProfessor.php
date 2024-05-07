@@ -7,7 +7,11 @@
 </head>
 <body>
     <h1><?= $title ?></h1>
-    <p>Nom d'usuari: <?= session()->get('user_id') ?></p>
-
+    <p>Nom d'usuari: <?= $user_id ?></p>
+    <p>Rol d'usuari: <?= $user_rol ?></p>
+    <p>Nom: <?= $nom ?></p>
+    <p>Cognoms: <?= $cognoms ?></p>
+    <p>Correu Personal: <?= $correu ?></p>
+    <p>Centre: <?= $centre_assignat ?></p>
 </body>
 </html>

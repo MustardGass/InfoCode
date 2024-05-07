@@ -81,6 +81,7 @@ class UsuarisController extends BaseController
         $modelAdmin = new AdminModel();
         $modelLogin = new LoginModel();
         $modelUsersRols = new UsersRolsModel();
+        $modelProfessor = new ProfessorModel();
 
         if($this->request->getPost()){
 
@@ -91,26 +92,29 @@ class UsuarisController extends BaseController
 
                 if(!$usuari_admin){
                     $usuari_profe = $modelLogin->obtindreProfessor($user);
+                    $rol = $modelUsersRols->obtindreRols($user);
+                    $info_profe = $modelProfessor->obtindreProfessor($user);
                 }
-
-            // $rol = $modelUsersRols->obtindreRols($user);
 
             if($usuari_admin && password_verify($password, $usuari_admin['password'])){
                 session()->set('isLogged', true);
                 session()->set('user_id', $usuari_admin['id_admin']);
-
+               
                 return redirect()->to('/pagina/panelSSTT');
             }elseif($usuari_profe && password_verify($password, $usuari_profe['password'])) {
                 session()->set('isLogged', true);
                 session()->set('user_id', $usuari_profe['idFK_user']);
-                // session()->set('user_rol', $rol['idFK_user']);
+                session()->set('user_rol', $rol['idFK_rol']);
+                session()->set('user_nom', $info_profe['nom']);
+                session()->set('user_cognoms', $info_profe['cognoms']);
+                session()->set('user_correu', $info_profe['correu']);
+                session()->set('user_centre', $info_profe['idFK_codi_centre']);
 
-                return redirect()->to(base_url('/pagina/panelProfessor'));
+                return redirect()->to(base_url('/pagina/TicketProfessors'));
             }else {
                 return redirect()->to('/login');
-            }
+            }   
         }
-
         return view("pages/session/login");
     }
 
