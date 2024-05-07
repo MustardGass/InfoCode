@@ -64,7 +64,7 @@
                             <input type="checkbox" class="form-check-input" id="recordar_usuari">
                             <label class="form-check-label" for="recordar_usuari">Recordar usuari</label>
                         </div>
-                        <input type="submit" class="btn" id="btn_accedir">Iniciar Sessió</input>
+                        <input type="submit" class="btn" id="btn_accedir"></input>
                         <div class="mt-3 text-center">
                             <a href="#" class="text-decoration-none">He oblidat la contrasenya</a>
                         </div>
