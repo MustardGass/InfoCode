@@ -183,7 +183,7 @@
              
               
            
-              <button>Eliminar Ticket</button>
+              <button class="btn btn-danger">Eliminar Ticket</button>
               <a href="<?= base_url('pagina/TicketSSTT') ?>">Cancelar</a>
             
             </div>  
