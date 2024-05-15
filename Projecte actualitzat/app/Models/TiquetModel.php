@@ -74,23 +74,8 @@ class TiquetModel extends Model
         return $this->findAll();
     }
 
-    // public function afegirTiquets($id) {
-    //     // $tiquet_model = new TiquetModel();
-    //     $this->insert([
-    //         'id_tiquet' => $id
-    //     ]); 
-    //     // [
-    //     //     // 'descripcio_avaria' => $descripcio_avaria,
-    //     //     // 'data_alta' => $data_alta,
-    //     //     // 'estat_tiquet' => $estat,
-    //     //     // 'idFk_dispositiu' => $idFK_tipus_dispositiu,
-    //     //     // 'centre_emitent' => $idFK_codiCentre_emitent,
-    //     //     // 'centre_reparador' => $idFK_codiCentre_reparador
-    //     // ];
 
-    // }
-
-    public function afegirTicket($id_tiquet, $codi_equip, $idFK_dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor) {
+    public function afegirTicket($id_tiquet, $codi_equip, $idFK_dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $idFK_codiCentre_emitent, $idFK_codiCentre_reparador, $idFK_professor, $centre_reparador) {
         $this->insert([
             'id_tiquet' => $id_tiquet,
             'codi_equip' => $codi_equip,
@@ -98,6 +83,7 @@ class TiquetModel extends Model
             'descripcio_avaria' => $descripcio_avaria,
             'data_alta' => $data_alta,
             'estat_tiquet' => $estat_tiquet,
+            'centre_reparador' => $centre_reparador,
             'idFK_codiCentre_emitent' => $idFK_codiCentre_emitent,
             'idFK_codiCentre_reparador' => $idFK_codiCentre_reparador,
             'idFK_idProfessor' => $idFK_professor
@@ -115,5 +101,7 @@ class TiquetModel extends Model
     //     $this->update($id_ticket, $data);
     // }
  
-
+    public function editarTicket($id_ticket, $nou_ticket) {
+        return $this->update($id_ticket, $nou_ticket);
+    }
 }

@@ -195,17 +195,11 @@
               <br>
 
              
-
               <button type="submit" class="btn btn-primary px-3">Crear Ticket</button>
             
             </div>  
             </form>
            
-            
-
-
-
-
           </div>
 
 

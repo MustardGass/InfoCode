@@ -17,10 +17,6 @@ class TicketSSTTController extends BaseController
         if(!session()->get('isLogged')) {
             return redirect()->to(base_url('login'));
         }
-        
-       // Model tiquet
-       $tiquetModel = new TiquetModel();
-       $modelTipus_dispositiu = new TipusDispositiuModel();
 
        // Configurar KpaCrud
        $config = [
@@ -61,6 +57,9 @@ class TicketSSTTController extends BaseController
            'centre_reparador' => [
                'name' => 'Centre taller'
            ],
+           'codi_equip' => [
+                'name' => 'Codi del equip'
+           ],
            'data_alta' => [
                'name' => 'Data creació'
            ],
@@ -73,7 +72,6 @@ class TicketSSTTController extends BaseController
        ]);
        $crud->addItemLink('edit', 'fa-solid fa-pen text-success', base_url('pagina/editar/'), 'Editar ticket');
        $crud->addItemLink('delete','fa-solid fa-trash text-danger', base_url('pagina/eliminar/'), 'Eliminar ticket');
-    //    $crud->addItemFunction('mailing', 'fa-paper-plane', array($this, 'myCustomPage'), "Send mail");
        
        // Generar la taula KpaCrud
        $data['table'] = $crud->render();
@@ -114,14 +112,20 @@ class TicketSSTTController extends BaseController
             $codi_equip = $this->request->getPost('cod_equip');
             $dispositiu = $this->request->getPost('t_dispositiu');
             $descripcio_avaria = $this->request->getPost('descripcio');
-            $centre_emitent = $this->request->getPost('c_emitent');
-            $centre_reparador = $this->request->getPost('c_reparador');
+            $idFK_Centre_emissor = $this->request->getPost('c_emitent');
+            $idFK_centre_reparador = $this->request->getPost('c_reparador');
             $professor = $this->request->getPost('professor');
 
             $dispositiu_exists = $modelDispositiu->find($dispositiu);
 
+            //obtindre nom del centre raparador
+            //realitzar consulta per trobar el centre reparador amb la id proporcionada
+            $centre_reparador = $modelCentre->find($idFK_centre_reparador);                //  $centre_reparador -> conté totes les dades del centre trobat
+            $nom_centre_reparador = $centre_reparador['nom'];  //si se a trobat el centre, extraiem el nom de aquell centre
+
+
             if($dispositiu_exists){
-                $modelTiquet->afegirTicket($idTicket, $codi_equip, $dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $centre_emitent, $centre_reparador, $professor);
+                $modelTiquet->afegirTicket($idTicket, $codi_equip, $dispositiu, $descripcio_avaria, $data_alta, $estat_tiquet, $idFK_Centre_emissor, $idFK_centre_reparador, $professor, $nom_centre_reparador);
                 return redirect()->to("pagina/TicketSSTT");
             } else {
                 echo "Dispositivo seleccionado no existe";
@@ -145,7 +149,6 @@ class TicketSSTTController extends BaseController
 
         $modelTiquet = new TiquetModel();
         $modelDispositiu = new TipusDispositiuModel();
-        // $modelProfessor = new ProfessorModel();
         $modelCentre = new CentreModel();
 
         $ticket = $modelTiquet->find($id_ticket);   //buscar en la bd el id del tiquet que sera eliminado
@@ -182,19 +185,43 @@ class TicketSSTTController extends BaseController
 
     public function editar_ticket($id_ticket) {
 
-        // $modelTiquet = new TiquetModel();
+        //Crear instancies als models
+        $modelTicket = new TiquetModel();
+        $modelCentre = new CentreModel();
+        $modelDispositiu = new TipusDispositiuModel();
 
-        // $ticket = $modelTiquet->find($id_ticket);
-        // $data['id_ticket'] = $ticket['id_tiquet'];
-
-
-        return view("pages/editarTicket");
-        // return redirect()->to('pages/editarTicket');
+        //buscar ticket especific amb el id proporcionat
+        $ticket = $modelTicket->find($id_ticket);
+        
+        //pasar dades a la vista
+        $data['ticket'] = $ticket['id_tiquet'];
+        $data['dispositiu'] = $modelDispositiu->select('id_tipus, tipus')->findAll();
+        $data['centre_emissor'] = $modelCentre->select('codi_centre, nom')->findAll();
+        $data['codi_equip'] = (int)$ticket['codi_equip'];
+        $data['descripcio_avaria'] = $ticket['descripcio_avaria'];
+        $data['contable'] = $modelCentre->contarDatos();
+        return view("pages/editarTicket", $data);
     }
 
-    // public function editar($codi_equip){
-    //     $tiquet_Model = new TiquetModel();
-    //     $tiquet_Model->editarTicket($codi_equip);
-    //     return redirect()->to("pagina/TicketSSTT");
-    // }
+    public function actualizar_ticket($id_ticket){
+        
+        $modelTicket = new TiquetModel();
+        
+        $cod_equip = $this->request->getPost('codi_equip');
+        $descripcio_avaria  = $this->request->getPost('descripcio_avaria');
+        $centre_emissor = $this->request->getPost('centreEmissor');
+        $dispositiu = $this->request->getPost('t_dispositiu');
+
+        $nou_ticket = [
+            'codi_equip' => $cod_equip,
+            'descripcio_avaria' => $descripcio_avaria,
+            'idFK_dispositiu' => $dispositiu,
+            'idFK_codiCentre_emitent' => $centre_emissor
+        ];
+
+        $modelTicket->editarTicket($id_ticket, $nou_ticket);
+
+         return redirect()->to("pagina/TicketSSTT");
+     }
+
 }

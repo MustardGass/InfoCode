@@ -83,4 +83,10 @@ class CentreModel extends Model
          return $result[$nom_random]->nom;
     }
 
+    public function contarDatos(){
+        $query = $this->db->query('SELECT COUNT(*) as total FROM centre'); 
+        $row = $query->getRow();
+    
+        return $row->total;
+        }
 }
