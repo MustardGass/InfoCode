@@ -63,10 +63,15 @@ class AlumnesModel extends Model
         return $this->findAll();
     }
 
-    public function registrarAlumne($correu_alumne, $idFK_codi_centre) {
-        $this->insert([
-            "correu_alumne" => $correu_alumne,
-            "idFK_codi_centre" => $idFK_codi_centre
-        ]);
+    // public function registrarAlumne($correu_alumne, $idFK_codi_centre) {
+    //     $this->insert([
+    //         "correu_alumne" => $correu_alumne,
+    //         "idFK_codi_centre" => $idFK_codi_centre
+    //     ]);
+    // }
+
+    
+    public function registrarAlumne($dades) {
+        return $this->insert($dades);
     }
 }

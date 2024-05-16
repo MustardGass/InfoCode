@@ -95,12 +95,6 @@ class TiquetModel extends Model
         return $this->where('id_tiquet', $id_ticket)->delete();
     }
     
-    // public function editarTicket($id_ticket, $nuevo_ticket) {
-    //     $data = ['id_tiquet' => $nuevo_ticket];
-
-    //     $this->update($id_ticket, $data);
-    // }
- 
     public function editarTicket($id_ticket, $nou_ticket) {
         return $this->update($id_ticket, $nou_ticket);
     }

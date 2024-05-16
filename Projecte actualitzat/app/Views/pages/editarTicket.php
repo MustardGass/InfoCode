@@ -12,15 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   
   <link rel="stylesheet" href="<?= base_url("css/style.css") ?>">
-  <title>Assignats</title>
-
-
-  <script type="text/javascript">
-    function showHideRow(row) {
-      $("#" + row).toggle();
-    } 
-  </script>
-
+  <title>Editar</title>
 
   <style>
     #wrapper {
@@ -134,37 +126,28 @@
             </div>
 
             <!-- Mostrar los datos del ticket -->
-
-            <form action="<?= base_url('pagina/'.$ticket.'/editar'); ?>" method="POST">
-          
-            <h3>ID Ticket</h3>
-            <p><?= $ticket ?></p>
-
-            <h3>Codi d'equip</h3>
-            <input type="text" name="codi_equip" value="<?= $codi_equip ?>">
-
-            <h3>Tipus de dispositiu</h3>
-            <select name="t_dispositiu" id="t_dispositiu">
-              <?php foreach($dispositiu as $t_dispositiu) : ?>
-                  <option value="<?= $t_dispositiu['id_tipus'] ?>"><?= $t_dispositiu['tipus'] ?></option>
-              <?php endforeach; ?>
-            </select>
-
-            <h3>Descripcio de la Avaria</h3>
-            <!-- <input type="text" name="descripcio_avaria" value="<?= $descripcio_avaria ?>"></input> -->
-            <textarea  name="descripcio_avaria" id="descripcio_avaria" rows="6" cols="50"><?= $descripcio_avaria ?></textarea>
-
-            <h3>Centre Emissor</h3>
+ 
+            <form action="<?= base_url("pagina/".$tiquet."/editar"); ?>" method="POST">
+            <h3>ID ticket</h3>
+            <p><?= $tiquet ?></p>
+            <h3>codi d'equip</h3>
+            <input type="text"  name="codigo_equipo" value="<?= $codi_equip ?>">
+            <h3>Descripcio_avaria</h3>
+            <textarea name="descripcion_avaria" id="descripcion_avaria" rows="5" cols="50"><?= $descripcio_avaria ?></textarea><br>
             
-            <?php foreach($centre_emissor as $index => $centre) : ?>
+            <h3>Centre emissor</h3>
+            <?php foreach($centro as $index => $centre) : ?>
               <input type="hidden" value="<?= $centre['nom'] ?>" id="nom<?= $index ?>">
               <input type="hidden" value="<?= $centre['codi_centre'] ?>" id="codi<?= $index ?>">
              <?php endforeach; ?>
-            <input type="text" id="inputBuscar"  oninput="buscar('<?= $contable?>')"> 
-            <input type="hidden" id="inputCodi" name="centreEmissor" >
+            <input type="text" id="inputBuscar"  oninput="buscar('<?= $contable?>')" value="<?= $centre_emissorAuto ?>"> 
             <div id="coincidencias" style="display: none;"></div> 
+            <h3>Centre Reparador</h3>
+            <input type="text" id="inputBuscar2" name="nom_centre_reparador"  oninput="buscar2('<?= $contable?>')" value="<?= $centre_reparadorAuto ?>"> 
+            <input type="hidden" id="inputCodi" name="codiCentreEmissor" >
+            <input type="hidden" id="inputCodi2" name="codiCentreReparador" >
+            <div id="coincidencias2" style="display: none;"></div> 
             <script>
-           
             function buscar(contable) {
             var texto=document.getElementById("inputBuscar").value.replace(/\b\w/g, function(match) {
             return match.toUpperCase();
@@ -190,18 +173,49 @@
                     });
                   }
                 }
+                if (coincidenciasEncontradas === 0) {
+                divCoincidencias.innerHTML = "<div>No se encontraron coincidencias.</div>";
+            }
                 divCoincidencias.style.display = "block";
                 } else {
                 divCoincidencias.style.display = "none";
                 }
-            }        
+            }       
+            function buscar2(contable) {
+            var texto=document.getElementById("inputBuscar2").value.replace(/\b\w/g, function(match) {
+            return match.toUpperCase();
+            });
+            var coincidenciasEncontradas = 0;
+            var divCoincidencias = document.getElementById("coincidencias2");
+            divCoincidencias.innerHTML = ""; 
+            if (texto !== "") {
+            for (var i = 0; i < contable && coincidenciasEncontradas < 8; i++) {
+            var nombre = document.getElementById("nom" + i).value;
+            var codigo = document.getElementById("codi" + i).value;
+            if (nombre.includes(texto)) {
+                var coincidenciaElemento = document.createElement("div");
+                coincidenciaElemento.textContent = nombre;
+                coincidenciaElemento.codigo=codigo;
+                document.getElementById("inputCodi2").value = codigo;
+                divCoincidencias.appendChild(coincidenciaElemento);
+                coincidenciasEncontradas++;
+                coincidenciaElemento.addEventListener("click", function() {
+                document.getElementById("inputCodi2").value = this.codigo;
+                document.getElementById("inputBuscar2").value = this.textContent;
+                divCoincidencias.style.display = "none";
+                    });
+                  }
+                }
+                if (coincidenciasEncontradas === 0) {
+                divCoincidencias.innerHTML = "<div>No se encontraron coincidencias.</div>";
+            }
+                divCoincidencias.style.display = "block";
+                } else {
+                divCoincidencias.style.display = "none";
+                }
+            }         
             </script>
-          
-
-
-
-            <button>Editar</button>
-
+            <button>Editar  Ticket</button>
             </form>
 
 
@@ -210,21 +224,7 @@
 
 
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script>
-            function mostrarInformacion(id) {
-              //Obtenim la info addicional
-              var infoElement = document.getElementById('info-' + id);
-
-              //Alterna etre dislay none i que el display sigui "true"
-              if (infoElement.style.display === 'none' || infoElement.style.display === '') {
-                //Si està ocult, mostrar
-                infoElement.style.display = 'block';
-              } else {
-                // Si està visible, ocultar
-                infoElement.style.display = 'none';
-              }
-            }
-          </script>
+    
 </body>
 
 </html>

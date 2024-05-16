@@ -15,9 +15,10 @@ class TicketProfessorsController extends BaseController
             return redirect()->to(base_url('login'));
         }
 
-        // Model tiquet
-        $tiquetModel = new TiquetModel();
-        $modelTipus_dispositiu = new TipusDispositiuModel();
+        // //verificar si l'usuari té el rol de professor
+        if(session()->get('user_rol') === 'Professor') {
+            return redirect()->to(base_url('login'));
+        }
 
         // Configurar KpaCrud
         $config = [
@@ -39,38 +40,31 @@ class TicketProfessorsController extends BaseController
         $crud->setRelation('idFK_dispositiu', 'tipus_dispositiu', 'id_tipus', 'tipus'); //relacio entre taula tiquet i tipus_dispositiu
 
         // Columnes que volem veure
-$crud->setColumns(['codi_equip', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'estat_tiquet']);
+        $crud->setColumns(['codi_equip', 'tipus_dispositiu__tipus', 'descripcio_avaria', 'estat_tiquet']);
 
-$crud->setColumnsInfo([
-    'codi_equip' => [
-        'name' => 'Codi del equip'
-    ],
-    'tipus_dispositiu__tipus' => [
-        'name' => 'Tipus de dispositiu',
-        'width' => '20%' // Ajustar el ancho del campo
-    ],
-    'descripcio_avaria' => [
-        'name' => 'Descripció',
-        'width' => '40%' // Ajustar el ancho del campo
-    ],
-    'estat_tiquet' => [
-        'name' =>  'Estat'
-    ]
-]);
-
-
-
+        $crud->setColumnsInfo([
+            'codi_equip' => [
+                'name' => 'Codi del equip'
+            ],
+            'tipus_dispositiu__tipus' => [
+                'name' => 'Tipus de dispositiu',
+                'width' => '20%' // Ajustar el ancho del campo
+            ],
+            'descripcio_avaria' => [
+                'name' => 'Descripció',
+                'width' => '40%' // Ajustar el ancho del campo
+            ],
+            'estat_tiquet' => [
+                'name' =>  'Estat'
+            ]
+        ]);
 
         // Generar la taula KpaCrud
         $data['table'] = $crud->render();
 
         // Passar dades a la vista
         return view('pages/TicketProfessors', $data);
-    }
-
-    public function afegir_ticket()
-    {
-
 
     }
+
 }

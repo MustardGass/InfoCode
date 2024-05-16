@@ -13,14 +13,6 @@
   
   <title>Ticket Professors</title>
 
-
-  <script type="text/javascript">
-    function showHideRow(row) {
-      $("#" + row).toggle();
-    } 
-  </script>
-
-
   <style>
     #wrapper {
       margin: 0 auto;
@@ -63,7 +55,6 @@
     }
 
     /* estils taula KpaCrud */
-   
     
   </style>
 
@@ -91,15 +82,14 @@
             <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
               <img src=<?= base_url('img/user.png'); ?> alt="User" style="max-height: 30px;">
-              <?= lang('TicketProfessors.usuari'); ?>
+              <?= session()->get('user_id') ?>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.opt1'); ?></a></li>
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.opt2'); ?></a></li>
+              <li><a class="dropdown-item" href="<?= base_url('/pagina/panelProfessor') ?>"><?= lang('TicketProfessors.opt1') ?></a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#"><?= lang('TicketProfessors.desconnectar'); ?></a></li>
+              <li><a class="dropdown-item" href="<?= base_url('logout') ?>"><?= lang('TicketProfessors.desconnectar'); ?></a></li>
             </ul>
           </li>
         </div>
@@ -163,28 +153,10 @@
               <?= $table ?>
             </div>
 
-
-
-
           </div>
 
-
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script>
-            function mostrarInformacion(id) {
-              //Obtenim la info addicional
-              var infoElement = document.getElementById('info-' + id);
-
-              //Alterna etre dislay none i que el display sigui "true"
-              if (infoElement.style.display === 'none' || infoElement.style.display === '') {
-                //Si està ocult, mostrar
-                infoElement.style.display = 'block';
-              } else {
-                // Si està visible, ocultar
-                infoElement.style.display = 'none';
-              }
-            }
-          </script>
+          
 </body>
 
 </html>

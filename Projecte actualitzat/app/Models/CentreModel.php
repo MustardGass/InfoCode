@@ -84,9 +84,7 @@ class CentreModel extends Model
     }
 
     public function contarDatos(){
-        $query = $this->db->query('SELECT COUNT(*) as total FROM centre'); 
-        $row = $query->getRow();
+        return $this->table('centre')->countAllResults();
+    }
     
-        return $row->total;
-        }
 }

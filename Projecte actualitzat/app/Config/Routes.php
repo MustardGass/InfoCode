@@ -14,13 +14,8 @@ $routes->post('/login', 'UsuarisController::login');
 $routes->get('/logout', 'UsuarisController::logout');
 
 
-$routes->get('/pagina_admin', 'UsuarisController::vista_admin');
-
 $routes->get('/registre', 'UsuarisController::registre');
 $routes->post('/registre', 'UsuarisController::registre');
-
-
-$routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 
 //----------CRUD SSTT----------------------
 $routes->get('/pagina/TicketSSTT', 'TicketSSTTController::vista_ticket_sstt');

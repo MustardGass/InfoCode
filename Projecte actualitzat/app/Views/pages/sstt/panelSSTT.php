@@ -9,14 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <title>Assignats</title>
-
-
-  <script type="text/javascript">
-    function showHideRow(row) {
-      $("#" + row).toggle();
-    } 
-  </script>
+  <link rel="stylesheet" href="<?= base_url('css/styles.css') ?>">
+  <title>Informacio</title>
 
 
   <style>
@@ -124,40 +118,17 @@
 
 
           <div class="col py-3">
+            <div class="row">
+              <h1><?= $title ?></h1>
+            </div>
 
-        <div class="row">
-        <h1><?= $title ?></h1>
-
-        </div>
-
-        <div class="row">
-
-            <p>Usuari actiu: <?= session()->get('user_id') ?></p>
-
-        </div>
-
-
-
-
+            <a href="<?= base_url('registre') ?>" class="btn btn-primary" style="width: 180px; margin: 10px;">Registrar Professor</a><br>
           </div>
 
 
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script>
-            function mostrarInformacion(id) {
-              //Obtenim la info addicional
-              var infoElement = document.getElementById('info-' + id);
-
-              //Alterna etre dislay none i que el display sigui "true"
-              if (infoElement.style.display === 'none' || infoElement.style.display === '') {
-                //Si està ocult, mostrar
-                infoElement.style.display = 'block';
-              } else {
-                // Si està visible, ocultar
-                infoElement.style.display = 'none';
-              }
-            }
-          </script>
+          
 </body>
 
 </html>
+

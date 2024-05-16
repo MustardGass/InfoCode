@@ -40,8 +40,8 @@
                     <img src="<?= base_url('img/loginRegistre_img.jpg'); ?>" id="img_logo" class="img-fluid">
                 </div>
                 <div class="col-md-6">
-                    <h3 class="text-center mt-5">REGISTRE</h3>
-                    <form action="<?= base_url('registre') ?>" method="POST" class="mt-5">
+                    <h3 class="text-center mt-2">REGISTRE</h3>
+                    <form action="<?= base_url('registre') ?>" method="POST">
                         <div>
                             <label for="nom" class="form-label">Nom</label>
                             <input type="text" name="nom" id="nom" class="form-control mb-4" />
@@ -64,7 +64,7 @@
                         </div>
 
                         <label for="centre">Centre</label>
-                        <select name="centre" id="centre">
+                        <select name="centre" id="centre" style="width: 250px; margin-bottom: 20px;">
                             <?php foreach($centre_profe as $centre) : ?>
                                 <option value="<?= $centre['codi_centre'] ?>"><?= $centre['nom'] ?></option>
                             <?php endforeach; ?>

@@ -95,8 +95,6 @@
 
   <!------------------ CONTINGUT DE LA WEB ------------------------->
   
-  
-
   <div class="container-fluid">
     
     <div class="row ">
@@ -134,11 +132,7 @@
       </nav>
   </div>
   
-
-
   <table  class="table" id="table_detail" cellpadding=10> 
-
-
     <tr> 
         <th scope="col" style='background-color: #4d82bc;'><input type="checkbox"/></th>
         <th scope="col" style='background-color: #4d82bc;'><?= lang('TicketProfessors.codi_taula');?></th>
@@ -157,7 +151,6 @@
           <?php endforeach; ?>
     </tr>
 
-
     <tr>
       <td>
         <?php foreach($estats as $estat) : ?>
@@ -165,18 +158,8 @@
         <?php endforeach; ?>
       </td>
     </tr>
-
-    
-
   </table>
-
-
-
 </div>
-
-
-
-  
 
 </body>
 </html>

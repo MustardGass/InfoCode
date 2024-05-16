@@ -12,14 +12,6 @@
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <title>Assignats</title>
 
-
-  <script type="text/javascript">
-    function showHideRow(row) {
-      $("#" + row).toggle();
-    } 
-  </script>
-
-
   <style>
     #wrapper {
       margin: 0 auto;
@@ -131,7 +123,6 @@
               <h1><?= lang('TicketProfessors.titol_afegirTicket');?></h1>
             </div>
 
-           
             <form action="<?= base_url("pagina/afegirTicket") ?>" method="post">
             
             <div class="container">
@@ -164,7 +155,6 @@
 
             <div class="row">
               
-      
               <div class="col">
                 <label for="c_emitent" class="form-label h5 ">Centre Emisor</label><br>
                 <select name="c_emitent" id="c_emitent" class="form-select">
@@ -194,7 +184,6 @@
                       
               <br>
 
-             
               <button type="submit" class="btn btn-primary px-3">Crear Ticket</button>
             
             </div>  
@@ -202,23 +191,8 @@
            
           </div>
 
-
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script>
-            function mostrarInformacion(id) {
-              //Obtenim la info addicional
-              var infoElement = document.getElementById('info-' + id);
 
-              //Alterna etre dislay none i que el display sigui "true"
-              if (infoElement.style.display === 'none' || infoElement.style.display === '') {
-                //Si està ocult, mostrar
-                infoElement.style.display = 'block';
-              } else {
-                // Si està visible, ocultar
-                infoElement.style.display = 'none';
-              }
-            }
-          </script>
 </body>
 
 </html>

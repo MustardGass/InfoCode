@@ -15,16 +15,14 @@ use Faker\Factory;
 class UsuarisController extends BaseController
 {
 
-    public function mostrar_pagina($pagina) {
-        $data['title']="Pagina" . $pagina;
-        return view("pagines/" . $pagina, $data);
-    }    
-
     public function registre() {
         //verificar si el usuari es admin
         // if(session()->get('rol') !== 'admin') {
         //     return redirect()->to(base_url('login'));
         // }
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
         
         $modelProfessor = new ProfessorModel();
         $modelCentre = new CentreModel();
@@ -32,9 +30,9 @@ class UsuarisController extends BaseController
         $modelRols = new RolsModel();
         $model_UsersRols = new UsersRolsModel();
         
-        $modelAlumnes = new AlumnesModel();
         
         $fake = Factory::create("es_ES");
+
         $data['centre_profe'] = $modelCentre->select('codi_centre, nom')->findAll();
 
         if($this->request->getMethod() === 'POST') {
@@ -50,13 +48,13 @@ class UsuarisController extends BaseController
             $modelProfessor->registrarProfessor($data);
 
             //guardar correu_xtec y password a la taula Login
-
             $pass_hash = password_hash($this->request->getPost('contrasenya'), PASSWORD_DEFAULT);
             
             $data = [
                 'idFK_user' => $this->request->getPost('correu_xtec'),
                 'password' => $pass_hash
             ];
+
             $modelLogin->registroUser($data);
 
             //Guardar correu_xtec y rol a la taula UsersRols
@@ -118,66 +116,10 @@ class UsuarisController extends BaseController
         return view("pages/session/login");
     }
 
-    // public function login() {
-        
-    //     $modelAdmin = new AdminModel();
-
-    //     if($this->request->getMethod()) {
-    //         $id_admin = $this->request->getPost('usuari');
-    //         $password = $this->request->getPost('contrasenya');
-        
-    //         $datosUser = $modelAdmin->obtindreAdmin($id_admin);
-        
-    //         if($datosUser){
-        
-    //             if(password_verify($password, $datosUser['password'])){
-    //                 $data = [
-    //                     "id_admin" => $datosUser['id_admin'],
-    //                     'isLogged' => true,
-    //                 ];
-        
-    //                 $session = session();
-    //                 $session->set($data);
-    //                 $session->set('id_admin', $id_admin);
-        
-    //                 return redirect()->to('/pagina/TicketSSTT');
-    //             } else{
-    //                 return redirect()->to('/login');
-    //             }
-    //         }
-    //     }
-       
-    
-    //     return view("pagines/login");
-    // }
-    
-
-    
 
     public function logout() {
         session()->destroy();
         return redirect()->to(base_url('login'));
     }
-
-    public function vista_admin() {
-        $data['title'] = "Pagina de Administrador";
-        return view('pages/admin', $data);
-    }
-
-
-    public function mostrar_numero($numero) {
-        $data['elnum'] = $numero;
-        return view("pagines", $data);
-    }
-
-    // imprimir info dels alumnes
-    // public function alumnes() {
-    //     $model = new \App\Models\AlumnesModel();
-
-    //     $data['title'] = "Alumnes";
-    //     $data['alumne'] = $model->getAlumnes();
-        
-    //     return view("pagines/alumnes", $data);
-    // }
 
 }

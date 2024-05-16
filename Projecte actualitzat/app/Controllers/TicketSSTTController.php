@@ -185,42 +185,56 @@ class TicketSSTTController extends BaseController
 
     public function editar_ticket($id_ticket) {
 
-        //Crear instancies als models
-        $modelTicket = new TiquetModel();
-        $modelCentre = new CentreModel();
-        $modelDispositiu = new TipusDispositiuModel();
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
 
-        //buscar ticket especific amb el id proporcionat
-        $ticket = $modelTicket->find($id_ticket);
-        
-        //pasar dades a la vista
-        $data['ticket'] = $ticket['id_tiquet'];
-        $data['dispositiu'] = $modelDispositiu->select('id_tipus, tipus')->findAll();
-        $data['centre_emissor'] = $modelCentre->select('codi_centre, nom')->findAll();
+        $modelTiquet = new TiquetModel();
+        $modelCentre = new CentreModel();
+
+        $ticket = $modelTiquet->find($id_ticket);
+
+        $FK_centreEmissor = $ticket['idFK_codiCentre_emitent'];
+        $centre_e = $modelCentre->find($FK_centreEmissor);
+        $centre_emissorAuto = $centre_e['nom'];
+
+
+        $data['tiquet']=$ticket['id_tiquet'];
+        $data['centro']=$modelCentre->select('codi_centre, nom')->findAll();
+        $data['contable']=$modelCentre->contarDatos();
         $data['codi_equip'] = (int)$ticket['codi_equip'];
+        $data['centre_emissorAuto']=$centre_emissorAuto;
+        $data['centre_reparadorAuto'] = $ticket['centre_reparador'];
         $data['descripcio_avaria'] = $ticket['descripcio_avaria'];
-        $data['contable'] = $modelCentre->contarDatos();
-        return view("pages/editarTicket", $data);
+        return view("pages/editarTicket",$data);
     }
 
     public function actualizar_ticket($id_ticket){
         
-        $modelTicket = new TiquetModel();
-        
-        $cod_equip = $this->request->getPost('codi_equip');
-        $descripcio_avaria  = $this->request->getPost('descripcio_avaria');
-        $centre_emissor = $this->request->getPost('centreEmissor');
-        $dispositiu = $this->request->getPost('t_dispositiu');
+        if(!session()->get('isLogged')) {
+            return redirect()->to(base_url('login'));
+        }
 
-        $nou_ticket = [
-            'codi_equip' => $cod_equip,
-            'descripcio_avaria' => $descripcio_avaria,
-            'idFK_dispositiu' => $dispositiu,
-            'idFK_codiCentre_emitent' => $centre_emissor
+        $tiquet_Model = new TiquetModel();
+        $descripcion_avaria=$this->request->getPost('descripcion_avaria');
+        $codi_equip=$this->request->getPost('codigo_equipo');
+        $centre_emissor=$this->request->getPost('codiCentreEmissor');
+        $centre_reparador=$this->request->getPost('nom_centre_reparador');
+        $codiCentreReparador=$this->request->getPost('codiCentreReparador');
+        $data=[
+            'codi_equip'=>$codi_equip,
+            'descripcio_avaria'=>$descripcion_avaria,
+            
+
         ];
-
-        $modelTicket->editarTicket($id_ticket, $nou_ticket);
-
+        if ($centre_emissor != null) {
+        $data['idFK_codiCentre_emitent'] = $centre_emissor;
+        }
+        if ($codiCentreReparador != null) {
+        $data['idFK_codiCentre_reparador'] = $codiCentreReparador;
+        $data['centre_reparador'] = $centre_reparador;
+        }
+        $tiquet_Model->editarTicket($id_ticket,$data);
          return redirect()->to("pagina/TicketSSTT");
      }
 

@@ -11,14 +11,6 @@
   <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
   <title>Assignats</title>
 
-
-  <script type="text/javascript">
-    function showHideRow(row) {
-      $("#" + row).toggle();
-    } 
-  </script>
-
-
   <style>
     #wrapper {
       margin: 0 auto;
@@ -138,28 +130,11 @@
               <?= $table ?>
             </div>
 
-
-
-
           </div>
 
 
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-          <script>
-            function mostrarInformacion(id) {
-              //Obtenim la info addicional
-              var infoElement = document.getElementById('info-' + id);
 
-              //Alterna etre dislay none i que el display sigui "true"
-              if (infoElement.style.display === 'none' || infoElement.style.display === '') {
-                //Si està ocult, mostrar
-                infoElement.style.display = 'block';
-              } else {
-                // Si està visible, ocultar
-                infoElement.style.display = 'none';
-              }
-            }
-          </script>
 </body>
 
 </html>
