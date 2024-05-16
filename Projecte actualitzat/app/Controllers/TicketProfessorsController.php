@@ -15,10 +15,10 @@ class TicketProfessorsController extends BaseController
             return redirect()->to(base_url('login'));
         }
 
-        // //verificar si l'usuari té el rol de professor
-        if(session()->get('user_rol') === 'Professor') {
-            return redirect()->to(base_url('login'));
-        }
+        // // //verificar si l'usuari té el rol de professor
+        // if(session()->get('user_rol') !== 'professor') {
+        //     return redirect()->to(base_url('login'));
+        // }
 
         // Configurar KpaCrud
         $config = [

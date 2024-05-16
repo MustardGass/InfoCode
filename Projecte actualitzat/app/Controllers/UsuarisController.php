@@ -76,6 +76,7 @@ class UsuarisController extends BaseController
 
     public function login() {
         
+        //Instanciar els models
         $modelAdmin = new AdminModel();
         $modelLogin = new LoginModel();
         $modelUsersRols = new UsersRolsModel();
