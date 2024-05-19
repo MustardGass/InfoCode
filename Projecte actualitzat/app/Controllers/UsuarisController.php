@@ -24,6 +24,7 @@ class UsuarisController extends BaseController
             return redirect()->to(base_url('login'));
         }
         
+        //instanciar models per interactuar amb la bd
         $modelProfessor = new ProfessorModel();
         $modelCentre = new CentreModel();
         $modelLogin = new LoginModel();
@@ -31,7 +32,7 @@ class UsuarisController extends BaseController
         $model_UsersRols = new UsersRolsModel();
         
         
-        $fake = Factory::create("es_ES");
+        // $fake = Factory::create("es_ES");
 
         $data['centre_profe'] = $modelCentre->select('codi_centre, nom')->findAll();
 
@@ -58,8 +59,8 @@ class UsuarisController extends BaseController
             $modelLogin->registroUser($data);
 
             //Guardar correu_xtec y rol a la taula UsersRols
-            $rolProfe = $modelRols->where('tipus_rol', 'professor')->first();
-            $id_rol = $rolProfe['id_rol'];
+            $rolProfe = $modelRols->where('tipus_rol', 'professor')->first();   //consulta a la taula Rols on volem obtindre el registre on el camp tipus_rol sigui igual a "professor"
+            $id_rol = $rolProfe['id_rol'];  
 
             $data = [
                 'idFK_user' => $this->request->getPost('correu_xtec'),
@@ -81,6 +82,7 @@ class UsuarisController extends BaseController
         $modelLogin = new LoginModel();
         $modelUsersRols = new UsersRolsModel();
         $modelProfessor = new ProfessorModel();
+        $data = [];
 
         if($this->request->getPost()){
 
@@ -89,32 +91,79 @@ class UsuarisController extends BaseController
 
             $usuari_admin = $modelAdmin->obtindreAdmin($user);
 
-                if(!$usuari_admin){
-                    $usuari_profe = $modelLogin->obtindreProfessor($user);
-                    $rol = $modelUsersRols->obtindreRols($user);
-                    $info_profe = $modelProfessor->obtindreProfessor($user);
+                // if(!$usuari_admin){
+                //     $usuari_profe = $modelLogin->obtindreProfessor($user);
+                //     $rol = $modelUsersRols->obtindreRols($user);
+                //     $info_profe = $modelProfessor->obtindreProfessor($user);
+                // }
+
+            if($usuari_admin) {
+                if($usuari_admin && password_verify($password, $usuari_admin['password'])) {
+                    session()->set('isLogged', true);
+                    session()->set('user_id', $usuari_admin['id_admin']);
+                    return redirect()->to(base_url('pagina/TicketSSTT'));
+                } else{
+                    $data['error'] = "Usuari i contrasenya incorrectes";
                 }
+            } elseif(!$usuari_admin){
+                $usuari_profe = $modelLogin->obtindreProfessor($user);
+                $rol = $modelUsersRols->obtindreRols($user);
+                $info_profe = $modelProfessor->obtindreProfessor($user);
 
-            if($usuari_admin && password_verify($password, $usuari_admin['password'])){
-                session()->set('isLogged', true);
-                session()->set('user_id', $usuari_admin['id_admin']);
-               
-                return redirect()->to('/pagina/panelSSTT');
-            }elseif($usuari_profe && password_verify($password, $usuari_profe['password'])) {
-                session()->set('isLogged', true);
-                session()->set('user_id', $usuari_profe['idFK_user']);
-                session()->set('user_rol', $rol['idFK_rol']);
-                session()->set('user_nom', $info_profe['nom']);
-                session()->set('user_cognoms', $info_profe['cognoms']);
-                session()->set('user_correu', $info_profe['correu']);
-                session()->set('user_centre', $info_profe['idFK_codi_centre']);
+                if($usuari_profe && password_verify($password, $usuari_profe['password'])) {
+                    session()->set('isLogged', true);
+                    session()->set('user_id', $usuari_profe['idFK_user']);
+                    session()->set('user_rol', $rol['idFK_rol']);
+                    session()->set('user_nom', $info_profe['nom']);
+                    session()->set('user_cognoms', $info_profe['cognoms']);
+                    session()->set('user_correu', $info_profe['correu']);
+                    session()->set('user_centre', $info_profe['idFK_codi_centre']);
 
-                return redirect()->to(base_url('/pagina/TicketProfessors'));
-            }else {
-                return redirect()->to('/login');
-            }   
+                    return redirect()->to(base_url('/pagina/TicketProfessors'));
+                } else {
+                    $data['error'] = "Usuari i contrasenya incorrectes";
+                }
+            } else {    //este else se deberia arreglar para el login de usuario alumno
+                $data['error'] = "Usuari i contrasenya incorrectes";
+            } 
+        } 
+        return view("pages/session/login", $data);
+    }
+
+    public function registre_alumnes() {
+        if(!session()->get('isLogged')){
+            return redirect()->to(base_url('login'));
         }
-        return view("pages/session/login");
+
+        $modelAlumne = new AlumnesModel();
+        $modelCentre = new CentreModel();
+        $modelLogin = new LoginModel();
+        // $modelRols = new RolsModel();
+        // $model_UsersRols = new UsersRolsModel();
+
+        $data['centre_alumne'] = $modelCentre->select('codi_centre, nom')->findAll();
+
+        if($this->request->getPost()) {
+            $data = [
+                'correu_alumne' => $this->request->getPost('correu'),
+                'idFK_codi_centre' => $this->request->getPost('centre'),
+            ];
+
+            $modelAlumne->registrarAlumne($data);
+
+            $pass_hash = password_hash($this->request->getPost('contrasenya'), PASSWORD_DEFAULT);
+
+            $data = [
+                'idFK_user' => $this->request->getPost('correu'),
+                'password' => $pass_hash
+            ];
+
+            $modelLogin->registroUser($data);
+
+            return redirect()->to(base_url('pagina/TicketProfessors'));
+        }
+
+        return view("pages/alumnes/registre_alumne", $data);
     }
 
 

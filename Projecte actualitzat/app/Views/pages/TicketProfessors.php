@@ -115,6 +115,10 @@
                   <a class="nav-link text-white" href="#"> <img src=<?= base_url('img/iconInventari.png'); ?> alt="Logo"
                       style="max-height: 30px;"><?= lang('TicketProfessors.inventari_menu'); ?></a>
                 </li>
+
+                <li class="nav-item mt-3">
+                  <a class="nav-link text-white" href="<?= base_url('pagina/registreAlumne') ?>"> Registrar Alumne</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -125,6 +129,7 @@
             <div class="mt-3 mb-5">
               <h1><?= lang('TicketProfessors.titol_reparacions'); ?></h1>
             </div>
+
 
     
             <!-- <table  class="table" id="table_detail" cellpadding=10> 

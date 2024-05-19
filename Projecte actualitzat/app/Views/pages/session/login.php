@@ -43,6 +43,12 @@
                 <div class="col-md-6">
                     <h3 class="text-center mt-5">LOGIN</h3>
                     
+                    <?php if(isset($error)) : ?>
+                        <div class="alert alert-danger" role="alert">
+                            <?= $error ?>
+                        </div>
+                    <?php endif; ?>
+
                     <form action="<?=base_url('/login')?>" class="mt-5" method="POST">
                         <div class="input-group mb-3">
                             <label class="input-group-text" for="idioma">Idioma</label>
@@ -54,7 +60,7 @@
 
                         <div class="mb-4">
                             <label for="usuari" class="form-label">Usuari</label>
-                            <input type="text" class="form-control mb-4"  name="usuari">
+                            <input type="text" class="form-control mb-4"  name="usuari" value="<?= old('usuari') ?>">
                         </div>
                         <div class="mb-4">
                             <label for="contrasenya" class="form-label">Contrasenya</label>

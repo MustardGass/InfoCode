@@ -70,8 +70,8 @@ class AlumnesModel extends Model
     //     ]);
     // }
 
-    
     public function registrarAlumne($dades) {
         return $this->insert($dades);
     }
+    
 }

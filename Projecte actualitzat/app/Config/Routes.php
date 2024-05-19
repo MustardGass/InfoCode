@@ -34,8 +34,8 @@ $routes->post('/pagina/(:segment)/editar', 'TicketSSTTController::actualizar_tic
 $routes->get('/pagina/TicketProfessors', 'TicketProfessorsController::vista_ticket_profes');
 $routes->get('/pagina/panelProfessor', 'InformacioController::info_professor');
 
-$routes->get('/pagina/TicketAlumnes', 'TicketAlumnesController::vista_layout');
-$routes->get('/pagina/alumnes', 'UsuarisController:: alumnes');
 
-$routes->get('/noticia/(:num)', 'UsuarisController::mostrar_numero');
-$routes->get('/pagina/(:segment)', 'UsuarisController::mostrar_pagina/$1');
+//-------------CRUD ALUMNE-------------------------------
+$routes->get('/pagina/registreAlumne', 'UsuarisController::registre_alumnes');
+$routes->post('/pagina/registreAlumne', 'UsuarisController::registre_alumnes');
+
